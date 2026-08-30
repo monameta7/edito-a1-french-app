@@ -1,9 +1,13 @@
 /* ===== Service Worker — اپ را قابل‌نصب و تا حدی آفلاین می‌کند =====
-   استراتژی: cache-first با به‌روزرسانی در پس‌زمینه (stale-while-revalidate).
-   یعنی صفحه فوراً از کش لود می‌شود (حتی آفلاین)، و همزمان نسخه جدید از شبکه
-   می‌آید و برای دفعه بعد در کش جایگزین می‌شود — پس بعد از هر آپدیت واقعی اپ،
-   ممکن است کاربر یک‌بار رفرش اضافه نیاز داشته باشد تا نسخه جدید را ببیند. */
-const CACHE_NAME = 'edito-a1-v1';
+   چون این اپ بدون build است (اسم فایل‌ها ثابت است، نه هش‌شده)، اگر index.html
+   هم مثل بقیه فایل‌ها cache-first می‌شد، یک باگ واقعی پیش می‌آمد: بعد از دیپلوی
+   یک آپدیت، ممکن بود index.html قدیمی (که تگ اسکریپت فایل جدید را ندارد) با
+   app.js جدید (که به آن فایل جدید نیاز دارد) قاطی شود و صفحه با خطا بشکند.
+   برای همین: HTML (ناوبری‌ها) همیشه network-first است — همیشه نسخه واقعی
+   سرور را می‌گیرد و فقط اگر آفلاین بود از کش برمی‌گردد. فایل‌های استاتیک دیگر
+   (css/js/تصاویر) همچنان cache-first با به‌روزرسانی در پس‌زمینه هستند تا لود
+   بعدی سریع باشد. */
+const CACHE_NAME = 'edito-a1-v2';
 const CORE_ASSETS = ['/', '/index.html', '/manifest.json'];
 
 self.addEventListener('install', function (e) {
@@ -24,6 +28,21 @@ self.addEventListener('fetch', function (e) {
   var url = new URL(e.request.url);
   if (url.origin !== location.origin) return; /* درخواست‌های خارجی (مثل API آنتروپیک) را دست‌نخورده بگذار */
 
+  /* ناوبری صفحه (بارگذاری/رفرش) یا خودِ index.html: همیشه اول شبکه، کش فقط برای حالت آفلاین */
+  if (e.request.mode === 'navigate' || url.pathname === '/' || url.pathname === '/index.html') {
+    e.respondWith(
+      fetch(e.request).then(function (res) {
+        if (res && res.status === 200) {
+          var resClone = res.clone();
+          caches.open(CACHE_NAME).then(function (cache) { cache.put(e.request, resClone); });
+        }
+        return res;
+      }).catch(function () { return caches.match(e.request); })
+    );
+    return;
+  }
+
+  /* بقیه فایل‌های استاتیک: cache-first + به‌روزرسانی در پس‌زمینه */
   e.respondWith(
     caches.match(e.request).then(function (cached) {
       var fetchPromise = fetch(e.request).then(function (res) {
