@@ -152,6 +152,11 @@ window.addEventListener('DOMContentLoaded', function () {
   applyTheme();
   Voice.init();
   buildItemIndex();
+  CloudSync.init();
+  CloudSync.onChange(function () {
+    var name = (location.hash || '#home').slice(1).split('/')[0];
+    if (name === 'settings' || name === 'home') route();
+  });
   window.addEventListener('hashchange', route);
   route();
 

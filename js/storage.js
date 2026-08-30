@@ -43,6 +43,7 @@ var Store = {
 
   save: function () {
     localStorage.setItem(this.KEY, JSON.stringify(this.state));
+    if (typeof CloudSync !== 'undefined') CloudSync.queuePush();
   },
 
   /* تاریخ به شکل YYYY-MM-DD */

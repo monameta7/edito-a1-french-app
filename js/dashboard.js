@@ -398,7 +398,25 @@ Views.lesson = function (el, lessonId) {
 Views.settings = function (el) {
   var s = Store.state.settings;
   var voices = Voice.frVoices;
-  var h = '<div class="card"><h2>⚙️ تنظیمات</h2>' +
+  var h = '';
+
+  if (CloudSync.enabled) {
+    var u = CloudSync.user;
+    h += '<div class="card"><h2>☁️ همگام‌سازی ابری</h2>';
+    if (u) {
+      h += '<div class="cloud-row">' +
+        (u.photoURL ? '<img class="cloud-avatar" src="' + Exercises.esc(u.photoURL) + '">' : '<span class="cloud-avatar cloud-avatar-fallback">👤</span>') +
+        '<div><b>' + Exercises.esc(u.displayName || 'کاربر') + '</b><div class="muted" style="font-size:13px">' + Exercises.esc(u.email || '') + '</div></div></div>' +
+        '<div class="muted" style="margin-top:8px">پیشرفتت با همین حساب گوگل ذخیره می‌شود — از هر دستگاهی وارد شوی، همین‌جا ادامه می‌دهی.</div>' +
+        '<div class="btnrow" style="margin-top:8px"><button class="btn-ghost cloud-signout">خروج از حساب</button></div>';
+    } else {
+      h += '<div class="muted">با گوگل وارد شو تا پیشرفتت (درس‌ها، XP، لایتنر) روی همه دستگاه‌هایت ذخیره بماند و با پاک‌شدن مرورگر از بین نرود.</div>' +
+        '<div class="btnrow" style="margin-top:8px"><button class="btn cloud-signin">🔐 ورود با گوگل</button></div>';
+    }
+    h += '</div>';
+  }
+
+  h += '<div class="card"><h2>⚙️ تنظیمات</h2>' +
     '<h3>🎨 تم</h3><div class="btnrow">' +
     '<button class="btn-ghost th-light">☀️ روشن</button><button class="btn-ghost th-dark">🌙 تیره</button></div>' +
     '<h3>🔊 صدای فرانسه <span class="muted">(' + voices.length + ' صدا پیدا شد)</span></h3>';
@@ -462,6 +480,19 @@ Views.settings = function (el) {
     '<div class="btnrow"><button class="btn-bad reset">پاک‌کردن کل پیشرفت</button></div></div>';
 
   el.innerHTML = h;
+  var signInBtn = el.querySelector('.cloud-signin');
+  if (signInBtn) signInBtn.onclick = function () {
+    signInBtn.disabled = true;
+    signInBtn.textContent = 'در حال ورود...';
+    CloudSync.signIn().catch(function (err) {
+      toast('ورود انجام نشد — دوباره امتحان کن (' + (err && err.code ? err.code : 'خطا') + ')');
+      signInBtn.disabled = false;
+      signInBtn.textContent = '🔐 ورود با گوگل';
+    });
+  };
+  var signOutBtn = el.querySelector('.cloud-signout');
+  if (signOutBtn) signOutBtn.onclick = function () { CloudSync.signOut(); };
+
   el.querySelector('.th-light').onclick = function () { s.theme = 'light'; Store.save(); applyTheme(); };
   el.querySelector('.th-dark').onclick = function () { s.theme = 'dark'; Store.save(); applyTheme(); };
   el.querySelectorAll('.voice-preview').forEach(function (btn) {

@@ -142,6 +142,11 @@ button:disabled{opacity:.45;cursor:default;transform:none!important}
 .float-text.lvl{color:var(--brand);font-size:22px}
 @keyframes floatUp{0%{opacity:0;transform:translate(-50%,4px) scale(.8)}15%{opacity:1;transform:translate(-50%,-6px) scale(1.1)}100%{opacity:0;transform:translate(-50%,-52px) scale(1)}}
 
+/* ---- ورود با گوگل / همگام‌سازی ابری ---- */
+.cloud-row{display:flex;align-items:center;gap:12px}
+.cloud-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.cloud-avatar-fallback{display:flex;align-items:center;justify-content:center;background:var(--chip);font-size:20px}
+
 /* ---- شعلهٔ استریک ---- */
 .flame{display:inline-block;animation:flamePulse 1.4s ease-in-out infinite}
 @keyframes flamePulse{0%,100%{transform:scale(1) rotate(-2deg)}50%{transform:scale(1.18) rotate(2deg)}}
