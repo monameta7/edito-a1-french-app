@@ -1,0 +1,33 @@
+/* ===== آزمون آزمایشی DELF A1 — چهار بخش: CO، CE، PE، PO ===== */
+EDITO.delf = {
+  exercises: [
+    /* ---------- Compréhension Orale (شنیداری) ---------- */
+    { type: 'mcq', skill: 'CO', topic: 'DELF شنیداری', level: 'medium', q: '🎧 پیام صوتی — ساعت قرار کِی است؟', audio: 'Bonjour, c\'est le cabinet du docteur Martin. Votre rendez-vous est confirmé pour mardi à dix heures et quart.', audioFa: 'سلام، اینجا مطب دکتر مارتن است. وقت شما برای سه‌شنبه ساعت ده و ربع تأیید شد.', options: ['سه‌شنبه ۱۰:۱۵', 'دوشنبه ۱۰:۴۵', 'سه‌شنبه ۱۰:۴۵', 'جمعه ۱۰:۱۵'], correct: 0, frOptions: false },
+    { type: 'mcq', skill: 'CO', topic: 'DELF شنیداری', level: 'medium', q: '🎧 اعلان ایستگاه — قطارِ لیون از کدام سکو حرکت می‌کند؟', audio: 'Votre attention, s\'il vous plaît. Le train pour Lyon partira à quinze heures trente, voie huit.', audioFa: 'توجه کنید، لطفاً. قطار لیون ساعت پانزده و سی دقیقه از سکوی هشت حرکت می‌کند.', options: ['سکوی ۸', 'سکوی ۳', 'سکوی ۱۵', 'سکوی ۱۸'], correct: 0, frOptions: false },
+    { type: 'mcq', skill: 'CO', topic: 'DELF شنیداری', level: 'medium', q: '🎧 پیام دوستت — چه چیزی باید بخری؟', audio: 'Salut ! Tu peux acheter du pain et un litre de lait pour ce soir ? Merci beaucoup !', audioFa: 'سلام! می‌شود برای امشب نان و یک لیتر شیر بخری؟ خیلی ممنون!', options: ['نان و شیر', 'پنیر و تخم‌مرغ', 'میوه و آب', 'کیک و قهوه'], correct: 0, frOptions: false },
+    { type: 'mcq', skill: 'CO', topic: 'DELF شنیداری', level: 'medium', q: '🎧 هواشناسی — هوای فردا؟', audio: 'Demain matin, il fait beau et chaud. Mais attention, l\'après-midi, il pleut sur toute la région.', audioFa: 'فردا صبح هوا خوب و گرم است. ولی توجه کن، بعدازظهر در کل منطقه باران می‌بارد.', options: ['صبح آفتابی، بعدازظهر بارانی', 'کل روز برفی', 'کل روز آفتابی', 'صبح بارانی'], correct: 0, frOptions: false },
+    { type: 'dictation', skill: 'CO', topic: 'DELF شنیداری', level: 'hard', text: 'Je voudrais réserver une table pour deux personnes.', trans: 'می‌خواهم یک میز برای دو نفر رزرو کنم.' },
+
+    /* ---------- Compréhension Écrite (خواندن) ---------- */
+    { type: 'mcq', skill: 'CE', topic: 'DELF خواندن', level: 'medium', q: 'ایمیل را بخوان — چرا امیر نمی‌تواند بیاید؟', qfr: 'Salut Paul, désolé, je ne peux pas venir à ta fête samedi. Je suis malade : j\'ai de la fièvre et je dois rester à la maison. Bon anniversaire quand même ! Amir', options: ['مریض است و باید خانه بماند', 'باید کار کند', 'مسافرت است', 'مهمان دارد'], correct: 0, frOptions: false },
+    { type: 'mcq', skill: 'CE', topic: 'DELF خواندن', level: 'medium', q: 'تابلو را بخوان — کِی می‌توانی به استخر بروی؟', qfr: 'PISCINE MUNICIPALE — Horaires : lundi-vendredi 8h-20h | samedi 9h-18h | dimanche FERMÉ', options: ['شنبه ساعت ۱۰ صبح', 'یکشنبه ساعت ۱۰', 'جمعه ساعت ۲۱', 'یکشنبه عصر'], correct: 0, frOptions: false },
+    { type: 'mcq', skill: 'CE', topic: 'DELF خواندن', level: 'medium', q: 'آگهی را بخوان — این آپارتمان چند اتاق خواب دارد؟', qfr: 'À louer : appartement 3 pièces, 70 m² — grand salon, deux chambres, cuisine équipée, 2e étage. 900 €/mois. Métro à 5 minutes.', options: ['دو', 'سه', 'یک', 'چهار'], correct: 0, frOptions: false, explain: '«3 pièces» یعنی سه فضا: یک پذیرایی + دو اتاق خواب.' },
+    { type: 'mcq', skill: 'CE', topic: 'DELF خواندن', level: 'medium', q: 'منو را بخوان — منوی روز شامل چیست؟', qfr: 'MENU DU JOUR (15 €) : Entrée : soupe de légumes | Plat : poulet-frites ou poisson-riz | Dessert : glace ou fruits | Boisson comprise', options: ['پیش‌غذا + غذا + دسر + نوشیدنی', 'فقط غذای اصلی', 'غذا و دسر، بدون نوشیدنی', 'فقط سوپ و دسر'], correct: 0, frOptions: false },
+    { type: 'mcq', skill: 'CE', topic: 'DELF خواندن', level: 'medium', q: 'پیامک را بخوان — کجا و کِی همدیگر را می‌بینند؟', qfr: 'Coucou ! On se retrouve demain à 18h30 devant le cinéma Rex pour le film de 19h. Ne sois pas en retard ! Bises, Léa', options: ['فردا ۱۸:۳۰ جلوی سینما', 'امروز ۱۹ در کافه', 'فردا ۱۹:۳۰ در رستوران', 'شنبه جلوی مترو'], correct: 0, frOptions: false },
+
+    /* ---------- Structures (گرامر و واژگان در خدمت آزمون) ---------- */
+    { type: 'fill', skill: 'GR', topic: 'DELF گرامر', level: 'hard', fa: 'فرم را کامل کن:', q: 'Je ___ iranienne et j\'ai trente ans. (être)', answer: ['suis'] },
+    { type: 'fill', skill: 'GR', topic: 'DELF گرامر', level: 'hard', fa: 'گذشته بساز:', q: 'Hier, nous ___ visité le musée du Louvre.', answer: ['avons'] },
+    { type: 'fill', skill: 'GR', topic: 'DELF گرامر', level: 'hard', fa: 'حرف اضافه درست:', q: 'Elle habite ___ France, ___ Paris.', answer: ['en, à', 'en à', 'en, a', 'en a'], explain: 'en France (کشور مؤنث)، à Paris (شهر).' },
+    { type: 'order', skill: 'GR', topic: 'DELF گرامر', level: 'hard', answer: 'Je voudrais un kilo de pommes s\'il vous plaît.', fa: 'جمله خرید را بساز:' },
+
+    /* ---------- Production Écrite (نوشتن) ---------- */
+    { type: 'write', skill: 'PE', topic: 'DELF نوشتن', level: 'hard', prompt: 'بخش ۱ آزمون نوشتن: فرم ثبت‌نام را به‌صورت جمله‌های کامل پر کن — اسم، ملیت، سن، شغل، آدرس (شهر) و زبان‌ها. (۵-۶ جمله)', min: 18, sample: 'Je m\'appelle Mona Ahmadi. Je suis iranienne. J\'ai trente ans. Je suis ingénieure. J\'habite à Téhéran, en Iran. Je parle persan, anglais et français.' },
+    { type: 'write', skill: 'PE', topic: 'DELF نوشتن', level: 'hard', prompt: 'بخش ۲ آزمون نوشتن: یک کارت‌پستال از تعطیلات بنویس (حداقل ۴۰ واژه): کجایی، هوا چطور است، چه کرده‌ای، کِی برمی‌گردی. ✉️ بعد از نوشتن، حتماً با «کپی برای معلم» بفرست تا مثل مصحح DELF نمره و فیدبک بدهم!', min: 40, sample: 'Chère Sara, bonjour de Paris ! Je passe des vacances formidables. Il fait beau et chaud. Hier, j\'ai visité la tour Eiffel et j\'ai pris beaucoup de photos. Ce soir, on va manger dans un petit restaurant français. Je rentre dimanche prochain. Grosses bises, Mona' },
+
+    /* ---------- Production Orale (گفتاری) ---------- */
+    { type: 'speak', skill: 'PO', topic: 'DELF گفتاری', level: 'hard', text: 'Je m\'appelle Mona. Je suis iranienne. J\'ai trente ans. Je suis ingénieure et j\'habite à Téhéran. J\'apprends le français depuis six mois.', fa: 'بخش ۱ (معرفی خود): خودت را کامل معرفی کن — جمله نمونه را با اطلاعات خودت بگو' },
+    { type: 'speak', skill: 'PO', topic: 'DELF گفتاری', level: 'hard', text: 'Le week-end, je fais de la natation et je lis. J\'aime aussi cuisiner avec ma famille. Le dimanche, on va au parc.', fa: 'بخش ۲ (صحبت آزاد): درباره آخر هفته‌ات صحبت کن' },
+    { type: 'speak', skill: 'PO', topic: 'DELF گفتاری', level: 'hard', text: 'Bonjour ! Je voudrais un kilo de tomates et un morceau de fromage, s\'il vous plaît. Ça coûte combien ? Je paie par carte. Merci, au revoir !', fa: 'بخش ۳ (ایفای نقش): در مغازه خرید کن — سلام، درخواست، قیمت، پرداخت، خداحافظی' }
+  ]
+};
