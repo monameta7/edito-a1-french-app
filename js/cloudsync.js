@@ -1,14 +1,10 @@
-/* ===== ورود با گوگل + همگام‌سازی پیشرفت بین دستگاه‌ها (اختیاری، با Firebase) =====
-   اگر پیکربندی Firebase هنوز وارد نشده (یا اسکریپت‌های Firebase لود نشوند —
-   مثلاً به‌خاطر قطعی اینترنت یا ad-blocker)، این بخش کاملاً غیرفعال می‌ماند و
-   اپ دقیقاً مثل قبل (فقط localStorage روی همین مرورگر) کار می‌کند — بدون خطا. */
-var FIREBASE_CONFIG = {
-  apiKey: 'PASTE_YOUR_FIREBASE_CONFIG_HERE',
-  authDomain: '',
-  projectId: '',
-  storageBucket: '',
-  messagingSenderId: '',
-  appId: ''
+/* ===== ورود با گوگل + همگام‌سازی پیشرفت بین دستگاه‌ها (اختیاری، با Supabase) =====
+   اگر پیکربندی Supabase هنوز وارد نشده (یا اسکریپت آن لود نشود — مثلاً به‌خاطر
+   قطعی اینترنت یا ad-blocker)، این بخش کاملاً غیرفعال می‌ماند و اپ دقیقاً مثل
+   قبل (فقط localStorage روی همین مرورگر) کار می‌کند — بدون خطا. */
+var SUPABASE_CONFIG = {
+  url: 'PASTE_YOUR_SUPABASE_URL_HERE',
+  anonKey: 'PASTE_YOUR_SUPABASE_ANON_KEY_HERE'
 };
 
 var CloudSync = {
@@ -24,33 +20,40 @@ var CloudSync = {
   _notify: function () { this._listeners.forEach(function (fn) { try { fn(); } catch (e) {} }); },
 
   init: function () {
-    if (!FIREBASE_CONFIG.apiKey || FIREBASE_CONFIG.apiKey.indexOf('PASTE_') === 0) return;
-    if (typeof firebase === 'undefined') return;
-    var self = this;
+    if (!SUPABASE_CONFIG.url || SUPABASE_CONFIG.url.indexOf('PASTE_') === 0) return;
+    if (typeof supabase === 'undefined' || !supabase.createClient) return;
     try {
-      firebase.initializeApp(FIREBASE_CONFIG);
-      this.auth = firebase.auth();
-      this.db = firebase.firestore();
+      this.client = supabase.createClient(SUPABASE_CONFIG.url, SUPABASE_CONFIG.anonKey);
     } catch (e) { return; }
     this.enabled = true;
-    this.auth.onAuthStateChanged(function (user) {
-      var justSignedIn = !self.user && user;
-      self.user = user;
+    var self = this;
+    /* اولین بار که این event صدا زده می‌شود، همان وضعیت فعلی (وارد شده یا نه) را
+       می‌دهد — چه صفحه تازه رفرش شده باشد چه تازه از صفحه ورود گوگل برگشته باشد */
+    this.client.auth.onAuthStateChange(function (event, session) {
       self.ready = true;
-      if (justSignedIn) self._onSignIn(user);
-      self._notify();
+      self._setUser(session ? session.user : null);
     });
+  },
+
+  _setUser: function (user) {
+    var justSignedIn = !this.user && user;
+    this.user = user;
+    if (justSignedIn) this._onSignIn(user);
+    this._notify();
   },
 
   signIn: function () {
     if (!this.enabled) return Promise.reject(new Error('cloud sync not configured'));
-    var provider = new firebase.auth.GoogleAuthProvider();
-    return this.auth.signInWithPopup(provider);
+    return this.client.auth.signInWithOAuth({
+      provider: 'google',
+      options: { redirectTo: location.origin + location.pathname }
+    });
   },
 
   signOut: function () {
     if (!this.enabled) return;
-    this.auth.signOut();
+    var self = this;
+    this.client.auth.signOut().then(function () { self.user = null; self._notify(); });
   },
 
   /* اولین بار بعد از ورود: اگر نسخه ابری موجود بود، آن را جایگزین پیشرفت محلی کن
@@ -58,10 +61,10 @@ var CloudSync = {
      اگر نبود (اولین ورود این کاربر)، پیشرفت محلی فعلی را به‌عنوان شروع در ابر آپلود کن */
   _onSignIn: function (user) {
     var self = this;
-    this.db.collection('progress').doc(user.uid).get().then(function (doc) {
-      if (doc.exists && doc.data() && doc.data().state) {
+    this.client.from('progress').select('state').eq('user_id', user.id).maybeSingle().then(function (res) {
+      if (res.data && res.data.state) {
         try {
-          var cloudState = JSON.parse(doc.data().state);
+          var cloudState = JSON.parse(res.data.state);
           var keepKey = Store.state.settings && Store.state.settings.apiKey;
           Store.state = cloudState;
           var d = Store.defaults();
@@ -81,7 +84,7 @@ var CloudSync = {
   },
 
   /* هر بار Store.save() صدا زده شود از اینجا هم رد می‌شود؛ برای جلوگیری از
-     نوشتن زیاد روی Firestore، چند نوشتن پشت‌سرهم را در یک نوشتن ادغام می‌کند */
+     نوشتن زیاد روی Supabase، چند نوشتن پشت‌سرهم را در یک نوشتن ادغام می‌کند */
   queuePush: function () {
     if (!this.enabled || !this.user) return;
     var self = this;
@@ -95,12 +98,12 @@ var CloudSync = {
     clone.settings = clone.settings || {};
     clone.settings.apiKey = ''; /* کلید API هیچ‌وقت به ابر فرستاده نمی‌شود */
     var self = this;
-    this.db.collection('progress').doc(this.user.uid).set({
+    this.client.from('progress').upsert({
+      user_id: this.user.id,
       state: JSON.stringify(clone),
-      updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-    }).then(function () {
-      self.lastSyncedAt = new Date();
-      self._notify();
+      updated_at: new Date().toISOString()
+    }).then(function (res) {
+      if (!res.error) { self.lastSyncedAt = new Date(); self._notify(); }
     }).catch(function () {});
   }
 };

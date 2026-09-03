@@ -402,11 +402,14 @@ Views.settings = function (el) {
 
   if (CloudSync.enabled) {
     var u = CloudSync.user;
+    var uMeta = (u && u.user_metadata) || {};
+    var uName = uMeta.full_name || uMeta.name || 'کاربر';
+    var uAvatar = uMeta.avatar_url || uMeta.picture || '';
     h += '<div class="card"><h2>☁️ همگام‌سازی ابری</h2>';
     if (u) {
       h += '<div class="cloud-row">' +
-        (u.photoURL ? '<img class="cloud-avatar" src="' + Exercises.esc(u.photoURL) + '">' : '<span class="cloud-avatar cloud-avatar-fallback">👤</span>') +
-        '<div><b>' + Exercises.esc(u.displayName || 'کاربر') + '</b><div class="muted" style="font-size:13px">' + Exercises.esc(u.email || '') + '</div></div></div>' +
+        (uAvatar ? '<img class="cloud-avatar" src="' + Exercises.esc(uAvatar) + '">' : '<span class="cloud-avatar cloud-avatar-fallback">👤</span>') +
+        '<div><b>' + Exercises.esc(uName) + '</b><div class="muted" style="font-size:13px">' + Exercises.esc(u.email || '') + '</div></div></div>' +
         '<div class="muted" style="margin-top:8px">پیشرفتت با همین حساب گوگل ذخیره می‌شود — از هر دستگاهی وارد شوی، همین‌جا ادامه می‌دهی.</div>' +
         '<div class="btnrow" style="margin-top:8px"><button class="btn-ghost cloud-signout">خروج از حساب</button></div>';
     } else {
