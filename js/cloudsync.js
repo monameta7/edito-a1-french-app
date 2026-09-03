@@ -3,8 +3,8 @@
    قطعی اینترنت یا ad-blocker)، این بخش کاملاً غیرفعال می‌ماند و اپ دقیقاً مثل
    قبل (فقط localStorage روی همین مرورگر) کار می‌کند — بدون خطا. */
 var SUPABASE_CONFIG = {
-  url: 'PASTE_YOUR_SUPABASE_URL_HERE',
-  anonKey: 'PASTE_YOUR_SUPABASE_ANON_KEY_HERE'
+  url: 'https://mekjiwxaqmuoenpbtkse.supabase.co',
+  anonKey: 'sb_publishable_3bbIBGrEgZfHGkrQEfg1CA_SzfjaI4C'
 };
 
 var CloudSync = {
