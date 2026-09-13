@@ -1,262 +1,228 @@
-/* ===== واحد ۸: Bonnes vacances ! — تعطیلات خوش! ===== */
+/* ===== واحد ۸: En forme ! — سرحال! ===== */
 EDITO.units[8] = {
   id: 8,
-  title: 'Bonnes vacances !',
-  fa: 'تعطیلات خوش!',
-  theme: 'سفر، کشورها و حروف اضافه، فصل‌ها، و گذشته (passé composé با avoir)',
+  title: 'En forme !',
+  fa: 'سرحال!',
+  theme: 'بدن و سلامتی، نزد پزشک، ورزش، passé composé با être و avoir، ضمیر y، فعل boire و توصیه',
   culture: {
-    title: 'کوچ بزرگ تابستانی 🚗',
-    body: 'در ماه اوت (août)، بخش بزرگی از فرانسه به تعطیلات می‌روند و شهرهای بزرگ مثل پاریس نسبتاً خلوت می‌شوند، درحالی‌که جاده‌ها و مقاصد ساحلی شلوغ می‌شوند — به این پدیده «les grands départs» می‌گویند. DELF (که آزمون نهایی این اپ از آن الهام گرفته) مدرک رسمی زبان فرانسه است که توسط وزارت آموزش فرانسه صادر می‌شود و در سراسر دنیا معتبر است.'
+    title: 'داروخانه با علامت صلیب سبز ➕',
+    body: 'در فرانسه داروخانه‌ها (pharmacies) با یک علامت صلیب سبز چشمک‌زن مشخص می‌شوند و برای مشکلات جزئی می‌توانی مستقیم و بدون وقت قبلی با داروساز مشورت کنی. سیستم بیمه سلامت فرانسه (Sécurité sociale) بخش زیادی از هزینه پزشک و دارو را پوشش می‌دهد.'
   },
   lessons: [
     {
       id: 'u8l1',
-      title: 'Les destinations',
-      fa: 'مقصدها — کشورها و فصل‌ها',
+      title: 'Le corps et la santé',
+      fa: 'بدن و سلامتی',
       vocab: [
-        { fr: 'les vacances', ipa: 'vakɑ̃s', fa: 'تعطیلات', ex: 'Bonnes vacances !', exfa: 'تعطیلات خوش!' },
-        { fr: 'un voyage', ipa: 'vwajaʒ', fa: 'سفر', ex: 'Bon voyage !', exfa: 'سفر خوش!' },
-        { fr: 'la mer', ipa: 'mɛʁ', fa: 'دریا', ex: 'On va à la mer.', exfa: 'به دریا می‌رویم.' },
-        { fr: 'la montagne', ipa: 'mɔ̃taɲ', fa: 'کوه / کوهستان', ex: 'J\'adore la montagne.', exfa: 'عاشق کوهستانم.' },
-        { fr: 'la plage', ipa: 'plaʒ', fa: 'ساحل', ex: 'Une belle plage', exfa: 'یک ساحل زیبا' },
-        { fr: 'la campagne', ipa: 'kɑ̃paɲ', fa: 'روستا / ییلاق', ex: 'Un week-end à la campagne', exfa: 'یک آخر هفته در ییلاق' },
-        { fr: 'l\'été', ipa: 'ete', fa: 'تابستان', ex: 'En été, il fait chaud.', exfa: 'تابستان هوا گرم است.' },
-        { fr: 'l\'hiver', ipa: 'ivɛʁ', fa: 'زمستان', ex: 'En hiver, il fait froid.', exfa: 'زمستان هوا سرد است.' },
-        { fr: 'le printemps', ipa: 'pʁɛ̃tɑ̃', fa: 'بهار', ex: 'Au printemps', exfa: 'در بهار' },
-        { fr: 'l\'automne', ipa: 'otɔn', fa: 'پاییز', ex: 'En automne', exfa: 'در پاییز' },
-        { fr: 'l\'Italie', ipa: 'itali', fa: 'ایتالیا', ex: 'Je vais en Italie.', exfa: 'به ایتالیا می‌روم.' },
-        { fr: 'le Maroc', ipa: 'maʁɔk', fa: 'مراکش', ex: 'Il va au Maroc.', exfa: 'او به مراکش می‌رود.' },
-        { fr: 'les États-Unis', ipa: 'etazyni', fa: 'آمریکا', ex: 'Elle habite aux États-Unis.', exfa: 'او در آمریکا زندگی می‌کند.' },
-        { fr: 'un billet', ipa: 'bijɛ', fa: 'بلیت', ex: 'Un billet d\'avion', exfa: 'بلیت هواپیما' },
-        { fr: 'un avion', ipa: 'avjɔ̃', fa: 'هواپیما', ex: 'On voyage en avion.', exfa: 'با هواپیما سفر می‌کنیم.' },
-        { fr: 'une valise', ipa: 'valiz', fa: 'چمدان', ex: 'Je fais ma valise.', exfa: 'چمدانم را می‌بندم.' }
+        { fr: 'le corps', ipa: 'kɔʁ', fa: 'بدن', ex: 'Le corps humain', exfa: 'بدن انسان' },
+        { fr: 'la tête / le ventre', ipa: 'tɛt / vɑ̃tʁ', fa: 'سر / شکم', ex: 'J\'ai mal à la tête.', exfa: 'سرم درد می‌کند.' },
+        { fr: 'la gorge / le dos', ipa: 'ɡɔʁʒ / do', fa: 'گلو / کمر', ex: 'J\'ai mal à la gorge.', exfa: 'گلویم درد می‌کند.' },
+        { fr: 'la main / le pied / la jambe / le bras', ipa: 'mɛ̃ / pje / ʒɑ̃b / bʁa', fa: 'دست / پا / ساق پا / بازو', ex: 'J\'ai mal au pied.', exfa: 'پایم درد می‌کند.' },
+        { fr: 'malade', ipa: 'malad', fa: 'مریض', ex: 'Je suis malade.', exfa: 'مریضم.' },
+        { fr: 'la fièvre', ipa: 'fjɛvʁ', fa: 'تب', ex: 'Elle a de la fièvre.', exfa: 'تب دارد.' },
+        { fr: 'fatigué / fatiguée', ipa: 'fatiɡe', fa: 'خسته', ex: 'Je suis très fatiguée.', exfa: 'خیلی خسته‌ام.' },
+        { fr: 'tousser', ipa: 'tuse', fa: 'سرفه کردن', ex: 'Il tousse beaucoup.', exfa: 'زیاد سرفه می‌کند.' },
+        { fr: 'un rhume', ipa: 'ʁym', fa: 'سرماخوردگی', ex: 'J\'ai un rhume.', exfa: 'سرما خورده‌ام.' },
+        { fr: 'faire du sport', ipa: 'fɛʁ dy spɔʁ', fa: 'ورزش کردن', ex: 'Je fais du sport pour être en forme.', exfa: 'برای سرحال بودن ورزش می‌کنم.' }
       ],
       phrases: [
-        { fr: 'Où est-ce que tu pars en vacances ?', fa: 'تعطیلات کجا می‌روی؟' },
-        { fr: 'Je pars en Italie.', fa: 'به ایتالیا می‌روم.' },
-        { fr: 'Bon voyage !', fa: 'سفر خوش!' }
+        { fr: 'Qu\'est-ce qui ne va pas ?', fa: 'چی شده؟ (مشکل چیست؟)' },
+        { fr: 'J\'ai mal à...', fa: '... درد می‌کند' },
+        { fr: 'Je ne me sens pas bien.', fa: 'حالم خوب نیست.' },
+        { fr: 'Bon rétablissement !', fa: 'زود خوب شو! (شفای عاجل)' }
       ],
       grammar: {
-        title: 'Les prépositions + pays — en / au / aux',
-        body: 'حرف اضافه کشورها به جنسیت کشور بستگی دارد:<br>' +
-          '• کشور مؤنث (اکثراً ختم به e-) → <b>en</b>: en France، en Italie، en Iran*<br>' +
-          '• کشور مذکر → <b>au</b>: au Maroc، au Canada، au Japon<br>' +
-          '• کشور جمع → <b>aux</b>: aux États-Unis<br>' +
-          '• شهرها → <b>à</b>: à Paris، à Téhéran<br>' +
-          '*⚠️ Iran مذکر است ولی چون با صدادار شروع می‌شود en می‌گیرد: <b>en Iran</b>',
-        table: {
-          head: ['مقصد', 'حرف اضافه', 'مثال'],
-          rows: [
-            ['کشور مؤنث', 'en', 'en France'],
-            ['کشور با صدادار', 'en', 'en Iran'],
-            ['کشور مذکر', 'au', 'au Maroc'],
-            ['کشور جمع', 'aux', 'aux États-Unis'],
-            ['شهر', 'à', 'à Paris']
-          ]
-        },
+        title: 'Avoir mal à + عضو بدن',
+        body: 'برای گفتن درد از الگوی <b>avoir mal à + حرف تعریف + عضو</b> استفاده می‌کنیم. à با حرف تعریف ترکیب می‌شود:<br>' +
+          '• à + la = à la: J\'ai mal <b>à la</b> tête. (سردرد دارم)<br>' +
+          '• à + le = au: Il a mal <b>au</b> ventre. (دلش درد می‌کند)<br>' +
+          '• à + les = aux: Elle a mal <b>aux</b> pieds. (پاهایش درد می‌کند)<br>' +
+          '⚠️ برای اعضای بدن از صفت ملکی استفاده نمی‌کنیم: «سرم درد می‌کند» = J\'ai mal à la tête (نه ma tête!)',
         examples: [
-          { fr: 'Cet été, je vais en Iran, à Téhéran.', fa: 'این تابستان به ایران می‌روم، به تهران.' },
-          { fr: 'Ils partent au Canada en hiver.', fa: 'آنها زمستان به کانادا می‌روند.' }
+          { fr: 'J\'ai mal à la gorge et je tousse.', fa: 'گلودرد دارم و سرفه می‌کنم.' },
+          { fr: 'Après le sport, on a mal aux jambes.', fa: 'بعد از ورزش پاهایمان درد می‌کند.' }
         ]
       },
       phonetics: {
-        title: 'فصل‌ها — تلفظ',
-        body: 'به حرف اضافه فصل‌ها هم دقت کن: en été، en hiver، en automne ولی au printemps!',
+        title: 'اعضای بدن — تلفظ',
+        body: 'چند واژه با حروف بی‌صدا:',
         items: [
-          { fr: 'en été', ipa: 'ɑ̃n‿ete', fa: 'در تابستان' },
-          { fr: 'en hiver', ipa: 'ɑ̃n‿ivɛʁ', fa: 'در زمستان' },
-          { fr: 'au printemps', ipa: 'o pʁɛ̃tɑ̃', fa: 'در بهار' },
-          { fr: 'en automne', ipa: 'ɑ̃n‿otɔn', fa: 'در پاییز' }
+          { fr: 'le corps', ipa: 'kɔʁ', fa: 'ps آخر بی‌صدا' },
+          { fr: 'le dos', ipa: 'do', fa: 's آخر بی‌صدا' }
         ]
       },
       dialogue: {
-        title: 'Projets de vacances',
+        title: 'Ça ne va pas ?',
         lines: [
-          { s: 'Emma', fr: 'Où est-ce que tu pars cet été, Mona ?', fa: 'این تابستان کجا می‌روی مونا؟' },
-          { s: 'Mona', fr: 'Je vais en Iran, chez mes parents. Et après, une semaine en Italie !', fa: 'به ایران می‌روم، خانه والدینم. و بعدش، یک هفته ایتالیا!' },
-          { s: 'Emma', fr: 'Super ! Tu vas où en Italie ?', fa: 'عالی! کجای ایتالیا می‌روی؟' },
-          { s: 'Mona', fr: 'À Rome et à Venise. Et toi ?', fa: 'رم و ونیز. تو چی؟' },
-          { s: 'Emma', fr: 'Moi, je vais à la montagne avec ma famille. On adore la nature !', fa: 'من با خانواده به کوهستان می‌روم. عاشق طبیعتیم!' },
-          { s: 'Mona', fr: 'Bonnes vacances alors !', fa: 'پس تعطیلات خوش!' }
+          { s: 'Karim', fr: 'Ça va, Mona ? Tu as l\'air fatiguée.', fa: 'خوبی مونا؟ خسته به نظر می‌رسی.' },
+          { s: 'Mona', fr: 'Non, ça ne va pas. J\'ai mal à la tête et à la gorge.', fa: 'نه، خوب نیستم. سردرد و گلودرد دارم.' },
+          { s: 'Karim', fr: 'Tu as de la fièvre ?', fa: 'تب داری؟' },
+          { s: 'Mona', fr: 'Oui, un peu. Et je tousse beaucoup.', fa: 'آره، کمی. و زیاد سرفه می‌کنم.' },
+          { s: 'Karim', fr: 'C\'est un rhume. Il faut aller chez le médecin !', fa: 'سرماخوردگی است. باید بروی دکتر!' }
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'کشورها و سفر', level: 'medium', fa: 'حرف اضافه درست (en/au/aux/à):', q: 'Je vais ___ France.', answer: ['en'] },
-        { type: 'fill', skill: 'GR', topic: 'کشورها و سفر', level: 'medium', fa: 'حرف اضافه درست:', q: 'Il part ___ Maroc.', answer: ['au'] },
-        { type: 'fill', skill: 'GR', topic: 'کشورها و سفر', level: 'medium', fa: 'حرف اضافه درست:', q: 'Elle habite ___ États-Unis.', answer: ['aux'] },
-        { type: 'mcq', skill: 'GR', topic: 'کشورها و سفر', level: 'easy', q: '«به تهران می‌روم» به فرانسه:', options: ['Je vais à Téhéran.', 'Je vais en Téhéran.', 'Je vais au Téhéran.', 'Je vais Téhéran.'], correct: 0, explain: 'شهرها با à می‌آیند.' },
-        { type: 'match', skill: 'VO', topic: 'فصل‌ها', level: 'easy', fa: 'فصل‌ها را جور کن:', pairs: [['l\'été', 'تابستان'], ['l\'hiver', 'زمستان'], ['le printemps', 'بهار'], ['l\'automne', 'پاییز']] },
-        { type: 'mcq', skill: 'CO', topic: 'کشورها و سفر', level: 'easy', q: '🎧 گوش کن — او کجا می‌رود؟', audio: 'Cet été, je pars en Espagne, à Barcelone, avec deux amies.', audioFa: 'این تابستان با دو دوستم به اسپانیا، بارسلون می‌روم.', options: ['اسپانیا، بارسلون', 'ایتالیا، رم', 'فرانسه، پاریس', 'مراکش'], correct: 0, frOptions: false },
-        { type: 'dictation', skill: 'CO', topic: 'کشورها و سفر', level: 'hard', text: 'Je fais ma valise pour le voyage.', trans: 'چمدانم را برای سفر می‌بندم.' },
-        { type: 'order', skill: 'GR', topic: 'کشورها و سفر', level: 'medium', answer: 'On va à la mer en été.', fa: 'جمله «تابستان به دریا می‌رویم» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'کشورها و سفر', level: 'medium', text: 'Cet été, je vais en Iran et après en France.', fa: 'برنامه سفرت را بگو' },
-        { type: 'write', skill: 'PE', topic: 'کشورها و سفر', level: 'hard', prompt: 'برنامه تعطیلات بعدی‌ات را بنویس: کجا، کِی، با کی، چطور؟ (۳-۴ جمله)', min: 12, sample: 'Cet été, je vais en Turquie avec ma famille. On part en avion au mois de juillet. On va à la mer et on visite Istanbul. J\'adore voyager !' }
+        { type: 'fill', skill: 'GR', topic: 'بدن و سلامتی', level: 'hard', fa: 'à la / au / aux :', q: 'J\'ai mal ___ tête.', answer: ['à la', 'a la'] },
+        { type: 'fill', skill: 'GR', topic: 'بدن و سلامتی', level: 'hard', fa: 'à la / au / aux :', q: 'Il a mal ___ ventre.', answer: ['au'] },
+        { type: 'fill', skill: 'GR', topic: 'بدن و سلامتی', level: 'hard', fa: 'à la / au / aux :', q: 'Elle a mal ___ pieds.', answer: ['aux'] },
+        { type: 'match', skill: 'VO', topic: 'بدن و سلامتی', level: 'medium', fa: 'اعضای بدن را جور کن:', pairs: [['la tête', 'سر'], ['le dos', 'کمر'], ['la main', 'دست'], ['la jambe', 'ساق پا'], ['la gorge', 'گلو']] },
+        { type: 'mcq', skill: 'CO', topic: 'بدن و سلامتی', level: 'medium', q: '🎧 گوش کن — مشکل او چیست؟', audio: 'Je ne me sens pas bien. J\'ai mal au ventre depuis hier soir.', audioFa: 'حالم خوب نیست. از دیشب دلم درد می‌کند.', options: ['از دیشب دلش درد می‌کند', 'سردرد دارد', 'پایش شکسته', 'سرما خورده'], correct: 0, frOptions: false },
+        { type: 'dictation', skill: 'CO', topic: 'بدن و سلامتی', level: 'hard', text: 'J\'ai mal à la gorge et j\'ai de la fièvre.', trans: 'گلودرد دارم و تب دارم.' },
+        { type: 'order', skill: 'GR', topic: 'بدن و سلامتی', level: 'hard', answer: 'Je ne me sens pas bien.', fa: 'جمله «حالم خوب نیست» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'بدن و سلامتی', level: 'hard', text: 'Je suis malade. J\'ai mal à la tête et je tousse.', fa: 'مریضم. سردرد دارم و سرفه می‌کنم.' },
+        { type: 'write', skill: 'PE', topic: 'بدن و سلامتی', level: 'hard', prompt: 'پیامی به همکارت بنویس: مریضی و امروز نمی‌آیی. (۲-۳ جمله)', min: 10, sample: 'Bonjour Julie, je suis malade aujourd\'hui. J\'ai de la fièvre et j\'ai mal à la gorge. Je ne peux pas venir au bureau, désolée.' }
       ]
     },
     {
       id: 'u8l2',
-      title: 'Raconter au passé',
-      fa: 'تعریف کردن گذشته — passé composé',
+      title: 'Chez le médecin',
+      fa: 'نزد پزشک',
       vocab: [
-        { fr: 'hier', ipa: 'jɛʁ', fa: 'دیروز', ex: 'Hier, j\'ai travaillé.', exfa: 'دیروز کار کردم.' },
-        { fr: 'la semaine dernière', ipa: 'səmɛn dɛʁnjɛʁ', fa: 'هفته پیش', ex: 'La semaine dernière, j\'ai voyagé.', exfa: 'هفته پیش سفر کردم.' },
-        { fr: 'l\'année dernière', ipa: 'ane dɛʁnjɛʁ', fa: 'پارسال', ex: 'L\'année dernière, on a visité Rome.', exfa: 'پارسال رم را دیدیم.' },
-        { fr: 'visiter', ipa: 'vizite', fa: 'بازدید کردن', ex: 'J\'ai visité le musée.', exfa: 'از موزه بازدید کردم.' },
-        { fr: 'un monument', ipa: 'mɔnymɑ̃', fa: 'بنای تاریخی', ex: 'La tour Eiffel est un monument.', exfa: 'برج ایفل یک بناست.' },
-        { fr: 'une photo', ipa: 'fɔto', fa: 'عکس', ex: 'J\'ai pris des photos.', exfa: 'عکس گرفتم.' },
-        { fr: 'un souvenir', ipa: 'suvniʁ', fa: 'خاطره / سوغاتی', ex: 'Un bon souvenir', exfa: 'یک خاطره خوب' },
-        { fr: 'rencontrer', ipa: 'ʁɑ̃kɔ̃tʁe', fa: 'ملاقات کردن / آشنا شدن', ex: 'J\'ai rencontré des gens sympas.', exfa: 'با آدم‌های خوبی آشنا شدم.' },
-        { fr: 'goûter', ipa: 'ɡute', fa: 'چشیدن', ex: 'On a goûté la cuisine locale.', exfa: 'غذای محلی را چشیدیم.' },
-        { fr: 'acheter des souvenirs', ipa: '', fa: 'سوغاتی خریدن', ex: 'J\'ai acheté des souvenirs.', exfa: 'سوغاتی خریدم.' },
-        { fr: 'formidable', ipa: 'fɔʁmidabl', fa: 'فوق‌العاده', ex: 'C\'était formidable !', exfa: 'فوق‌العاده بود!' },
-        { fr: 'passer (du temps)', ipa: 'pɑse', fa: 'گذراندن', ex: 'On a passé une semaine à Rome.', exfa: 'یک هفته در رم گذراندیم.' }
+        { fr: 'un médecin / un docteur', ipa: 'medsɛ̃ / dɔktœʁ', fa: 'پزشک / دکتر', ex: 'Je vais chez le médecin.', exfa: 'می‌روم دکتر.' },
+        { fr: 'une ordonnance', ipa: 'ɔʁdɔnɑ̃s', fa: 'نسخه', ex: 'Voilà votre ordonnance.', exfa: 'بفرمایید نسخه‌تان.' },
+        { fr: 'un médicament / un comprimé', ipa: 'medikamɑ̃ / kɔ̃pʁime', fa: 'دارو / قرص', ex: 'Un comprimé matin et soir', exfa: 'یک قرص صبح و شب' },
+        { fr: 'boire', ipa: 'bwaʁ', fa: 'نوشیدن', ex: 'Buvez beaucoup d\'eau.', exfa: 'آب زیاد بنوشید.' },
+        { fr: 'se reposer / dormir', ipa: 'sə ʁəpoze / dɔʁmiʁ', fa: 'استراحت کردن / خوابیدن', ex: 'Il faut vous reposer.', exfa: 'باید استراحت کنید.' },
+        { fr: 'la grippe', ipa: 'ɡʁip', fa: 'آنفولانزا', ex: 'Vous avez la grippe.', exfa: 'آنفولانزا دارید.' },
+        { fr: 'grave', ipa: 'ɡʁav', fa: 'جدی / وخیم', ex: 'Ce n\'est pas grave.', exfa: 'جدی نیست.' },
+        { fr: 'aller mieux', ipa: 'ale mjø', fa: 'بهتر شدن', ex: 'Je vais mieux, merci.', exfa: 'بهترم، ممنون.' },
+        { fr: 'éviter', ipa: 'evite', fa: 'پرهیز کردن', ex: 'Évitez le sport cette semaine.', exfa: 'این هفته از ورزش پرهیز کنید.' },
+        { fr: 'un conseil', ipa: 'kɔ̃sɛj', fa: 'توصیه', ex: 'Un bon conseil', exfa: 'یک توصیه خوب' }
       ],
       phrases: [
-        { fr: 'Qu\'est-ce que tu as fait hier ?', fa: 'دیروز چه‌کار کردی؟' },
-        { fr: 'C\'était comment ?', fa: 'چطور بود؟' },
-        { fr: 'C\'était super / formidable !', fa: 'عالی / فوق‌العاده بود!' },
-        { fr: 'J\'ai passé de bonnes vacances.', fa: 'تعطیلات خوبی گذراندم.' }
+        { fr: 'Je voudrais prendre rendez-vous.', fa: 'می‌خواهم وقت بگیرم.' },
+        { fr: 'Où avez-vous mal ?', fa: 'کجایتان درد می‌کند؟' },
+        { fr: 'Prenez ce médicament trois fois par jour.', fa: 'این دارو را روزی سه بار بخورید.' }
       ],
       grammar: {
-        title: 'Le passé composé avec « avoir »',
-        body: 'زمان گذشته اصلی فرانسه است — معادل ماضی ساده/نقلی فارسی:<br>' +
-          '<b>avoir (حال) + participe passé (اسم مفعول)</b><br>' +
-          'ساخت اسم مفعول:<br>' +
-          '• فعل‌های -er → <b>é</b>: travailler → travaill<b>é</b>، visiter → visit<b>é</b><br>' +
-          '• فعل‌های -ir → <b>i</b>: finir → fin<b>i</b>، choisir → chois<b>i</b><br>' +
-          '• بی‌قاعده‌های مهم: faire → <b>fait</b>، prendre → <b>pris</b>، voir → <b>vu</b>، boire → <b>bu</b>، avoir → <b>eu</b>، être → <b>été</b>',
+        title: 'Les conseils — il faut / devoir / impératif + le verbe « boire »',
+        body: 'سه راه برای توصیه و دستور:<br>' +
+          '۱) <b>il faut + مصدر</b>: Il faut dormir.<br>' +
+          '۲) <b>devoir + مصدر</b>: Vous devez vous reposer.<br>' +
+          '۳) <b>امری</b>: Buvez de l\'eau ! Reposez-vous !<br><br>' +
+          'فعل <b>boire</b> (نوشیدن) بی‌قاعده است:',
         table: {
-          head: ['حال', 'گذشته (passé composé)'],
+          head: ['ضمیر', 'boire — نوشیدن'],
           rows: [
-            ['je visite', 'j\'ai visité'],
-            ['tu manges', 'tu as mangé'],
-            ['il fait', 'il a fait'],
-            ['nous prenons', 'nous avons pris'],
-            ['vous voyez', 'vous avez vu'],
-            ['ils choisissent', 'ils ont choisi']
+            ['je', 'bois'], ['tu', 'bois'], ['il / elle', 'boit'],
+            ['nous', 'buvons'], ['vous', 'buvez'], ['ils / elles', 'boivent']
           ]
         },
         examples: [
-          { fr: 'Hier, j\'ai visité le Louvre et j\'ai pris des photos.', fa: 'دیروز از لوور بازدید کردم و عکس گرفتم.' },
-          { fr: 'On a mangé dans un petit restaurant.', fa: 'در یک رستوران کوچک غذا خوردیم.' },
-          { fr: 'Tu as fait quoi ce week-end ?', fa: 'این آخر هفته چه‌کار کردی؟' }
+          { fr: 'Il faut rester à la maison et vous reposer.', fa: 'باید خانه بمانید و استراحت کنید.' },
+          { fr: 'Buvez beaucoup d\'eau et reposez-vous !', fa: 'آب زیاد بنوشید و استراحت کنید!' }
         ]
       },
       phonetics: {
-        title: 'é در اسم مفعول',
-        body: 'پایانه é با صدای [e] بسته — کوتاه و واضح:',
+        title: 'آوای [ɡʁ] و [kʁ]',
+        body: 'خوشه‌های صامت با r:',
         items: [
-          { fr: 'j\'ai visité', ipa: 'ʒe vizite', fa: 'بازدید کردم' },
-          { fr: 'j\'ai mangé', ipa: 'ʒe mɑ̃ʒe', fa: 'خوردم' },
-          { fr: 'j\'ai travaillé', ipa: 'ʒe tʁavaje', fa: 'کار کردم' },
-          { fr: 'on a goûté', ipa: 'ɔ̃n‿a ɡute', fa: 'چشیدیم' }
+          { fr: 'la grippe', ipa: 'ɡʁip', fa: 'آنفولانزا' },
+          { fr: 'un comprimé', ipa: 'kɔ̃pʁime', fa: 'قرص' }
         ]
       },
       dialogue: {
-        title: 'Le retour de voyage',
+        title: 'La consultation',
         lines: [
-          { s: 'Karim', fr: 'Alors Mona, tes vacances en Italie ? C\'était comment ?', fa: 'خب مونا، تعطیلات ایتالیا؟ چطور بود؟' },
-          { s: 'Mona', fr: 'Formidable ! On a passé une semaine à Rome.', fa: 'فوق‌العاده! یک هفته در رم گذراندیم.' },
-          { s: 'Karim', fr: 'Qu\'est-ce que vous avez fait ?', fa: 'چه‌کارها کردید؟' },
-          { s: 'Mona', fr: 'On a visité le Colisée, on a pris beaucoup de photos...', fa: 'کولوسئوم را دیدیم، کلی عکس گرفتیم...' },
-          { s: 'Karim', fr: 'Et la cuisine italienne ?', fa: 'و غذای ایتالیایی؟' },
-          { s: 'Mona', fr: 'On a goûté les pâtes et les glaces. J\'ai adoré ! Et j\'ai acheté des souvenirs pour toi !', fa: 'پاستا و بستنی خوردیم. عاشقش شدم! برایت سوغاتی هم خریدم!' }
+          { s: 'Médecin', fr: 'Bonjour ! Alors, qu\'est-ce qui ne va pas ?', fa: 'سلام! خب، چی شده؟' },
+          { s: 'Mona', fr: 'J\'ai mal à la tête et à la gorge, et je tousse.', fa: 'سردرد و گلودرد دارم و سرفه می‌کنم.' },
+          { s: 'Médecin', fr: 'C\'est la grippe, mais ce n\'est pas grave. Voilà une ordonnance.', fa: 'آنفولانزاست، ولی جدی نیست. بفرمایید نسخه.' },
+          { s: 'Mona', fr: 'Merci docteur. Un conseil ?', fa: 'ممنون دکتر. توصیه‌ای هست؟' },
+          { s: 'Médecin', fr: 'Buvez beaucoup d\'eau, dormez bien et reposez-vous !', fa: 'آب زیاد بنوشید، خوب بخوابید و استراحت کنید!' }
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'passé composé بساز:', q: 'Hier, j\'___ visité le musée.', answer: ['ai'] },
-        { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'اسم مفعول manger:', q: 'Nous avons ___ au restaurant. (manger)', answer: ['mangé', 'mange'] },
-        { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'اسم مفعول بی‌قاعده faire:', q: 'Qu\'est-ce que tu as ___ hier ? (faire)', answer: ['fait'] },
-        { type: 'mcq', skill: 'GR', topic: 'passé composé', level: 'easy', q: '«عکس گرفتم» به فرانسه:', options: ['J\'ai pris des photos.', 'J\'ai prendre des photos.', 'Je pris des photos.', 'J\'ai prendé des photos.'], correct: 0, explain: 'prendre بی‌قاعده است: pris.' },
-        { type: 'mcq', skill: 'CO', topic: 'passé composé', level: 'easy', q: '🎧 گوش کن — او دیروز چه کرد؟', audio: 'Hier, j\'ai travaillé le matin et l\'après-midi, j\'ai fait du sport.', audioFa: 'دیروز صبح کار کردم و بعدازظهر ورزش کردم.', options: ['کار و ورزش', 'سفر و خرید', 'فیلم و رستوران', 'هیچی'], correct: 0, frOptions: false },
-        { type: 'match', skill: 'GR', topic: 'passé composé', level: 'easy', fa: 'اسم مفعول‌ها را جور کن:', pairs: [['voir', 'vu'], ['boire', 'bu'], ['prendre', 'pris'], ['faire', 'fait']] },
-        { type: 'dictation', skill: 'CO', topic: 'passé composé', level: 'hard', text: 'On a visité un monument magnifique.', trans: 'از یک بنای فوق‌العاده بازدید کردیم.' },
-        { type: 'order', skill: 'GR', topic: 'passé composé', level: 'medium', answer: 'J\'ai acheté des souvenirs pour ma famille.', fa: 'جمله «برای خانواده‌ام سوغاتی خریدم» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'passé composé', level: 'medium', text: 'Hier, j\'ai visité le musée et j\'ai pris des photos.', fa: 'دیروزت را تعریف کن' },
-        { type: 'write', skill: 'PE', topic: 'passé composé', level: 'hard', prompt: 'دیروزت را تعریف کن: سه کاری که انجام دادی. (۳ جمله در گذشته)', min: 10, sample: 'Hier, j\'ai travaillé jusqu\'à cinq heures. Le soir, j\'ai regardé un film français. Et j\'ai étudié mon français !' }
+        { type: 'mcq', skill: 'CO', topic: 'نزد پزشک', level: 'medium', q: '🎧 گوش کن — دارو را چند بار در روز باید بخورد؟', audio: 'Prenez ce médicament deux fois par jour, matin et soir.', audioFa: 'این دارو را روزی دو بار، صبح و شب بخورید.', options: ['دو بار', 'سه بار', 'یک بار', 'چهار بار'], correct: 0, frOptions: false },
+        { type: 'fill', skill: 'GR', topic: 'فعل boire', level: 'hard', fa: 'boire را صرف کن:', q: 'Vous ___ beaucoup d\'eau.', answer: ['buvez'] },
+        { type: 'fill', skill: 'GR', topic: 'توصیه و دستور', level: 'hard', fa: 'devoir را صرف کن:', q: 'Vous ___ vous reposer.', answer: ['devez'] },
+        { type: 'match', skill: 'VO', topic: 'نزد پزشک', level: 'medium', fa: 'جور کن:', pairs: [['une ordonnance', 'نسخه'], ['un comprimé', 'قرص'], ['la grippe', 'آنفولانزا'], ['un conseil', 'توصیه']] },
+        { type: 'dictation', skill: 'CO', topic: 'نزد پزشک', level: 'hard', text: 'Buvez beaucoup d\'eau et reposez-vous.', trans: 'آب زیاد بنوشید و استراحت کنید.' },
+        { type: 'order', skill: 'GR', topic: 'توصیه و دستور', level: 'hard', answer: 'Il faut rester à la maison.', fa: 'جمله «باید خانه بمانید» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'نزد پزشک', level: 'hard', text: 'Bonjour docteur. J\'ai mal au ventre depuis deux jours.', fa: 'به دکتر توضیح بده' },
+        { type: 'write', skill: 'PE', topic: 'توصیه و دستور', level: 'hard', prompt: 'دوستت سرما خورده. سه توصیه به او بنویس (با il faut / devoir / امری).', min: 10, sample: 'Ma pauvre ! Il faut te reposer. Tu dois boire beaucoup d\'eau. Dors bien ! Bon rétablissement !' }
       ]
     },
     {
       id: 'u8l3',
-      title: 'Le récit de voyage',
-      fa: 'سفرنامه — منفی گذشته و سؤال',
+      title: 'Qu\'est-ce qui s\'est passé ?',
+      fa: 'چه اتفاقی افتاد؟ — passé composé با être و ضمیر y',
       vocab: [
-        { fr: 'partir', ipa: 'paʁtiʁ', fa: 'رفتن / عزیمت کردن', ex: 'Je pars demain matin.', exfa: 'فردا صبح می‌روم.' },
-        { fr: 'un aéroport', ipa: 'aeʁɔpɔʁ', fa: 'فرودگاه', ex: 'On va à l\'aéroport.', exfa: 'به فرودگاه می‌رویم.' },
-        { fr: 'réserver', ipa: 'ʁezɛʁve', fa: 'رزرو کردن', ex: 'J\'ai réservé l\'hôtel.', exfa: 'هتل را رزرو کردم.' },
-        { fr: 'perdre', ipa: 'pɛʁdʁ', fa: 'گم کردن', ex: 'J\'ai perdu mon passeport !', exfa: 'پاسپورتم را گم کردم!' },
-        { fr: 'un passeport', ipa: 'pɑspɔʁ', fa: 'پاسپورت', ex: 'Votre passeport, s\'il vous plaît.', exfa: 'پاسپورت‌تان، لطفاً.' },
-        { fr: 'oublier', ipa: 'ublije', fa: 'فراموش کردن', ex: 'J\'ai oublié mon billet.', exfa: 'بلیتم را فراموش کردم.' },
-        { fr: 'attendre', ipa: 'atɑ̃dʁ', fa: 'منتظر ماندن', ex: 'On a attendu deux heures.', exfa: 'دو ساعت منتظر ماندیم.' },
-        { fr: 'en retard', ipa: 'ɑ̃ ʁətaʁ', fa: 'دیر / با تأخیر', ex: 'Le train est en retard.', exfa: 'قطار تأخیر دارد.' },
-        { fr: 'trouver', ipa: 'tʁuve', fa: 'پیدا کردن', ex: 'J\'ai trouvé un bon hôtel.', exfa: 'یک هتل خوب پیدا کردم.' },
-        { fr: 'déjà', ipa: 'deʒa', fa: 'قبلاً / تا حالا', ex: 'Tu as déjà visité Paris ?', exfa: 'تا حالا پاریس رفته‌ای؟' },
-        { fr: 'ne... jamais', ipa: 'ʒamɛ', fa: 'هرگز', ex: 'Je n\'ai jamais visité Rome.', exfa: 'هرگز رم نرفته‌ام.' },
-        { fr: 'heureusement', ipa: 'øʁøzmɑ̃', fa: 'خوشبختانه', ex: 'Heureusement, j\'ai trouvé mon sac !', exfa: 'خوشبختانه کیفم را پیدا کردم!' }
+        { fr: 'tomber', ipa: 'tɔ̃be', fa: 'افتادن', ex: 'Je suis tombé dans la rue.', exfa: 'در خیابان افتادم.' },
+        { fr: 'un accident', ipa: 'aksidɑ̃', fa: 'تصادف / حادثه', ex: 'Il a eu un accident.', exfa: 'تصادف کرد.' },
+        { fr: 'l\'hôpital', ipa: 'opital', fa: 'بیمارستان', ex: 'Elle est allée à l\'hôpital.', exfa: 'به بیمارستان رفت.' },
+        { fr: 'se casser', ipa: 'sə kɑse', fa: 'شکستن (عضو بدن)', ex: 'Il s\'est cassé la jambe.', exfa: 'پایش شکست.' },
+        { fr: 'glisser', ipa: 'ɡlise', fa: 'لیز خوردن', ex: 'J\'ai glissé dans l\'escalier.', exfa: 'در پله‌ها لیز خوردم.' },
+        { fr: 'la salle de sport', ipa: 'sal də spɔʁ', fa: 'باشگاه ورزشی', ex: 'Je vais à la salle de sport.', exfa: 'به باشگاه می‌روم.' },
+        { fr: 'pas de chance !', ipa: 'pa də ʃɑ̃s', fa: 'بدشانسی!', ex: 'Oh, pas de chance !', exfa: 'اوه، بدشانسی!' }
       ],
       phrases: [
-        { fr: 'Tu as déjà visité... ?', fa: 'تا حالا ... رفته‌ای؟' },
-        { fr: 'Non, jamais. / Oui, une fois.', fa: 'نه، هرگز. / آره، یک بار.' },
-        { fr: 'Quelle aventure !', fa: 'عجب ماجرایی!' }
+        { fr: 'Qu\'est-ce qui s\'est passé ?', fa: 'چه اتفاقی افتاد؟' },
+        { fr: 'Ce n\'est rien.', fa: 'چیزی نیست.' },
+        { fr: 'Tu vas à la salle de sport ? — J\'y vais deux fois par semaine.', fa: 'به باشگاه می‌روی؟ — هفته‌ای دو بار می‌روم.' }
       ],
       grammar: {
-        title: 'La négation au passé composé + déjà / jamais',
-        body: 'در منفیِ گذشته، <b>ne...pas دور فعل کمکی avoir</b> می‌آید نه دور اسم مفعول:<br>' +
-          '• Je <b>n\'ai pas</b> visité Rome. (رم را ندیده‌ام)<br>' +
-          '• On <b>n\'a pas</b> trouvé l\'hôtel. (هتل را پیدا نکردیم)<br><br>' +
-          '• <b>déjà</b> (قبلاً/تا حالا): Tu as <b>déjà</b> visité Paris ?<br>' +
-          '• <b>ne... jamais</b> (هرگز): Je n\'ai <b>jamais</b> voyagé en avion.',
+        title: 'Le passé composé avec « être » + le pronom « y »',
+        body: 'حدود ۱۵ فعلِ حرکت/تغییر حالت، گذشته‌شان را با <b>être</b> می‌سازند نه avoir: <b>aller، venir، arriver، partir، tomber، rester، rentrer، naître</b> + همه فعل‌های انعکاسی.<br>' +
+          '⚠️ با être، اسم مفعول با فاعل <b>مطابقت</b> می‌کند: Il est allé / Elle est allé<b>e</b> / Ils sont allé<b>s</b><br><br>' +
+          'ضمیر <b>y</b> جای «به آنجا / در آنجا» را می‌گیرد: Tu vas <s>à la salle de sport</s> ? → J\'<b>y</b> vais.',
+        table: {
+          head: ['فاعل', 'مثال', 'معنی'],
+          rows: [
+            ['il', 'Il est tombé.', 'او افتاد'],
+            ['elle', 'Elle est tombée.', 'او افتاد (زن)'],
+            ['فعل انعکاسی', 'Elle s\'est cassé la jambe.', 'پایش شکست']
+          ]
+        },
         examples: [
-          { fr: 'Je n\'ai pas pris de photos.', fa: 'عکس نگرفتم.' },
-          { fr: 'Vous avez déjà goûté la cuisine iranienne ? — Non, jamais !', fa: 'تا حالا غذای ایرانی خورده‌اید؟ — نه، هرگز!' }
+          { fr: 'Il est tombé et il est allé à l\'hôpital.', fa: 'افتاد و به بیمارستان رفت.' },
+          { fr: 'Tu vas à l\'hôpital ? — Oui, j\'y vais maintenant.', fa: 'به بیمارستان می‌روی؟ — آره، الان آنجا می‌روم.' }
         ]
       },
       phonetics: {
-        title: 'گفتار سریع — j\'ai / je n\'ai pas',
-        body: 'در گفتار روزمره این‌ها خیلی سریع ادا می‌شوند:',
+        title: 'است یا دارد؟ — est / a',
+        body: 'در شنیدن گذشته، دقت کن فعل کمکی être است یا avoir:',
         items: [
-          { fr: 'j\'ai visité', ipa: 'ʒe', fa: '«ژه ویزیته»' },
-          { fr: 'je n\'ai pas visité', ipa: 'ʒənepa', fa: '«ژُنِپا ویزیته»' },
-          { fr: 'on n\'a pas trouvé', ipa: 'ɔ̃napa', fa: '«اُناپا تروُوه»' }
+          { fr: 'il est allé', ipa: 'il ɛ‿tale', fa: 'رفت (être)' },
+          { fr: 'il a mangé', ipa: 'il a mɑ̃ʒe', fa: 'خورد (avoir)' }
         ]
       },
       dialogue: {
-        title: 'Une aventure à l\'aéroport',
+        title: 'L\'accident de vélo',
         lines: [
-          { s: 'Sara', fr: 'Alors, ton voyage ? Tout s\'est bien passé ?', fa: 'خب، سفرت؟ همه‌چیز خوب پیش رفت؟' },
-          { s: 'Mona', fr: 'Non, quelle aventure ! D\'abord, le taxi est arrivé en retard.', fa: 'نه، عجب ماجرایی! اول تاکسی دیر رسید.' },
-          { s: 'Sara', fr: 'Oh non !', fa: 'وای نه!' },
-          { s: 'Mona', fr: 'Et à l\'aéroport, j\'ai perdu mon passeport ! J\'ai cherché partout...', fa: 'و در فرودگاه پاسپورتم را گم کردم! همه‌جا را گشتم...' },
-          { s: 'Sara', fr: 'Et alors ?', fa: 'خب بعدش؟' },
-          { s: 'Mona', fr: 'Heureusement, une dame a trouvé mon passeport ! Mais je n\'ai pas mangé, je n\'ai pas bu... quel stress !', fa: 'خوشبختانه یک خانم پاسپورتم را پیدا کرد! ولی نه چیزی خوردم، نه نوشیدم... عجب استرسی!' }
+          { s: 'Sara', fr: 'Karim ! Qu\'est-ce qui s\'est passé ? Ton bras !', fa: 'کریم! چه اتفاقی افتاد؟ دستت!' },
+          { s: 'Karim', fr: 'Je suis tombé de vélo hier soir. Je suis allé à l\'hôpital.', fa: 'دیشب از دوچرخه افتادم. رفتم بیمارستان.' },
+          { s: 'Sara', fr: 'C\'est grave ?', fa: 'جدی است؟' },
+          { s: 'Karim', fr: 'Non, ce n\'est rien. Mais je vais éviter la salle de sport cette semaine !', fa: 'نه، چیزی نیست. ولی این هفته از باشگاه پرهیز می‌کنم!' },
+          { s: 'Sara', fr: 'Tu y vas d\'habitude tous les jours, non ?', fa: 'معمولاً هر روز آنجا می‌روی، نه؟' },
+          { s: 'Karim', fr: 'Oui, mais pas cette semaine. Pas de chance !', fa: 'آره، ولی این هفته نه. بدشانسی!' }
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'منفی کن:', q: 'Je ___ ai pas visité le musée.', answer: ["n'", 'n'], explain: 'ne قبل از صدادار به \'n تبدیل می‌شود.' },
-        { type: 'mcq', skill: 'GR', topic: 'passé composé', level: 'easy', q: 'منفیِ «On a trouvé l\'hôtel»:', options: ['On n\'a pas trouvé l\'hôtel.', 'On a pas ne trouvé l\'hôtel.', 'On a trouvé pas l\'hôtel.', 'On ne trouvé pas l\'hôtel.'], correct: 0 },
-        { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: '«هرگز» را اضافه کن:', q: 'Je n\'ai ___ voyagé en avion.', answer: ['jamais'] },
-        { type: 'mcq', skill: 'CO', topic: 'سفر و ماجرا', level: 'easy', q: '🎧 گوش کن — چه مشکلی پیش آمد؟', audio: 'À la gare, j\'ai oublié ma valise dans le train ! Heureusement, un employé a trouvé ma valise.', audioFa: 'در ایستگاه، چمدانم را در قطار جا گذاشتم! خوشبختانه یک کارمند چمدانم را پیدا کرد.', options: ['چمدانش را در قطار جا گذاشت', 'بلیتش را گم کرد', 'قطار تأخیر داشت', 'پاسپورتش را گم کرد'], correct: 0, frOptions: false },
-        { type: 'match', skill: 'VO', topic: 'سفر و ماجرا', level: 'easy', fa: 'جور کن:', pairs: [['perdre', 'گم کردن'], ['oublier', 'فراموش کردن'], ['attendre', 'منتظر ماندن'], ['réserver', 'رزرو کردن']] },
-        { type: 'dictation', skill: 'CO', topic: 'passé composé', level: 'hard', text: 'J\'ai perdu mon billet à l\'aéroport.', trans: 'بلیتم را در فرودگاه گم کردم.' },
-        { type: 'order', skill: 'GR', topic: 'passé composé', level: 'medium', answer: 'Tu as déjà visité la France ?', fa: 'سؤال «تا حالا فرانسه رفته‌ای؟» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'سفر و ماجرا', level: 'medium', text: 'Je n\'ai jamais visité Paris, mais je veux y aller !', fa: 'هرگز پاریس نرفته‌ام، ولی می‌خواهم بروم!' },
-        { type: 'write', skill: 'PE', topic: 'passé composé', level: 'hard', prompt: 'یک سفر واقعی‌ات را تعریف کن: کجا رفتی، چه کردی، یک اتفاق جالب. (۴ جمله در گذشته)', min: 14, sample: 'L\'année dernière, j\'ai voyagé à Ispahan avec mes amis. On a visité les monuments et on a pris beaucoup de photos. J\'ai goûté des plats traditionnels. Mais j\'ai perdu mon téléphone ! Heureusement, un homme sympa a trouvé mon téléphone.' }
+        { type: 'mcq', skill: 'GR', topic: 'passé composé با être', level: 'medium', q: 'کدام فعل با être صرف می‌شود؟', options: ['tomber', 'manger', 'visiter', 'boire'], correct: 0, explain: 'فعل‌های حرکت (aller، tomber...) با être می‌آیند.' },
+        { type: 'fill', skill: 'GR', topic: 'passé composé با être', level: 'hard', fa: 'être یا avoir؟', q: 'Hier, elle ___ allée au cinéma.', answer: ['est'] },
+        { type: 'fill', skill: 'GR', topic: 'ضمیر y', level: 'hard', fa: 'با y جواب بده:', q: 'Tu vas à l\'hôpital ? → Oui, j\'___ vais.', answer: ['y'] },
+        { type: 'mcq', skill: 'CO', topic: 'حوادث', level: 'medium', q: '🎧 گوش کن — چه اتفاقی افتاد؟', audio: 'Ce matin, je suis tombée dans l\'escalier et je me suis cassé le bras.', audioFa: 'امروز صبح در پله‌ها افتادم و دستم شکست.', options: ['از پله افتاد و دستش شکست', 'تصادف ماشین کرد', 'سرما خورد', 'پایش لیز خورد ولی چیزی نشد'], correct: 0, frOptions: false },
+        { type: 'match', skill: 'GR', topic: 'passé composé با être', level: 'medium', fa: 'جور کن (کدام با کدام؟):', pairs: [['aller', 'être'], ['tomber', 'être'], ['visiter', 'avoir'], ['boire', 'avoir']] },
+        { type: 'dictation', skill: 'CO', topic: 'passé composé با être', level: 'hard', text: 'Il est allé à l\'hôpital hier soir.', trans: 'دیشب به بیمارستان رفت.' },
+        { type: 'order', skill: 'GR', topic: 'passé composé با être', level: 'hard', answer: 'Je suis restée à la maison.', fa: 'جمله «خانه ماندم» (گوینده زن) را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'حوادث', level: 'hard', text: 'Je suis tombé dans la rue, mais ce n\'est pas grave.', fa: 'اتفاق را تعریف کن' },
+        { type: 'write', skill: 'PE', topic: 'passé composé با être', level: 'hard', prompt: 'دیروزت را تعریف کن: کجا رفتی، کِی برگشتی، چه کردی؟ (۴ جمله — حداقل دو فعل با être)', min: 14, sample: 'Hier matin, je suis allée au travail à huit heures. À midi, je suis sortie avec une collègue. Le soir, je suis rentrée à sept heures et je me suis couchée tôt.' }
       ]
     }
   ],
   bilan: {
     exercises: [
-      { type: 'mcq', skill: 'CO', topic: 'کشورها و سفر', level: 'easy', q: '🎧 گوش کن — او تعطیلات کجا رفت؟', audio: 'L\'été dernier, je suis allée au Maroc. On a visité Marrakech, c\'était magnifique !', audioFa: 'تابستان گذشته به مراکش رفتم. مراکش را دیدیم، فوق‌العاده بود!', options: ['مراکش', 'ایتالیا', 'فرانسه', 'اسپانیا'], correct: 0, frOptions: false },
-      { type: 'mcq', skill: 'CE', topic: 'passé composé', level: 'easy', q: 'کارت‌پستال را بخوان — کدام درست است؟', qfr: 'Chère Sara, bonjour de Rome ! On a visité le Colisée et on a mangé des pâtes délicieuses. Hier, j\'ai acheté des souvenirs au marché. Il fait très beau ! Bises, Mona', options: ['مونا در رم است و خوش می‌گذرد', 'مونا در پاریس است', 'هوا بد است', 'مونا چیزی نخریده'], correct: 0, frOptions: false },
-      { type: 'fill', skill: 'GR', topic: 'کشورها و سفر', level: 'medium', fa: 'حرف اضافه:', q: 'Ils habitent ___ Iran.', answer: ['en'] },
-      { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'passé composé بساز:', q: 'Nous ___ visité trois musées.', answer: ['avons'] },
-      { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'اسم مفعول boire:', q: 'J\'ai ___ un café italien. (boire)', answer: ['bu'] },
-      { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'منفی گذشته:', q: 'Elle n\'a ___ trouvé son passeport.', answer: ['pas'] },
-      { type: 'match', skill: 'VO', topic: 'کشورها و سفر', level: 'easy', fa: 'جور کن:', pairs: [['un avion', 'هواپیما'], ['une valise', 'چمدان'], ['la plage', 'ساحل'], ['un billet', 'بلیت']] },
-      { type: 'order', skill: 'GR', topic: 'passé composé', level: 'medium', answer: 'On a passé une semaine à la mer.', fa: 'جمله «یک هفته کنار دریا گذراندیم» را بساز:' },
-      { type: 'dictation', skill: 'CO', topic: 'passé composé', level: 'hard', text: 'Hier, on a pris beaucoup de photos.', trans: 'دیروز کلی عکس گرفتیم.' },
-      { type: 'speak', skill: 'PO', topic: 'کشورها و سفر', level: 'medium', text: 'L\'année dernière, j\'ai voyagé en Turquie. C\'était formidable !', fa: 'از یک سفر تعریف کن' },
-      { type: 'write', skill: 'PE', topic: 'passé composé', level: 'hard', prompt: 'یک کارت‌پستال از سفر بنویس: کجایی، چه کرده‌ای، هوا چطور است. (۴-۵ جمله)', min: 16, sample: 'Chère Emma, bonjour d\'Ispahan ! On a visité la place Naghsh-e Jahan, c\'est magnifique. Hier, j\'ai acheté des souvenirs au bazar. On a goûté des plats délicieux. Il fait beau et chaud. Bises, Mona' }
+      { type: 'mcq', skill: 'CO', topic: 'بدن و سلامتی', level: 'medium', q: '🎧 گوش کن — مشکل بیمار چیست؟', audio: 'Docteur, j\'ai mal à la gorge et à la tête, je tousse et j\'ai de la fièvre.', audioFa: 'دکتر، گلودرد و سردرد دارم، سرفه می‌کنم و تب دارم.', options: ['گلودرد، سردرد، سرفه و تب', 'دل‌درد و کمردرد', 'پای شکسته', 'خستگی'], correct: 0, frOptions: false },
+      { type: 'mcq', skill: 'CE', topic: 'حوادث', level: 'medium', q: 'پیام را بخوان — چرا نیامده؟', qfr: 'Désolée, je ne peux pas venir aujourd\'hui. Je suis tombée dans l\'escalier hier. J\'ai mal au dos. Le médecin dit : une semaine de repos !', options: ['از پله افتاده و باید استراحت کند', 'سرما خورده', 'مسافرت است', 'سرش شلوغ است'], correct: 0, frOptions: false },
+      { type: 'fill', skill: 'GR', topic: 'بدن و سلامتی', level: 'hard', fa: 'کامل کن:', q: 'Après le match, j\'ai mal ___ jambes.', answer: ['aux'] },
+      { type: 'fill', skill: 'GR', topic: 'passé composé با être', level: 'hard', fa: 'être یا avoir؟', q: 'Ils ___ arrivés en retard.', answer: ['sont'] },
+      { type: 'fill', skill: 'GR', topic: 'فعل boire', level: 'hard', fa: 'boire را صرف کن:', q: 'Elle ___ beaucoup d\'eau.', answer: ['boit'] },
+      { type: 'fill', skill: 'GR', topic: 'ضمیر y', level: 'hard', fa: 'با y:', q: 'Tu vas à la salle de sport ? → Oui, j\'___ vais.', answer: ['y'] },
+      { type: 'match', skill: 'VO', topic: 'بدن و سلامتی', level: 'medium', fa: 'جور کن:', pairs: [['le ventre', 'شکم'], ['le bras', 'بازو'], ['la fièvre', 'تب'], ['un médicament', 'دارو']] },
+      { type: 'order', skill: 'GR', topic: 'حوادث', level: 'hard', answer: 'Qu\'est-ce qui s\'est passé ?', fa: 'سؤال «چه اتفاقی افتاد؟» را بساز:' },
+      { type: 'dictation', skill: 'CO', topic: 'نزد پزشک', level: 'hard', text: 'Reposez-vous et buvez beaucoup d\'eau.', trans: 'استراحت کنید و آب زیاد بنوشید.' },
+      { type: 'speak', skill: 'PO', topic: 'نزد پزشک', level: 'hard', text: 'Bonjour docteur, je ne me sens pas bien. J\'ai mal à la tête depuis hier.', fa: 'نزد دکتر' },
+      { type: 'write', skill: 'PE', topic: 'حوادث', level: 'hard', prompt: 'یک اتفاق بد (واقعی یا خیالی) را تعریف کن: چه شد، کجا رفتی، الان چطوری؟ (۴-۵ جمله در گذشته)', min: 16, sample: 'La semaine dernière, je suis tombée de vélo dans le parc. J\'ai eu très mal au bras. Je suis allée à l\'hôpital avec mon frère. Maintenant, je vais mieux !' }
     ]
   }
 };

@@ -1,9 +1,9 @@
 /* ===== واحد ۷: Chez moi — خانه من ===== */
 EDITO.units[7] = {
   id: 7,
-  title: 'Chez moi',
-  fa: 'خانه من',
-  theme: 'خانه و اتاق‌ها، اثاث، حروف اضافه مکان، مقایسه و il faut',
+  title: 'Chez moi !',
+  fa: 'خانه من!',
+  theme: 'خانه و اتاق‌ها، اثاث و حروف اضافه مکان، passé composé با avoir، ضمایر مفعولی مستقیم (le/la/les) و فعل connaître',
   culture: {
     title: 'طبقه صفر یعنی همکف! 🏢',
     body: 'در فرانسه شماره‌گذاری طبقات با «rez-de-chaussée» (همکف، طبقه صفر) شروع می‌شود، نه «premier étage» (طبقه اول) — یعنی چیزی که در خیلی جاها «طبقه دوم» حساب می‌شود، اینجا «premier étage» است! همچنین آپارتمان‌های پاریس معمولاً کوچک‌ترند و اجاره بر اساس متراژ (m²) حساب می‌شود، نه تعداد اتاق‌خواب.'
@@ -143,70 +143,72 @@ EDITO.units[7] = {
     },
     {
       id: 'u7l3',
-      title: 'Comparer et choisir',
-      fa: 'مقایسه و انتخاب',
+      title: 'J\'ai trouvé un appartement !',
+      fa: 'یک آپارتمان پیدا کردم! — گذشته و ضمایر مفعولی',
       vocab: [
-        { fr: 'plus... que', ipa: 'ply... kə', fa: 'بیشتر... از', ex: 'Paris est plus grand que Lyon.', exfa: 'پاریس بزرگ‌تر از لیون است.' },
-        { fr: 'moins... que', ipa: 'mwɛ̃... kə', fa: 'کمتر... از', ex: 'C\'est moins cher.', exfa: 'ارزان‌تر است.' },
-        { fr: 'aussi... que', ipa: 'osi... kə', fa: 'به همان اندازه...', ex: 'Aussi grand que...', exfa: 'به همان بزرگیِ...' },
-        { fr: 'meilleur / meilleure', ipa: 'mɛjœʁ', fa: 'بهتر', ex: 'C\'est le meilleur choix.', exfa: 'بهترین انتخاب است.' },
-        { fr: 'il faut', ipa: 'il fo', fa: 'باید / لازم است', ex: 'Il faut un canapé.', exfa: 'یک کاناپه لازم است.' },
-        { fr: 'choisir', ipa: 'ʃwaziʁ', fa: 'انتخاب کردن', ex: 'Je choisis le bleu.', exfa: 'آبی را انتخاب می‌کنم.' },
-        { fr: 'déménager', ipa: 'demenaʒe', fa: 'اسباب‌کشی کردن', ex: 'On déménage en juin.', exfa: 'ژوئن اسباب‌کشی می‌کنیم.' },
-        { fr: 'calme', ipa: 'kalm', fa: 'آرام / ساکت', ex: 'Un quartier calme', exfa: 'یک محله آرام' },
-        { fr: 'bruyant / bruyante', ipa: 'bʁɥijɑ̃ / -ɑ̃t', fa: 'پر سر و صدا', ex: 'La rue est bruyante.', exfa: 'خیابان پر سر و صداست.' },
+        { fr: 'trouver', ipa: 'tʁuve', fa: 'پیدا کردن', ex: 'J\'ai trouvé un appartement.', exfa: 'یک آپارتمان پیدا کردم.' },
+        { fr: 'visiter', ipa: 'vizite', fa: 'بازدید کردن', ex: 'On a visité trois appartements.', exfa: 'سه آپارتمان را دیدیم.' },
+        { fr: 'déménager', ipa: 'demenaʒe', fa: 'اسباب‌کشی کردن', ex: 'On a déménagé en juin.', exfa: 'ژوئن اسباب‌کشی کردیم.' },
+        { fr: 'connaître', ipa: 'kɔnɛtʁ', fa: 'شناختن (جایی/کسی)', ex: 'Tu connais ce quartier ?', exfa: 'این محله را می‌شناسی؟' },
+        { fr: 'calme / bruyant', ipa: 'kalm / bʁɥijɑ̃', fa: 'آرام / پرسروصدا', ex: 'C\'est un quartier calme.', exfa: 'محله آرامی است.' },
         { fr: 'pratique', ipa: 'pʁatik', fa: 'کاربردی / راحت', ex: 'C\'est très pratique.', exfa: 'خیلی کاربردی است.' },
         { fr: 'moderne / ancien', ipa: 'mɔdɛʁn / ɑ̃sjɛ̃', fa: 'مدرن / قدیمی', ex: 'Un immeuble ancien', exfa: 'یک ساختمان قدیمی' }
       ],
       phrases: [
-        { fr: 'Qu\'est-ce que tu préfères ?', fa: 'کدام را ترجیح می‌دهی؟' },
-        { fr: 'Je préfère...', fa: 'ترجیح می‌دهم...' },
-        { fr: 'C\'est une bonne idée.', fa: 'فکر خوبی است.' }
+        { fr: 'Tu connais ce quartier ?', fa: 'این محله را می‌شناسی؟' },
+        { fr: 'J\'ai visité l\'appartement hier.', fa: 'دیروز آپارتمان را دیدم.' },
+        { fr: 'Je le/la prends !', fa: 'برش می‌دارم!' }
       ],
       grammar: {
-        title: 'Le comparatif + il faut',
-        body: 'برای مقایسه:<br>' +
-          '• <b>plus + صفت + que</b>: بزرگ‌تر از — La maison est <b>plus grande que</b> l\'appartement.<br>' +
-          '• <b>moins + صفت + que</b>: کمتر — L\'appartement est <b>moins cher que</b> la maison.<br>' +
-          '• <b>aussi + صفت + que</b>: به همان اندازه<br>' +
-          '⚠️ استثنا: plus bon نمی‌گوییم! → <b>meilleur</b> (بهتر)<br><br>' +
-          '<b>il faut</b> + اسم/مصدر = «لازم است / باید»: Il faut une table. Il faut visiter l\'appartement.',
+        title: 'Le passé composé (avoir) + les pronoms COD',
+        body: 'برای گفتن کاری که <b>انجام دادی</b>، از passé composé با avoir استفاده می‌کنیم: avoir (حال) + participe passé.<br>' +
+          '• trouver → trouv<b>é</b> | visiter → visit<b>é</b>: J\'<b>ai trouvé</b> un appartement.<br><br>' +
+          'برای تکرار نکردن مفعول مستقیم، از ضمیر <b>le / la / l\' / les</b> استفاده می‌کنیم که <b>قبل از فعل</b> می‌آید:<br>' +
+          '• Tu as visité <s>l\'appartement</s> ? → Tu <b>l\'</b>as visité ?<br>' +
+          '• Je prends <s>ces meubles</s> → Je <b>les</b> prends.',
+        table: {
+          head: ['مفعول', 'ضمیر', 'مثال'],
+          rows: [
+            ['مذکر', 'le', 'Je le prends.'],
+            ['مؤنث', 'la', 'Je la visite.'],
+            ['قبل صدادار', 'l\'', 'Je l\'ai trouvé.'],
+            ['جمع', 'les', 'Je les connais.']
+          ]
+        },
         examples: [
-          { fr: 'Cet appartement est plus clair que l\'autre.', fa: 'این آپارتمان از آن یکی نورگیرتر است.' },
-          { fr: 'Le quartier est moins bruyant.', fa: 'محله کم‌سروصداتر است.' },
-          { fr: 'Il faut déménager avant juin.', fa: 'باید قبل از ژوئن اسباب‌کشی کنیم.' }
+          { fr: 'J\'ai visité un appartement hier. Je l\'ai adoré !', fa: 'دیروز یک آپارتمان دیدم. عاشقش شدم!' },
+          { fr: 'Tu connais cette rue ? — Oui, je la connais bien.', fa: 'این خیابان را می‌شناسی؟ — آره، خوب می‌شناسمش.' }
         ]
       },
       phonetics: {
-        title: 'plus — سه تلفظ!',
-        body: 'واژه plus بسته به جایگاه سه تلفظ دارد:',
+        title: 'é در اسم مفعول',
+        body: 'پایانه é با صدای [e] بسته — کوتاه و واضح:',
         items: [
-          { fr: 'plus grand', ipa: 'ply ɡʁɑ̃', fa: 'قبل صامت: «پلو»' },
-          { fr: 'plus ancien', ipa: 'ply‿zɑ̃sjɛ̃', fa: 'قبل صدادار: «پلوز»' },
-          { fr: 'J\'aime plus !', ipa: 'plys', fa: 'آخر جمله: «پلوس»' }
+          { fr: 'j\'ai trouvé', ipa: 'ʒe tʁuve', fa: 'پیدا کردم' },
+          { fr: 'j\'ai visité', ipa: 'ʒe vizite', fa: 'بازدید کردم' }
         ]
       },
       dialogue: {
-        title: 'Quel appartement choisir ?',
+        title: 'Bonne nouvelle !',
         lines: [
-          { s: 'Mona', fr: 'Alors, l\'appartement A ou l\'appartement B ?', fa: 'خب، آپارتمان A یا B؟' },
-          { s: 'Karim', fr: 'Le A est plus grand, mais il est plus cher aussi.', fa: 'A بزرگ‌تر است، ولی گران‌تر هم هست.' },
-          { s: 'Mona', fr: 'Oui, et le B est plus près du métro. C\'est pratique.', fa: 'آره، و B به مترو نزدیک‌تر است. راحت است.' },
-          { s: 'Karim', fr: 'Mais le quartier du B est plus bruyant, non ?', fa: 'ولی محله B پر سروصداتر است، نه؟' },
-          { s: 'Mona', fr: 'C\'est vrai. Le A est dans un quartier plus calme. Il faut réfléchir !', fa: 'راست می‌گویی. A در محله آرام‌تری است. باید فکر کنیم!' }
+          { s: 'Mona', fr: 'Karim ! J\'ai trouvé un appartement !', fa: 'کریم! یک آپارتمان پیدا کردم!' },
+          { s: 'Karim', fr: 'Super ! Tu connais le quartier ?', fa: 'عالی! محله را می‌شناسی؟' },
+          { s: 'Mona', fr: 'Oui, je le connais bien, il est calme.', fa: 'آره، خوب می‌شناسمش، آرام است.' },
+          { s: 'Karim', fr: 'Et l\'appartement, tu l\'as visité ?', fa: 'و آپارتمان، دیدیش؟' },
+          { s: 'Mona', fr: 'Oui, hier. Je l\'ai adoré, je le prends !', fa: 'آره، دیروز. عاشقش شدم، برش می‌دارم!' }
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'مقایسه', level: 'medium', fa: 'مقایسه بساز (بزرگ‌تر):', q: 'La maison est ___ grande que l\'appartement.', answer: ['plus'] },
-        { type: 'fill', skill: 'GR', topic: 'مقایسه', level: 'medium', fa: 'مقایسه بساز (ارزان‌تر = کمتر گران):', q: 'Le studio est ___ cher que la maison.', answer: ['moins'] },
-        { type: 'mcq', skill: 'GR', topic: 'مقایسه', level: 'easy', q: '«این کیک بهتر است»:', options: ['Ce gâteau est meilleur.', 'Ce gâteau est plus bon.', 'Ce gâteau est plus meilleur.', 'Ce gâteau est bien plus.'], correct: 0, explain: 'plus bon غلط است — meilleur درست است.' },
-        { type: 'fill', skill: 'GR', topic: 'il faut', level: 'medium', fa: 'کامل کن:', q: 'Il ___ une table pour la cuisine.', answer: ['faut'] },
-        { type: 'mcq', skill: 'CO', topic: 'مقایسه', level: 'easy', q: '🎧 گوش کن — کدام آپارتمان ارزان‌تر است؟', audio: 'L\'appartement A coûte mille euros, l\'appartement B coûte huit cents euros. Le B est moins cher.', audioFa: 'آپارتمان A هزار یورو است، آپارتمان B هشتصد یورو است. B ارزان‌تر است.', options: ['B', 'A', 'مساوی‌اند', 'گفته نشد'], correct: 0, frOptions: false },
+        { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'passé composé بساز:', q: 'J\'___ trouvé un appartement. (avoir)', answer: ['ai'] },
+        { type: 'fill', skill: 'GR', topic: 'ضمایر مفعولی', level: 'medium', fa: 'با ضمیر جایگزین کن:', q: 'Tu visites l\'appartement ? → Tu ___ visites ?', answer: ["l'"] },
+        { type: 'fill', skill: 'GR', topic: 'فعل connaître', level: 'medium', fa: 'connaître را صرف کن:', q: 'Tu ___ ce quartier ?', answer: ['connais'] },
+        { type: 'mcq', skill: 'GR', topic: 'ضمایر مفعولی', level: 'medium', q: '«خوب می‌شناسمش» (این خیابان) به فرانسه:', options: ['Je la connais bien.', 'Je le connais bien.', 'Je connais la bien.', 'Je les connais bien.'], correct: 0, explain: 'rue مؤنث است: la.' },
         { type: 'match', skill: 'VO', topic: 'توصیف خانه', level: 'easy', fa: 'جور کن:', pairs: [['calme', 'آرام'], ['bruyant', 'پر سروصدا'], ['ancien', 'قدیمی'], ['pratique', 'کاربردی']] },
-        { type: 'dictation', skill: 'CO', topic: 'مقایسه', level: 'hard', text: 'Ce quartier est plus calme que le centre.', trans: 'این محله از مرکز شهر آرام‌تر است.' },
-        { type: 'order', skill: 'GR', topic: 'مقایسه', level: 'medium', answer: 'La maison est plus grande que le studio.', fa: 'جمله «خانه از سوئیت بزرگ‌تر است» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'مقایسه', level: 'medium', text: 'Je préfère cet appartement. Il est plus clair et moins cher.', fa: 'من این آپارتمان را ترجیح می‌دهم. نورگیرتر و ارزان‌تر است.' },
-        { type: 'write', skill: 'PE', topic: 'مقایسه', level: 'hard', prompt: 'دو خانه (یا دو شهر) را مقایسه کن. (۳ جمله با plus/moins/aussi)', min: 12, sample: 'Téhéran est plus grand que Chiraz. Mais Chiraz est plus calme et moins cher. Je préfère Chiraz parce que c\'est une belle ville.' }
+        { type: 'mcq', skill: 'CO', topic: 'passé composé', level: 'easy', q: '🎧 گوش کن — او چند آپارتمان دید؟', audio: 'J\'ai visité trois appartements et j\'ai trouvé un très bel appartement calme.', audioFa: 'سه آپارتمان دیدم و یک آپارتمان آرام و زیبا پیدا کردم.', options: ['سه تا', 'دو تا', 'یکی', 'پنج تا'], correct: 0, frOptions: false },
+        { type: 'dictation', skill: 'CO', topic: 'passé composé', level: 'hard', text: 'J\'ai trouvé un appartement calme et pratique.', trans: 'یک آپارتمان آرام و کاربردی پیدا کردم.' },
+        { type: 'order', skill: 'GR', topic: 'passé composé', level: 'medium', answer: 'J\'ai visité un appartement hier.', fa: 'جمله «دیروز یک آپارتمان دیدم» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'passé composé', level: 'medium', text: 'J\'ai trouvé un appartement. Je le connais bien, il est calme et pratique.', fa: 'از پیداکردن خانه‌ات بگو' },
+        { type: 'write', skill: 'PE', topic: 'passé composé', level: 'hard', prompt: 'داستان پیداکردن آپارتمانت را بنویس: چند تا دیدی، کدام را پیدا کردی، چرا آن را دوست داری. (۴ جمله)', min: 14, sample: 'J\'ai visité quatre appartements. J\'ai trouvé un bel appartement dans un quartier calme. Je le connais bien maintenant. Je l\'ai pris parce qu\'il est près du métro.' }
       ]
     }
   ],
@@ -215,8 +217,8 @@ EDITO.units[7] = {
       { type: 'mcq', skill: 'CO', topic: 'خانه و اتاق‌ها', level: 'easy', q: '🎧 گوش کن — این خانه چه چیزی ندارد؟', audio: 'C\'est un bel appartement avec un grand salon, deux chambres et un balcon, mais il n\'y a pas d\'ascenseur.', audioFa: 'آپارتمان زیبایی است با پذیرایی بزرگ، دو اتاق خواب و بالکن، ولی آسانسور ندارد.', options: ['آسانسور', 'بالکن', 'پذیرایی', 'اتاق خواب'], correct: 0, frOptions: false },
       { type: 'mcq', skill: 'CE', topic: 'خانه و اتاق‌ها', level: 'easy', q: 'آگهی را بخوان — اجاره چقدر است؟', qfr: 'À louer : studio meublé, 25 m², 5e étage sans ascenseur, près de l\'université. Loyer : 550 € par mois.', options: ['۵۵۰ یورو در ماه', '۲۵ یورو', '۵۰۰ یورو', '۵۵۰ یورو در سال'], correct: 0, frOptions: false },
       { type: 'fill', skill: 'GR', topic: 'حروف اضافه مکان', level: 'medium', fa: 'روی یا زیر؟', q: 'Le livre est ___ la table. (روی)', answer: ['sur'] },
-      { type: 'fill', skill: 'GR', topic: 'مقایسه', level: 'medium', fa: 'مقایسه بساز:', q: 'Le salon est ___ grand que la chambre. (بزرگ‌تر)', answer: ['plus'] },
-      { type: 'fill', skill: 'GR', topic: 'il faut', level: 'medium', fa: 'کامل کن:', q: 'Il ___ visiter l\'appartement avant de louer.', answer: ['faut'] },
+      { type: 'fill', skill: 'GR', topic: 'passé composé', level: 'medium', fa: 'کامل کن:', q: 'J\'___ visité cet appartement hier. (avoir)', answer: ['ai'] },
+      { type: 'fill', skill: 'GR', topic: 'ضمایر مفعولی', level: 'medium', fa: 'با ضمیر جایگزین کن:', q: 'Tu connais cette rue ? → Oui, je ___ connais.', answer: ['la'] },
       { type: 'match', skill: 'VO', topic: 'اثاث خانه', level: 'easy', fa: 'جور کن:', pairs: [['un lit', 'تخت'], ['une lampe', 'چراغ'], ['un bureau', 'میز کار'], ['une porte', 'در']] },
       { type: 'order', skill: 'GR', topic: 'حروف اضافه مکان', level: 'medium', answer: 'Le canapé est en face de la fenêtre.', fa: 'جمله «کاناپه روبه‌روی پنجره است» را بساز:' },
       { type: 'dictation', skill: 'CO', topic: 'خانه و اتاق‌ها', level: 'hard', text: 'J\'habite au troisième étage avec ascenseur.', trans: 'طبقه سوم با آسانسور زندگی می‌کنم.' },

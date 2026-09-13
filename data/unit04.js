@@ -1,266 +1,232 @@
-/* ===== واحد ۴: Les soldes, c'est parti ! — حراج شروع شد! ===== */
+/* ===== واحد ۴: C'est où ? — کجاست؟ ===== */
 EDITO.units[4] = {
   id: 4,
-  title: 'Les soldes, c\'est parti !',
-  fa: 'حراج شروع شد!',
-  theme: 'لباس و رنگ‌ها، صفت اشاره، خرید در مغازه، اعداد تا ۱۰۰۰',
+  title: 'C\'est où ?',
+  fa: 'کجاست؟',
+  theme: 'شهر و مکان‌ها (c\'est un/il est)، وسایل نقلیه و بسامد (jamais/souvent/toujours)، فعل prendre، امری و ربط‌دهنده‌ها، اعداد بزرگ',
   culture: {
-    title: 'Les soldes — حراج‌های قانونی 🏷️',
-    body: 'در فرانسه حراج‌های بزرگ فروشگاهی (les soldes) آزاد نیستند؛ فقط دو دوره در سال — یکی زمستان (ژانویه) و یکی تابستان (ژوئیه) — و تاریخشان توسط دولت تعیین و اعلام می‌شود. بیرون از این دوره‌ها، تخفیف زدن روی قیمت اصلی برای فروشگاه‌ها قانوناً محدود است. به همین دلیل «les soldes» یک رویداد فرهنگی-اجتماعی است که مردم منتظرش می‌مانند!'
+    title: 'ورود به مغازه 🏪',
+    body: 'وقتی وارد یک نانوایی، مغازه یا داروخانه در فرانسه می‌شوی، همیشه یک <b>Bonjour</b> بلند به همه می‌گویی — نه فقط به فروشنده. همین‌طور هنگام خروج، <b>Au revoir</b> گفتن عادی و منتظره است. بسیاری از شهرهای کوچک فرانسه بین ساعت ۱۲ تا ۱۴ برای ناهار مغازه‌هایشان را می‌بندند، پس قبل از رفتن ساعت کاری را چک کن!'
   },
   lessons: [
     {
       id: 'u4l1',
-      title: 'Les vêtements et les couleurs',
-      fa: 'لباس‌ها و رنگ‌ها',
+      title: 'Les lieux de la ville',
+      fa: 'مکان‌های شهر',
       vocab: [
-        { fr: 'un vêtement', ipa: 'vɛtmɑ̃', fa: 'لباس', ex: 'J\'achète des vêtements.', exfa: 'لباس می‌خرم.' },
-        { fr: 'un pantalon', ipa: 'pɑ̃talɔ̃', fa: 'شلوار', ex: 'Un pantalon noir', exfa: 'شلوار مشکی' },
-        { fr: 'une chemise', ipa: 'ʃəmiz', fa: 'پیراهن (مردانه)', ex: 'Une chemise blanche', exfa: 'پیراهن سفید' },
-        { fr: 'une robe', ipa: 'ʁɔb', fa: 'پیراهن زنانه', ex: 'Une jolie robe', exfa: 'یک پیراهن قشنگ' },
-        { fr: 'une jupe', ipa: 'ʒyp', fa: 'دامن', ex: 'Une jupe bleue', exfa: 'دامن آبی' },
-        { fr: 'un manteau', ipa: 'mɑ̃to', fa: 'پالتو', ex: 'Un manteau d\'hiver', exfa: 'پالتوی زمستانی' },
-        { fr: 'des chaussures', ipa: 'ʃosyʁ', fa: 'کفش', ex: 'Des chaussures de sport', exfa: 'کفش ورزشی' },
-        { fr: 'un tee-shirt', ipa: 'tiʃœʁt', fa: 'تی‌شرت', ex: 'Un tee-shirt vert', exfa: 'تی‌شرت سبز' },
-        { fr: 'porter', ipa: 'pɔʁte', fa: 'پوشیدن (تن داشتن)', ex: 'Elle porte une robe rouge.', exfa: 'او پیراهن قرمز پوشیده.' },
-        { fr: 'noir / noire', ipa: 'nwaʁ', fa: 'مشکی', ex: 'Un pantalon noir', exfa: 'شلوار مشکی' },
-        { fr: 'blanc / blanche', ipa: 'blɑ̃ / blɑ̃ʃ', fa: 'سفید', ex: 'Une chemise blanche', exfa: 'پیراهن سفید' },
-        { fr: 'rouge', ipa: 'ʁuʒ', fa: 'قرمز', ex: 'Une robe rouge', exfa: 'پیراهن قرمز' },
-        { fr: 'bleu / bleue', ipa: 'blø', fa: 'آبی', ex: 'Un manteau bleu', exfa: 'پالتوی آبی' },
-        { fr: 'vert / verte', ipa: 'vɛʁ / vɛʁt', fa: 'سبز', ex: 'Une jupe verte', exfa: 'دامن سبز' },
-        { fr: 'jaune', ipa: 'ʒon', fa: 'زرد', ex: 'Un tee-shirt jaune', exfa: 'تی‌شرت زرد' },
-        { fr: 'joli / jolie', ipa: 'ʒɔli', fa: 'قشنگ', ex: 'C\'est très joli !', exfa: 'خیلی قشنگ است!' }
+        { fr: 'une ville', ipa: 'vil', fa: 'شهر', ex: 'Paris est une belle ville.', exfa: 'پاریس شهر زیبایی است.' },
+        { fr: 'une rue', ipa: 'ʁy', fa: 'خیابان', ex: 'J\'habite rue Pasteur.', exfa: 'در خیابان پاستور زندگی می‌کنم.' },
+        { fr: 'une place', ipa: 'plas', fa: 'میدان', ex: 'La place de la République', exfa: 'میدان جمهوری' },
+        { fr: 'un café / un restaurant', ipa: 'kafe / ʁɛstoʁɑ̃', fa: 'کافه / رستوران', ex: 'Il y a un café ici.', exfa: 'اینجا یک کافه هست.' },
+        { fr: 'un cinéma / un musée', ipa: 'sinema / myze', fa: 'سینما / موزه', ex: 'Le musée du Louvre', exfa: 'موزه لوور' },
+        { fr: 'une gare', ipa: 'ɡaʁ', fa: 'ایستگاه قطار', ex: 'La gare est loin ?', exfa: 'ایستگاه دور است؟' },
+        { fr: 'un hôtel', ipa: 'otɛl', fa: 'هتل', ex: 'L\'hôtel est dans le centre.', exfa: 'هتل در مرکز شهر است.' },
+        { fr: 'une banque / une pharmacie', ipa: 'bɑ̃k / faʁmasi', fa: 'بانک / داروخانه', ex: 'La banque est fermée.', exfa: 'بانک بسته است.' },
+        { fr: 'un monument', ipa: 'mɔnymɑ̃', fa: 'بنای تاریخی', ex: 'C\'est un monument célèbre.', exfa: 'یک بنای تاریخی معروف است.' },
+        { fr: 'un plan (de la ville)', ipa: 'plɑ̃', fa: 'نقشه (شهر)', ex: 'Vous avez un plan de la ville ?', exfa: 'نقشه شهر دارید؟' },
+        { fr: 'un habitant / une habitante', ipa: 'abitɑ̃', fa: 'ساکن (شهر)', ex: 'Paris a deux millions d\'habitants.', exfa: 'پاریس دو میلیون ساکن دارد.' }
       ],
       phrases: [
-        { fr: 'Qu\'est-ce que tu portes ?', fa: 'چی پوشیدی؟' },
-        { fr: 'De quelle couleur ?', fa: 'چه رنگی؟' },
-        { fr: 'Ça te va bien !', fa: 'بهت میاد!' }
+        { fr: 'Il y a...', fa: 'وجود دارد / هست' },
+        { fr: 'Qu\'est-ce qu\'il y a dans ton quartier ?', fa: 'در محله‌ات چه چیزهایی هست؟' },
+        { fr: 'C\'est ouvert / fermé.', fa: 'باز است / بسته است.' }
       ],
       grammar: {
-        title: 'La place et l\'accord des adjectifs',
-        body: 'صفت‌ها در فرانسه:<br>' +
-          '۱) با اسم <b>مطابقت</b> می‌کنند (جنسیت و تعداد): un pantalon noir / une robe noir<b>e</b> / des robes noir<b>es</b><br>' +
-          '۲) بیشتر صفت‌ها (از جمله همه رنگ‌ها) <b>بعد از اسم</b> می‌آیند: une robe <b>rouge</b> (نه rouge robe!)<br>' +
-          '۳) چند صفت کوتاه قبل از اسم می‌آیند: petit، grand، joli، beau — un <b>joli</b> manteau',
-        table: {
-          head: ['مذکر', 'مؤنث', 'معنی'],
-          rows: [
-            ['noir', 'noire', 'مشکی'],
-            ['blanc', 'blanche', 'سفید'],
-            ['vert', 'verte', 'سبز'],
-            ['bleu', 'bleue', 'آبی'],
-            ['rouge', 'rouge', 'قرمز (بی‌تغییر)']
-          ]
-        },
+        title: '« C\'est un(e)... » vs « Il/Elle est... »',
+        body: 'برای <b>معرفی/شناساندنِ</b> یک چیز از <b>c\'est + حرف تعریف نامعین + اسم</b> استفاده می‌کنیم؛ برای <b>توصیفِ</b> همان چیز (با صفت) از <b>il/elle est + صفت</b>:<br>' +
+          '• <b>C\'est un</b> musée. (این یک موزه است — معرفی)<br>' +
+          '• <b>Il est</b> grand et moderne. (بزرگ و مدرن است — توصیف)<br>' +
+          '⚠️ اشتباه رایج: نگو «Il est un musée» — یا c\'est+اسم یا il est+صفت!',
         examples: [
-          { fr: 'Elle porte une jupe verte et des chaussures blanches.', fa: 'او دامن سبز و کفش سفید پوشیده.' },
-          { fr: 'C\'est un joli manteau bleu.', fa: 'این یک پالتوی آبی قشنگ است.' }
+          { fr: 'C\'est une place magnifique. Elle est très grande.', fa: 'میدان فوق‌العاده‌ای است. خیلی بزرگ است.' },
+          { fr: 'C\'est un petit café. Il est ouvert le dimanche.', fa: 'یک کافه کوچک است. یکشنبه‌ها باز است.' }
         ]
       },
       phonetics: {
-        title: 'صفت مذکر و مؤنث — بشنو',
-        body: 'مثل ملیت‌ها، صامت آخر صفت فقط در مؤنث خوانده می‌شود:',
+        title: 'آواهای [e] و [ɛ]',
+        body: 'دو نوع «اِ» در فرانسه: <b>[e]</b> بسته (مثل é در café) و <b>[ɛ]</b> باز (مثل è یا ai):',
         items: [
-          { fr: 'vert / verte', ipa: 'vɛʁ / vɛʁt', fa: 'سبز' },
-          { fr: 'blanc / blanche', ipa: 'blɑ̃ / blɑ̃ʃ', fa: 'سفید' },
-          { fr: 'grand / grande', ipa: 'ɡʁɑ̃ / ɡʁɑ̃d', fa: 'بزرگ' },
-          { fr: 'petit / petite', ipa: 'pəti / pətit', fa: 'کوچک' }
+          { fr: 'un café / un musée', ipa: 'kafe / myze', fa: 'بسته [e]' },
+          { fr: 'près / français', ipa: 'pʁɛ / fʁɑ̃sɛ', fa: 'باز [ɛ]' }
         ]
       },
       dialogue: {
-        title: 'Qu\'est-ce que je porte ce soir ?',
+        title: 'Mon quartier',
         lines: [
-          { s: 'Sara', fr: 'Qu\'est-ce que je porte ce soir ? La robe rouge ou la jupe noire ?', fa: 'امشب چی بپوشم؟ پیراهن قرمز یا دامن مشکی؟' },
-          { s: 'Mona', fr: 'La robe rouge ! Elle est très jolie.', fa: 'پیراهن قرمز! خیلی قشنگ است.' },
-          { s: 'Sara', fr: 'Avec les chaussures blanches ?', fa: 'با کفش‌های سفید؟' },
-          { s: 'Mona', fr: 'Oui ! Et le petit manteau noir. Ça te va très bien !', fa: 'آره! و آن پالتوی مشکی کوچک. خیلی بهت میاد!' }
+          { s: 'Nina', fr: 'Tu habites où, Karim ?', fa: 'کجا زندگی می‌کنی کریم؟' },
+          { s: 'Karim', fr: 'Rue Pasteur, dans le centre. C\'est un quartier calme.', fa: 'خیابان پاستور، در مرکز شهر. یک محله آرام است.' },
+          { s: 'Nina', fr: 'Qu\'est-ce qu\'il y a dans ton quartier ?', fa: 'در محله‌ات چه چیزهایی هست؟' },
+          { s: 'Karim', fr: 'Il y a un parc, des cafés et un petit musée. Il est gratuit le dimanche !', fa: 'یک پارک، چند کافه و یک موزه کوچک هست. یکشنبه‌ها رایگان است!' },
+          { s: 'Nina', fr: 'Super, j\'aimerais visiter ça un jour.', fa: 'عالی، دوست دارم یک روز آنجا را ببینم.' }
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'صفت و مطابقت', level: 'medium', fa: 'صفت را با اسم مطابقت بده:', q: 'Une chemise ___ (سفید)', answer: ['blanche'], explain: 'chemise مؤنث است: blanche.' },
-        { type: 'mcq', skill: 'GR', topic: 'صفت و مطابقت', level: 'easy', q: 'کدام ترتیب درست است؟', options: ['une robe rouge', 'une rouge robe', 'rouge une robe', 'une robe rouges'], correct: 0, explain: 'رنگ‌ها بعد از اسم می‌آیند.' },
-        { type: 'fill', skill: 'GR', topic: 'صفت و مطابقت', level: 'medium', fa: 'جمع کن:', q: 'des chaussures ___ (مشکی)', answer: ['noires'], explain: 'مؤنث جمع: noires.' },
-        { type: 'match', skill: 'VO', topic: 'لباس و رنگ', level: 'easy', fa: 'جور کن:', pairs: [['un pantalon', 'شلوار'], ['une jupe', 'دامن'], ['un manteau', 'پالتو'], ['des chaussures', 'کفش']] },
-        { type: 'mcq', skill: 'CO', topic: 'لباس و رنگ', level: 'easy', q: '🎧 گوش کن — او چه پوشیده؟', audio: 'Aujourd\'hui, je porte un pantalon bleu et un tee-shirt blanc.', audioFa: 'امروز شلوار آبی و تی‌شرت سفید پوشیده‌ام.', options: ['شلوار آبی و تی‌شرت سفید', 'پیراهن قرمز', 'دامن سبز و پالتو', 'کفش مشکی و شلوار زرد'], correct: 0, frOptions: false },
-        { type: 'dictation', skill: 'CO', topic: 'لباس و رنگ', level: 'hard', text: 'Elle porte une jolie robe verte.', trans: 'او یک پیراهن سبز قشنگ پوشیده.' },
-        { type: 'order', skill: 'GR', topic: 'صفت و مطابقت', level: 'medium', answer: 'Je porte un manteau noir.', fa: 'جمله «پالتوی مشکی پوشیده‌ام» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'لباس و رنگ', level: 'medium', text: 'Aujourd\'hui, je porte un pantalon noir et une chemise blanche.', fa: 'امروز شلوار مشکی و پیراهن سفید پوشیده‌ام.' },
-        { type: 'write', skill: 'PE', topic: 'لباس و رنگ', level: 'hard', prompt: 'بنویس امروز چی پوشیده‌ای (با رنگ‌ها، ۲ جمله).', min: 8, sample: 'Aujourd\'hui, je porte un pantalon bleu et un tee-shirt blanc. Je porte aussi des chaussures noires.' }
+        { type: 'mcq', skill: 'GR', topic: 'c\'est / il est', level: 'medium', q: 'کدام درست است؟', options: ['C\'est un café. Il est ouvert.', 'Il est un café. Il est ouvert.', 'C\'est un café. C\'est ouvert le café.', 'Il un café.'], correct: 0 },
+        { type: 'fill', skill: 'GR', topic: 'c\'est / il est', level: 'medium', fa: 'کامل کن:', q: '___ un musée. Il est très grand.', answer: ["C'est", "c'est"] },
+        { type: 'mcq', skill: 'GR', topic: 'حرف تعریف نامعین', level: 'easy', q: 'کدام جمله درست است؟', options: ['Il y a une banque ici.', 'Il y a un banque ici.', 'Il y a le banque ici.', 'Il y a banque ici.'], correct: 0, explain: 'banque مؤنث است و برای چیز ناشناخته une می‌آید.' },
+        { type: 'match', skill: 'VO', topic: 'شهر و مکان‌ها', level: 'easy', fa: 'مکان‌ها را جور کن:', pairs: [['la gare', 'ایستگاه قطار'], ['le musée', 'موزه'], ['la pharmacie', 'داروخانه'], ['un plan', 'نقشه'], ['un habitant', 'ساکن']] },
+        { type: 'mcq', skill: 'CO', topic: 'شهر و مکان‌ها', level: 'easy', q: '🎧 گوش کن — در محله چه چیزی نیست؟', audio: 'Dans mon quartier, il y a un café et une pharmacie, mais il n\'y a pas de parc.', audioFa: 'در محله من یک کافه و یک داروخانه هست، ولی پارک نیست.', options: ['پارک', 'کافه', 'داروخانه', 'مدرسه'], correct: 0, frOptions: false },
+        { type: 'dictation', skill: 'CO', topic: 'شهر و مکان‌ها', level: 'medium', text: 'C\'est un grand musée. Il est gratuit le dimanche.', trans: 'موزه بزرگی است. یکشنبه‌ها رایگان است.' },
+        { type: 'order', skill: 'GR', topic: 'شهر و مکان‌ها', level: 'easy', answer: 'Il y a un parc dans mon quartier.', fa: 'جمله «در محله من یک پارک هست» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'شهر و مکان‌ها', level: 'easy', text: 'C\'est un grand parc. Il est très calme.', fa: 'یک مکان از شهرت را معرفی و توصیف کن' },
+        { type: 'write', skill: 'PE', topic: 'شهر و مکان‌ها', level: 'medium', prompt: 'یک مکان از شهرت را معرفی کن (c\'est) و توصیفش کن (il/elle est). (۲-۳ جمله)', min: 8, sample: 'C\'est un grand parc dans mon quartier. Il est très calme et magnifique.' }
       ]
     },
     {
       id: 'u4l2',
-      title: 'Dans le magasin',
-      fa: 'در مغازه',
+      title: 'On y va comment ?',
+      fa: 'چطور برویم؟ — وسایل نقلیه و فعل prendre',
       vocab: [
-        { fr: 'un magasin', ipa: 'maɡazɛ̃', fa: 'مغازه', ex: 'Le magasin est ouvert.', exfa: 'مغازه باز است.' },
-        { fr: 'les soldes', ipa: 'sɔld', fa: 'حراج', ex: 'C\'est les soldes !', exfa: 'حراج است!' },
-        { fr: 'essayer', ipa: 'eseje', fa: 'پرو کردن / امتحان کردن', ex: 'Je peux essayer ?', exfa: 'می‌توانم پرو کنم؟' },
-        { fr: 'la taille', ipa: 'tɑj', fa: 'سایز', ex: 'Quelle est votre taille ?', exfa: 'سایزتان چند است؟' },
-        { fr: 'cher / chère', ipa: 'ʃɛʁ', fa: 'گران', ex: 'C\'est trop cher !', exfa: 'خیلی گران است!' },
-        { fr: 'pas cher', ipa: 'pa ʃɛʁ', fa: 'ارزان', ex: 'C\'est pas cher.', exfa: 'ارزان است.' },
-        { fr: 'trop', ipa: 'tʁo', fa: 'زیادی / بیش از حد', ex: 'C\'est trop grand.', exfa: 'زیادی بزرگ است.' },
-        { fr: 'un peu', ipa: 'œ̃ pø', fa: 'کمی', ex: 'C\'est un peu petit.', exfa: 'کمی کوچک است.' },
-        { fr: 'grand / grande', ipa: 'ɡʁɑ̃ / ɡʁɑ̃d', fa: 'بزرگ', ex: 'Trop grand pour moi', exfa: 'برای من زیادی بزرگ' },
-        { fr: 'petit / petite', ipa: 'pəti / pətit', fa: 'کوچک', ex: 'Un peu petit', exfa: 'کمی کوچک' },
-        { fr: 'la cabine d\'essayage', ipa: 'kabin desɛjaʒ', fa: 'اتاق پرو', ex: 'La cabine est là-bas.', exfa: 'اتاق پرو آنجاست.' },
-        { fr: 'un vendeur / une vendeuse', ipa: 'vɑ̃dœʁ / vɑ̃døz', fa: 'فروشنده', ex: 'La vendeuse est sympa.', exfa: 'فروشنده مهربان است.' }
+        { fr: 'aller', ipa: 'ale', fa: 'رفتن', ex: 'Je vais au cinéma.', exfa: 'به سینما می‌روم.' },
+        { fr: 'prendre', ipa: 'pʁɑ̃dʁ', fa: 'سوار شدن / گرفتن', ex: 'Je prends le métro.', exfa: 'مترو سوار می‌شوم.' },
+        { fr: 'le métro / le bus / un train', ipa: 'metʁo / bys / tʁɛ̃', fa: 'مترو / اتوبوس / قطار', ex: 'Le bus numéro 12', exfa: 'اتوبوس شماره ۱۲' },
+        { fr: 'un vélo / une voiture', ipa: 'velo / vwatyʁ', fa: 'دوچرخه / ماشین', ex: 'Nous allons en voiture.', exfa: 'با ماشین می‌رویم.' },
+        { fr: 'à pied', ipa: 'a pje', fa: 'پیاده', ex: 'Je vais au travail à pied.', exfa: 'پیاده سر کار می‌روم.' },
+        { fr: 'un ticket', ipa: 'tikɛ', fa: 'بلیت', ex: 'J\'achète un ticket de métro.', exfa: 'بلیت مترو می‌خرم.' },
+        { fr: 'toujours', ipa: 'tuʒuʁ', fa: 'همیشه', ex: 'Je prends toujours le métro.', exfa: 'همیشه مترو سوار می‌شوم.' },
+        { fr: 'souvent', ipa: 'suvɑ̃', fa: 'اغلب', ex: 'Je vais souvent à pied.', exfa: 'اغلب پیاده می‌روم.' },
+        { fr: 'ne... jamais', ipa: 'ʒamɛ', fa: 'هرگز', ex: 'Je ne prends jamais le bus.', exfa: 'هرگز اتوبوس سوار نمی‌شوم.' },
+        { fr: 'loin (de) / près (de)', ipa: 'lwɛ̃ / pʁɛ', fa: 'دور / نزدیک', ex: 'C\'est loin d\'ici ?', exfa: 'از اینجا دور است؟' }
       ],
       phrases: [
-        { fr: 'Je peux vous aider ?', fa: 'می‌توانم کمک‌تان کنم؟ (فروشنده)' },
-        { fr: 'Je cherche une robe.', fa: 'دنبال یک پیراهن می‌گردم.' },
-        { fr: 'Vous faites quelle taille ?', fa: 'سایزتان چند است؟' },
-        { fr: 'Je peux l\'essayer ?', fa: 'می‌توانم پروش کنم؟' },
-        { fr: 'Je le / la prends !', fa: 'برش می‌دارم! (می‌خرم)' }
+        { fr: 'On y va comment ?', fa: 'چطور برویم؟' },
+        { fr: 'Je prends le métro.', fa: 'مترو سوار می‌شوم.' },
+        { fr: 'C\'est à dix minutes.', fa: 'ده دقیقه راه است.' }
       ],
       grammar: {
-        title: 'Les adjectifs démonstratifs — ce / cette / ces',
-        body: 'برای اشاره به چیزی («این / آن»)، از صفت اشاره استفاده می‌کنیم:<br>' +
-          '• <b>ce</b> + اسم مذکر: ce pantalon (این شلوار)<br>' +
-          '• <b>cet</b> + مذکرِ با صدادار: cet hôtel<br>' +
-          '• <b>cette</b> + اسم مؤنث: cette robe (این پیراهن)<br>' +
-          '• <b>ces</b> + جمع: ces chaussures (این کفش‌ها)',
+        title: 'Le verbe « prendre » + les adverbes de fréquence',
+        body: 'فعل <b>prendre</b> برای وسیله نقلیه یعنی «سوار شدن»: Je prends le bus.<br>' +
+          'قید‌های بسامد معمولاً بعد از فعل می‌آیند:<br>' +
+          '• <b>toujours</b> (همیشه) > <b>souvent</b> (اغلب) > <b>ne... jamais</b> (هرگز)<br>' +
+          'Je prends <b>toujours</b> le métro. | Je <b>ne</b> prends <b>jamais</b> le bus.',
         table: {
-          head: ['', 'مثال', 'معنی'],
+          head: ['ضمیر', 'prendre — گرفتن/سوار شدن'],
           rows: [
-            ['ce', 'ce manteau', 'این پالتو'],
-            ['cet', 'cet hôtel', 'این هتل'],
-            ['cette', 'cette jupe', 'این دامن'],
-            ['ces', 'ces vêtements', 'این لباس‌ها']
+            ['je', 'prends'], ['tu', 'prends'], ['il / elle / on', 'prend'],
+            ['nous', 'prenons'], ['vous', 'prenez'], ['ils / elles', 'prennent']
           ]
         },
         examples: [
-          { fr: 'J\'aime cette robe, mais ce manteau est trop cher.', fa: 'این پیراهن را دوست دارم، ولی این پالتو خیلی گران است.' },
-          { fr: 'Ces chaussures sont jolies !', fa: 'این کفش‌ها قشنگ‌اند!' }
+          { fr: 'Je prends toujours le métro pour aller au travail.', fa: 'همیشه با مترو سر کار می‌روم.' },
+          { fr: 'Elle ne prend jamais le bus, elle préfère le vélo.', fa: 'او هرگز اتوبوس سوار نمی‌شود، دوچرخه را ترجیح می‌دهد.' }
         ]
       },
       phonetics: {
-        title: 'آوای [ʃ] و [ʒ]',
-        body: '<b>ch</b> صدای «ش» و <b>j / g(e,i)</b> صدای «ژ» می‌دهد:',
+        title: 'آواهای تودماغی [ɑ̃] و [ɔ̃]',
+        body: 'فرانسه چند صدای «تودماغی» دارد که در فارسی نیستند:',
         items: [
-          { fr: 'une chemise', ipa: 'ʃəmiz', fa: '«ش»' },
-          { fr: 'des chaussures', ipa: 'ʃosyʁ', fa: '«ش»' },
-          { fr: 'une jupe', ipa: 'ʒyp', fa: '«ژ»' },
-          { fr: 'joli', ipa: 'ʒɔli', fa: '«ژ»' },
-          { fr: 'un magasin', ipa: 'maɡazɛ̃', fa: '«گ» — چون بعدش a است' }
+          { fr: 'en voiture', ipa: 'ɑ̃ vwatyʁ', fa: '[ɑ̃]' },
+          { fr: 'on prend', ipa: 'ɔ̃ pʁɑ̃', fa: '[ɔ̃]' },
+          { fr: 'souvent', ipa: 'suvɑ̃', fa: '[ɑ̃]' }
         ]
       },
       dialogue: {
-        title: 'C\'est les soldes !',
+        title: 'On va au cinéma ?',
         lines: [
-          { s: 'Vendeuse', fr: 'Bonjour ! Je peux vous aider ?', fa: 'سلام! می‌توانم کمک‌تان کنم؟' },
-          { s: 'Mona', fr: 'Oui, je cherche une robe pour une fête.', fa: 'بله، دنبال یک پیراهن برای مهمانی می‌گردم.' },
-          { s: 'Vendeuse', fr: 'Vous faites quelle taille ?', fa: 'سایزتان چند است؟' },
-          { s: 'Mona', fr: 'Du 38. J\'aime cette robe bleue. Je peux l\'essayer ?', fa: 'سایز ۳۸. این پیراهن آبی را دوست دارم. می‌توانم پرو کنم؟' },
-          { s: 'Vendeuse', fr: 'Bien sûr ! La cabine est là-bas.', fa: 'حتماً! اتاق پرو آنجاست.' },
-          { s: 'Mona', fr: '... C\'est un peu grand, non ?', fa: '... کمی بزرگ نیست؟' },
-          { s: 'Vendeuse', fr: 'Voilà le 36. ... Ah oui, ça vous va très bien !', fa: 'بفرمایید سایز ۳۶... آه بله، خیلی به شما می‌آید!' },
-          { s: 'Mona', fr: 'Parfait, je la prends !', fa: 'عالی، برش می‌دارم!' }
+          { s: 'Léa', fr: 'On va au cinéma ce soir ? On y va comment ?', fa: 'امشب بریم سینما؟ چطور بریم؟' },
+          { s: 'Karim', fr: 'Je prends toujours le métro le soir, c\'est plus rapide.', fa: 'شب‌ها همیشه مترو سوار می‌شوم، سریع‌تر است.' },
+          { s: 'Léa', fr: 'D\'accord. Moi, je ne prends jamais le métro le soir, mais bon !', fa: 'باشه. من هرگز شب‌ها مترو سوار نمی‌شوم، ولی باشه!' },
+          { s: 'Karim', fr: 'C\'est à cinq minutes à pied de la station. Parfait, on y va !', fa: 'از ایستگاه پنج دقیقه پیاده است. عالی، بزن بریم!' }
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'صفت اشاره', level: 'medium', fa: 'صفت اشاره درست (ce / cet / cette / ces):', q: 'J\'aime ___ robe.', answer: ['cette'] },
-        { type: 'fill', skill: 'GR', topic: 'صفت اشاره', level: 'medium', fa: 'صفت اشاره درست:', q: '___ chaussures sont trop chères.', answer: ['Ces', 'ces'] },
-        { type: 'mcq', skill: 'GR', topic: 'صفت اشاره', level: 'easy', q: '«این هتل» به فرانسه:', options: ['cet hôtel', 'ce hôtel', 'cette hôtel', 'ces hôtel'], correct: 0, explain: 'مذکر با صدادار/h بی‌صدا: cet.' },
-        { type: 'mcq', skill: 'CO', topic: 'خرید', level: 'easy', q: '🎧 گوش کن — مشکل چیست؟', audio: 'Cette jupe est jolie mais elle est trop petite. Vous avez la taille 40 ?', audioFa: 'این دامن قشنگ است ولی خیلی کوچک است. سایز ۴۰ دارید؟', options: ['دامن زیادی کوچک است', 'دامن گران است', 'رنگش را دوست ندارد', 'مغازه بسته است'], correct: 0, frOptions: false },
-        { type: 'match', skill: 'VO', topic: 'خرید', level: 'easy', fa: 'جور کن:', pairs: [['essayer', 'پرو کردن'], ['la taille', 'سایز'], ['cher', 'گران'], ['les soldes', 'حراج']] },
-        { type: 'dictation', skill: 'CO', topic: 'خرید', level: 'hard', text: 'Je peux essayer cette robe ?', trans: 'می‌توانم این پیراهن را پرو کنم؟' },
-        { type: 'order', skill: 'GR', topic: 'خرید', level: 'medium', answer: 'Ce manteau est trop cher.', fa: 'جمله «این پالتو خیلی گران است» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'خرید', level: 'medium', text: 'Bonjour, je cherche un pantalon noir, taille 40.', fa: 'سلام، دنبال شلوار مشکی سایز ۴۰ می‌گردم.' },
-        { type: 'mcq', skill: 'CE', topic: 'خرید', level: 'easy', q: 'برچسب را بخوان — قیمت با تخفیف چند است؟', qfr: 'SOLDES ! Robe d\'été — Prix : 60 € → 30 € (-50%)', options: ['۳۰ یورو', '۶۰ یورو', '۵۰ یورو', '۹۰ یورو'], correct: 0, frOptions: false }
+        { type: 'fill', skill: 'GR', topic: 'فعل prendre', level: 'easy', fa: 'prendre را صرف کن:', q: 'Nous ___ le train.', answer: ['prenons'] },
+        { type: 'fill', skill: 'GR', topic: 'فعل prendre', level: 'easy', fa: 'prendre را صرف کن:', q: 'Elle ___ toujours le bus.', answer: ['prend'] },
+        { type: 'mcq', skill: 'GR', topic: 'قید بسامد', level: 'medium', q: '«هرگز اتوبوس سوار نمی‌شوم» به فرانسه:', options: ['Je ne prends jamais le bus.', 'Je prends jamais le bus.', 'Je ne jamais prends le bus.', 'Jamais je prends le bus.'], correct: 0 },
+        { type: 'match', skill: 'VO', topic: 'وسایل نقلیه', level: 'easy', fa: 'وسیله‌ها را جور کن:', pairs: [['le métro', 'مترو'], ['à pied', 'پیاده'], ['le vélo', 'دوچرخه'], ['un ticket', 'بلیت']] },
+        { type: 'mcq', skill: 'CO', topic: 'وسایل نقلیه', level: 'easy', q: '🎧 گوش کن — او چطور سر کار می‌رود؟', audio: 'Je prends toujours le vélo pour aller au travail. C\'est rapide !', audioFa: 'همیشه با دوچرخه سر کار می‌روم. سریع است!', options: ['همیشه با دوچرخه', 'گاهی با مترو', 'هرگز پیاده نمی‌رود', 'همیشه با ماشین'], correct: 0, frOptions: false },
+        { type: 'dictation', skill: 'CO', topic: 'فعل prendre', level: 'medium', text: 'On prend le métro ce soir.', trans: 'امشب مترو سوار می‌شویم.' },
+        { type: 'order', skill: 'GR', topic: 'فعل prendre', level: 'easy', answer: 'Je prends souvent le bus.', fa: 'جمله «اغلب اتوبوس سوار می‌شوم» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'وسایل نقلیه', level: 'easy', text: 'Je prends toujours le métro. Je ne prends jamais le bus.', fa: 'وسیله نقلیه‌ات را بگو' }
       ]
     },
     {
       id: 'u4l3',
-      title: 'On paie !',
-      fa: 'حساب می‌کنیم! — پرداخت و اعداد بزرگ',
+      title: 'Pour aller à... ?',
+      fa: 'مسیر — آدرس پرسیدن و اعداد بزرگ',
       vocab: [
-        { fr: 'payer', ipa: 'peje', fa: 'پرداخت کردن', ex: 'Vous payez comment ?', exfa: 'چطور پرداخت می‌کنید؟' },
-        { fr: 'la caisse', ipa: 'kɛs', fa: 'صندوق', ex: 'La caisse est là-bas.', exfa: 'صندوق آنجاست.' },
-        { fr: 'en espèces', ipa: 'ɑ̃n‿ɛspɛs', fa: 'نقدی', ex: 'Je paie en espèces.', exfa: 'نقد پرداخت می‌کنم.' },
-        { fr: 'par carte', ipa: 'paʁ kaʁt', fa: 'با کارت', ex: 'Je paie par carte.', exfa: 'با کارت پرداخت می‌کنم.' },
-        { fr: 'un prix', ipa: 'pʁi', fa: 'قیمت', ex: 'C\'est un bon prix.', exfa: 'قیمت خوبی است.' },
-        { fr: 'une réduction', ipa: 'ʁedyksjɔ̃', fa: 'تخفیف', ex: 'Il y a une réduction de 20%.', exfa: '۲۰٪ تخفیف دارد.' },
-        { fr: 'gratuit / gratuite', ipa: 'ɡʁatɥi / ɡʁatɥit', fa: 'رایگان', ex: 'La livraison est gratuite.', exfa: 'ارسال رایگان است.' },
-        { fr: 'deux cents', ipa: 'dø sɑ̃', fa: '۲۰۰ دویست', ex: 'Deux cents euros', exfa: 'دویست یورو' },
-        { fr: 'cinq cents', ipa: 'sɛ̃k sɑ̃', fa: '۵۰۰ پانصد', ex: 'Cinq cents grammes', exfa: 'پانصد گرم' },
-        { fr: 'mille', ipa: 'mil', fa: '۱۰۰۰ هزار', ex: 'Mille euros', exfa: 'هزار یورو' },
-        { fr: 'un ticket / un reçu', ipa: 'tikɛ / ʁəsy', fa: 'رسید', ex: 'Voilà votre ticket.', exfa: 'بفرمایید رسیدتان.' },
-        { fr: 'rembourser', ipa: 'ʁɑ̃buʁse', fa: 'پس دادن پول', ex: 'On peut vous rembourser.', exfa: 'می‌توانیم پول‌تان را پس بدهیم.' }
+        { fr: 'tourner / continuer', ipa: 'tuʁne / kɔ̃tinɥe', fa: 'پیچیدن / ادامه دادن', ex: 'Tournez à droite.', exfa: 'به راست بپیچید.' },
+        { fr: 'traverser', ipa: 'tʁavɛʁse', fa: 'عبور کردن (رد شدن)', ex: 'Traversez la place.', exfa: 'از میدان رد شوید.' },
+        { fr: 'monter / descendre', ipa: 'mɔ̃te / desɑ̃dʁ', fa: 'بالا رفتن / پایین رفتن', ex: 'Montez dans le bus.', exfa: 'سوار اتوبوس شوید.' },
+        { fr: 'à droite / à gauche / tout droit', ipa: 'a dʁwat / a ɡoʃ / tu dʁwa', fa: 'راست / چپ / مستقیم', ex: 'La banque est à droite.', exfa: 'بانک سمت راست است.' },
+        { fr: 'devant / derrière', ipa: 'dəvɑ̃ / dɛʁjɛʁ', fa: 'جلوی / پشتِ', ex: 'Devant la gare', exfa: 'جلوی ایستگاه' },
+        { fr: 'à côté de / en face de', ipa: 'a kote də / ɑ̃ fas də', fa: 'کنارِ / روبه‌روی', ex: 'En face du café', exfa: 'روبه‌روی کافه' },
+        { fr: 'mille', ipa: 'mil', fa: '۱۰۰۰ هزار', ex: 'Mille habitants', exfa: 'هزار ساکن' },
+        { fr: 'un million', ipa: 'miljɔ̃', fa: 'یک میلیون', ex: 'Deux millions d\'habitants', exfa: 'دو میلیون ساکن' },
+        { fr: 'un milliard', ipa: 'miljaʁ', fa: 'یک میلیارد', ex: 'Sept milliards de personnes', exfa: 'هفت میلیارد نفر' }
       ],
       phrases: [
-        { fr: 'Vous payez comment ?', fa: 'چطور پرداخت می‌کنید؟' },
-        { fr: 'Par carte, s\'il vous plaît.', fa: 'با کارت، لطفاً.' },
-        { fr: 'Ça fait combien en tout ?', fa: 'جمعاً چقدر می‌شود؟' },
-        { fr: 'Vous avez la monnaie ?', fa: 'پول خرد دارید؟' }
+        { fr: 'Pour aller à la gare, s\'il vous plaît ?', fa: 'برای رفتن به ایستگاه (از کدام طرف)، لطفاً؟' },
+        { fr: 'Prenez la première rue à droite.', fa: 'اولین خیابان سمت راست را بروید.' },
+        { fr: 'C\'est juste là.', fa: 'همین‌جاست.' }
       ],
       grammar: {
-        title: 'Les nombres de 100 à 1000 + payer',
-        body: 'اعداد بزرگ:<br>' +
-          '• 100 = cent، 200 = deux cent<b>s</b> (با s)، ولی 201 = deux cent un (بدون s)<br>' +
-          '• 1000 = mille — هیچ‌وقت s نمی‌گیرد: deux mille<br>' +
-          '• ترکیب: 345 = trois cent quarante-cinq<br><br>' +
-          'فعل <b>payer</b>: je paie، tu paies، il paie، nous payons، vous payez، ils paient',
+        title: 'L\'impératif + les connecteurs',
+        body: 'برای دادن دستور/راهنمایی، فعل را <b>بدون ضمیر</b> می‌آوریم — être، avoir، aller و فعل‌های -er همه امری دارند:<br>' +
+          '• être → <b>Sois</b> prudent ! (مواظب باش!) | avoir → <b>Ayez</b> votre ticket ! | aller → <b>Allez</b> tout droit ! | monter → <b>Montez</b> !<br>' +
+          '⚠️ در امریِ tu برای فعل‌های -er، حرف s حذف می‌شود: Tu tournes → Tourne !<br><br>' +
+          'ربط‌دهنده‌های مفید: <b>pour</b> (برای)، <b>parce que</b> (چون)، <b>mais</b> (ولی)، <b>avec</b> (با)، <b>sans</b> (بدون).',
         table: {
-          head: ['عدد', 'فرانسه'],
+          head: ['فعل', 'امری با tu', 'امری با vous'],
           rows: [
-            ['150', 'cent cinquante'],
-            ['238', 'deux cent trente-huit'],
-            ['500', 'cinq cents'],
-            ['999', 'neuf cent quatre-vingt-dix-neuf'],
-            ['1000', 'mille']
+            ['aller', 'Va !', 'Allez !'],
+            ['avoir', '(کمتر رایج)', 'Ayez votre ticket !'],
+            ['tourner', 'Tourne !', 'Tournez !'],
+            ['monter', 'Monte !', 'Montez !']
           ]
         },
         examples: [
-          { fr: 'Ça fait cent vingt euros. Vous payez comment ?', fa: 'صدوبیست یورو می‌شود. چطور پرداخت می‌کنید؟' },
-          { fr: 'Je paie par carte.', fa: 'با کارت پرداخت می‌کنم.' }
+          { fr: 'Traversez la place pour aller à la gare.', fa: 'برای رفتن به ایستگاه از میدان رد شوید.' },
+          { fr: 'Prenez le bus, mais n\'oubliez pas votre ticket !', fa: 'اتوبوس سوار شوید، ولی بلیت‌تان را فراموش نکنید!' }
         ]
       },
       phonetics: {
-        title: 'ریتم و تکیه جمله فرانسوی',
-        body: 'در فرانسه تکیه همیشه روی <b>آخرین هجای گروه</b> است و جمله مثل موسیقی روان ادا می‌شود. گوش کن و با همان آهنگ تکرار کن:',
+        title: 'آوای [ʁ] فرانسوی',
+        body: 'حرف r فرانسه از تهِ گلو تلفظ می‌شود، شبیه «غ» نرم فارسی:',
         items: [
-          { fr: 'Ça fait combien ?', ipa: 'sa fɛ kɔ̃bjɛ̃', fa: 'تکیه روی «بین»' },
-          { fr: 'Je paie par carte.', ipa: 'ʒə pɛ paʁ kaʁt', fa: 'تکیه روی «کارت»' },
-          { fr: 'C\'est un bon prix !', ipa: 'sɛ‿tœ̃ bɔ̃ pʁi', fa: 'تکیه روی «پری»' }
+          { fr: 'à droite', ipa: 'a dʁwat', fa: 'راست' },
+          { fr: 'derrière', ipa: 'dɛʁjɛʁ', fa: 'پشت' },
+          { fr: 'un million', ipa: 'miljɔ̃', fa: 'میلیون' }
         ]
       },
       dialogue: {
-        title: 'À la caisse',
+        title: 'Où est le musée ?',
         lines: [
-          { s: 'Caissier', fr: 'Bonjour ! Alors, la robe et les chaussures... Ça fait cent quinze euros.', fa: 'سلام! خب، پیراهن و کفش‌ها... صدوپانزده یورو می‌شود.' },
-          { s: 'Mona', fr: 'Il y a une réduction avec les soldes, non ?', fa: 'با حراج تخفیف دارد، نه؟' },
-          { s: 'Caissier', fr: 'Ah oui, pardon ! Moins 30%... Ça fait quatre-vingts euros cinquante.', fa: 'آه بله، ببخشید! منهای ۳۰٪... هشتاد یورو و پنجاه می‌شود.' },
-          { s: 'Mona', fr: 'Super ! Je paie par carte.', fa: 'عالی! با کارت پرداخت می‌کنم.' },
-          { s: 'Caissier', fr: 'Voilà votre reçu. Bonne journée !', fa: 'بفرمایید رسیدتان. روز خوش!' }
+          { s: 'Touriste', fr: 'Excusez-moi, madame. Pour aller au musée, s\'il vous plaît ?', fa: 'ببخشید خانم. برای رفتن به موزه، لطفاً؟' },
+          { s: 'Passante', fr: 'Continuez tout droit et prenez la première rue à gauche.', fa: 'مستقیم ادامه بدهید و اولین خیابان سمت چپ را بروید.' },
+          { s: 'Touriste', fr: 'D\'accord. C\'est loin ?', fa: 'باشه. دور است؟' },
+          { s: 'Passante', fr: 'Non, c\'est à cinq minutes à pied. Le musée a plus d\'un million de visiteurs par an !', fa: 'نه، پنج دقیقه پیاده است. موزه بیش از یک میلیون بازدیدکننده در سال دارد!' },
+          { s: 'Touriste', fr: 'Merci beaucoup !', fa: 'خیلی ممنون!' }
         ]
       },
       exercises: [
-        { type: 'mcq', skill: 'CO', topic: 'اعداد', level: 'easy', q: '🎧 گوش کن — چقدر شد؟', audio: 'Ça fait trois cent quarante-cinq euros.', audioFa: 'سیصدوچهل‌وپنج یورو می‌شود.', options: ['345', '245', '445', '335'], correct: 0 },
-        { type: 'fill', skill: 'VO', topic: 'اعداد', level: 'medium', fa: 'به حروف بنویس:', q: '200 = ___', answer: ['deux cents', 'deux cent'], explain: 'دویست: deux cents (با s چون گِرد است).' },
-        { type: 'fill', skill: 'GR', topic: 'خرید', level: 'medium', fa: 'payer را صرف کن:', q: 'Nous ___ en espèces.', answer: ['payons'] },
-        { type: 'mcq', skill: 'VO', topic: 'خرید', level: 'easy', q: '«با کارت پرداخت می‌کنم» به فرانسه:', options: ['Je paie par carte.', 'Je paie en carte.', 'Je paie de carte.', 'Je paie au carte.'], correct: 0 },
-        { type: 'match', skill: 'VO', topic: 'خرید', level: 'easy', fa: 'جور کن:', pairs: [['gratuit', 'رایگان'], ['une réduction', 'تخفیف'], ['en espèces', 'نقدی'], ['un reçu', 'رسید']] },
-        { type: 'dictation', skill: 'CO', topic: 'اعداد', level: 'hard', text: 'Ça fait cent cinquante euros.', trans: 'صدوپنجاه یورو می‌شود.' },
-        { type: 'order', skill: 'GR', topic: 'خرید', level: 'medium', answer: 'Vous payez comment ?', fa: 'سؤال «چطور پرداخت می‌کنید؟» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'خرید', level: 'medium', text: 'Ça fait combien en tout ? Je paie par carte.', fa: 'جمعاً چقدر می‌شود؟ با کارت پرداخت می‌کنم.' },
-        { type: 'write', skill: 'PE', topic: 'خرید', level: 'hard', prompt: 'یک مکالمه کوتاه خرید بنویس: چه می‌خواهی، سایز، و چطور پرداخت می‌کنی. (۳ جمله)', min: 12, sample: 'Bonjour, je cherche une chemise blanche, taille 38. Je peux l\'essayer ? Je paie par carte, s\'il vous plaît.' }
+        { type: 'fill', skill: 'GR', topic: 'فعل امری', level: 'easy', fa: 'به یک غریبه (رسمی) بگو «بپیچید به چپ»:', q: '___ à gauche.', answer: ['Tournez', 'tournez'] },
+        { type: 'fill', skill: 'GR', topic: 'فعل امری', level: 'easy', fa: 'امری فعل aller با vous:', q: '___ tout droit !', answer: ['Allez', 'allez'] },
+        { type: 'fill', skill: 'GR', topic: 'ربط‌دهنده‌ها', level: 'medium', fa: 'ربط‌دهنده درست:', q: 'Je prends le bus ___ c\'est rapide.', answer: ['parce que', "parce qu'"] },
+        { type: 'fill', skill: 'VO', topic: 'اعداد بزرگ', level: 'medium', fa: 'به حروف بنویس:', q: '1 000 000 = un ___', answer: ['million'] },
+        { type: 'match', skill: 'VO', topic: 'حروف اضافه مکان', level: 'easy', fa: 'جور کن:', pairs: [['en face de', 'روبه‌روی'], ['à côté de', 'کنار'], ['derrière', 'پشت'], ['devant', 'جلوی']] },
+        { type: 'mcq', skill: 'CE', topic: 'مسیر و جهت', level: 'easy', q: 'پیام را بخوان — کافه کجاست؟', qfr: 'Le café « Chez Paul » est en face de la gare, à côté de la banque.', options: ['روبه‌روی ایستگاه، کنار بانک', 'پشت ایستگاه', 'داخل هتل', 'کنار موزه'], correct: 0, frOptions: false },
+        { type: 'dictation', skill: 'CO', topic: 'مسیر و جهت', level: 'medium', text: 'Prenez la deuxième rue à droite.', trans: 'دومین خیابان سمت راست را بروید.' },
+        { type: 'order', skill: 'GR', topic: 'مسیر و جهت', level: 'easy', answer: 'Pour aller à la gare, s\'il vous plaît ?', fa: 'سؤال «برای رفتن به ایستگاه، لطفاً؟» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'مسیر و جهت', level: 'easy', text: 'Excusez-moi, pour aller au musée, s\'il vous plaît ?', fa: 'ببخشید، برای رفتن به موزه (از کدام طرف)، لطفاً؟' },
+        { type: 'write', skill: 'PE', topic: 'مسیر و جهت', level: 'medium', prompt: 'به یک توریست آدرس بده: از اینجا تا ایستگاه (۲-۳ جمله امری با یک ربط‌دهنده).', min: 8, sample: 'Continuez tout droit et traversez la place. Prenez la première rue à gauche parce que c\'est plus court. La gare est juste là.' }
       ]
     }
   ],
   bilan: {
     exercises: [
-      { type: 'mcq', skill: 'CO', topic: 'خرید', level: 'easy', q: '🎧 گوش کن — مشتری چه می‌خرد؟', audio: 'Je prends cette jupe noire et ces chaussures blanches. Je paie par carte.', audioFa: 'این دامن مشکی و این کفش‌های سفید را برمی‌دارم. با کارت پرداخت می‌کنم.', options: ['دامن مشکی و کفش سفید', 'پیراهن قرمز', 'پالتوی آبی', 'شلوار و تی‌شرت'], correct: 0, frOptions: false },
-      { type: 'mcq', skill: 'CO', topic: 'اعداد', level: 'easy', q: '🎧 گوش کن — قیمت نهایی؟', audio: 'Avec la réduction, ça fait deux cent soixante euros.', audioFa: 'با تخفیف، دویست‌وشصت یورو می‌شود.', options: ['260', '360', '250', '160'], correct: 0 },
-      { type: 'mcq', skill: 'CE', topic: 'خرید', level: 'easy', q: 'آگهی را بخوان — کدام درست است؟', qfr: 'SOLDES D\'ÉTÉ ! Du 1er au 30 juillet. Robes : -40% | Chaussures : -50% | Livraison gratuite.', options: ['کفش‌ها ۵۰٪ تخفیف دارند', 'پیراهن‌ها ۵۰٪ تخفیف دارند', 'ارسال پولی است', 'حراج در ماه اوت است'], correct: 0, frOptions: false },
-      { type: 'fill', skill: 'GR', topic: 'صفت اشاره', level: 'medium', fa: 'ce / cet / cette / ces :', q: 'J\'adore ___ chaussures !', answer: ['ces'] },
-      { type: 'fill', skill: 'GR', topic: 'صفت و مطابقت', level: 'medium', fa: 'صفت را مطابقت بده:', q: 'une robe ___ (آبی)', answer: ['bleue'] },
-      { type: 'fill', skill: 'VO', topic: 'اعداد', level: 'medium', fa: 'به حروف بنویس:', q: '500 = ___', answer: ['cinq cents', 'cinq cent'] },
-      { type: 'match', skill: 'VO', topic: 'لباس و رنگ', level: 'easy', fa: 'جور کن:', pairs: [['une chemise', 'پیراهن'], ['un tee-shirt', 'تی‌شرت'], ['blanc', 'سفید'], ['vert', 'سبز']] },
-      { type: 'order', skill: 'GR', topic: 'خرید', level: 'medium', answer: 'Je peux essayer cette jupe ?', fa: 'سؤال «می‌توانم این دامن را پرو کنم؟» را بساز:' },
-      { type: 'dictation', skill: 'CO', topic: 'لباس و رنگ', level: 'hard', text: 'Ce manteau noir est trop grand.', trans: 'این پالتوی مشکی زیادی بزرگ است.' },
-      { type: 'speak', skill: 'PO', topic: 'خرید', level: 'medium', text: 'Je cherche une robe pour une fête. J\'aime cette robe bleue.', fa: 'در مغازه‌ای' },
-      { type: 'write', skill: 'PE', topic: 'خرید', level: 'hard', prompt: 'تجربه یک خرید را بنویس: کجا رفتی، چی خریدی، چه رنگی، چند شد؟ (۴ جمله)', min: 14, sample: 'Je vais au magasin avec mon amie. J\'achète une robe rouge et des chaussures noires. La robe coûte quarante euros avec la réduction. Je paie par carte.' }
+      { type: 'mcq', skill: 'CO', topic: 'شهر و مکان‌ها', level: 'easy', q: '🎧 گوش کن — در محله چه چیزهایی هست؟', audio: 'Dans mon quartier, il y a une école, deux cafés et un petit parc, mais il n\'y a pas de musée.', audioFa: 'در محله من یک مدرسه، دو کافه و یک پارک کوچک هست، ولی موزه نیست.', options: ['مدرسه، دو کافه و پارک', 'موزه و سینما', 'فقط یک بانک', 'ایستگاه و هتل'], correct: 0, frOptions: false },
+      { type: 'mcq', skill: 'CO', topic: 'وسایل نقلیه', level: 'medium', q: '🎧 گوش کن — او چطور همیشه سر کار می‌رود؟', audio: 'Je prends toujours le métro, je ne prends jamais la voiture.', audioFa: 'همیشه مترو سوار می‌شوم، هرگز ماشین نمی‌گیرم.', options: ['همیشه مترو', 'همیشه ماشین', 'گاهی پیاده', 'اغلب دوچرخه'], correct: 0, frOptions: false },
+      { type: 'mcq', skill: 'CE', topic: 'شهر و مکان‌ها', level: 'easy', q: 'آگهی را بخوان — هتل کجاست؟', qfr: 'Hôtel Le Soleil ** — dans le centre-ville, à côté de la gare, à dix minutes du musée.', options: ['مرکز شهر، کنار ایستگاه', 'بیرون شهر', 'روبه‌روی پارک', 'ده دقیقه تا ایستگاه'], correct: 0, frOptions: false },
+      { type: 'fill', skill: 'GR', topic: 'c\'est / il est', level: 'medium', fa: 'کامل کن:', q: '___ une banque. Elle est fermée le dimanche.', answer: ["C'est", "c'est"] },
+      { type: 'fill', skill: 'GR', topic: 'فعل prendre', level: 'easy', fa: 'prendre را صرف کن:', q: 'Vous ___ le train ?', answer: ['prenez'] },
+      { type: 'fill', skill: 'GR', topic: 'فعل امری', level: 'easy', fa: 'امری بساز (vous):', q: '___ la première rue à gauche.', answer: ['Prenez', 'prenez'] },
+      { type: 'fill', skill: 'VO', topic: 'اعداد بزرگ', level: 'medium', fa: 'به حروف بنویس:', q: '1000 = ___', answer: ['mille'] },
+      { type: 'match', skill: 'VO', topic: 'شهر و مکان‌ها', level: 'easy', fa: 'جور کن:', pairs: [['une gare', 'ایستگاه'], ['un plan', 'نقشه'], ['une banque', 'بانک'], ['un habitant', 'ساکن']] },
+      { type: 'order', skill: 'GR', topic: 'فعل امری', level: 'easy', answer: 'Prenez la première rue à gauche.', fa: 'جمله «اولین خیابان سمت چپ را بروید» را بساز:' },
+      { type: 'dictation', skill: 'CO', topic: 'فعل prendre', level: 'medium', text: 'Je prends toujours le métro pour aller au travail.', trans: 'همیشه با مترو سر کار می‌روم.' },
+      { type: 'speak', skill: 'PO', topic: 'مسیر و جهت', level: 'medium', text: 'Excusez-moi, où est la pharmacie ? C\'est loin d\'ici ?', fa: 'ببخشید، داروخانه کجاست؟ از اینجا دور است؟' },
+      { type: 'write', skill: 'PE', topic: 'شهر و مکان‌ها', level: 'medium', prompt: 'محله‌ات را توصیف کن (c\'est/il-elle est)، و بگو چطور همیشه/اغلب/هرگز سر کار می‌روی. (۴ جمله)', min: 14, sample: 'J\'habite dans un petit quartier. C\'est un endroit calme. Il y a un parc et des cafés. Je prends toujours le métro pour aller au travail.' }
     ]
   }
 };

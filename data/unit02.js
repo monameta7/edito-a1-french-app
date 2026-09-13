@@ -1,271 +1,250 @@
-/* ===== واحد ۲: On va où ? — کجا برویم؟ ===== */
+/* ===== واحد ۲: Près de moi — نزدیک من ===== */
 EDITO.units[2] = {
   id: 2,
-  title: 'On va où ?',
-  fa: 'کجا برویم؟',
-  theme: 'شهر و مکان‌ها، il y a، حروف تعریف معین، فعل aller، پرسیدن و دادن آدرس',
+  title: 'Près de moi',
+  fa: 'نزدیک من',
+  theme: 'محل زندگی و علاقه‌مندی‌ها (فعل‌های -er)، خانواده و وضعیت تأهل (صفت‌های ملکی)، شغل‌ها و مذکر/مؤنث آنها',
   culture: {
-    title: 'ورود به مغازه 🏪',
-    body: 'وقتی وارد یک نانوایی، مغازه یا داروخانه در فرانسه می‌شوی، همیشه یک <b>Bonjour</b> بلند به همه می‌گویی — نه فقط به فروشنده. همین‌طور هنگام خروج، <b>Au revoir</b> گفتن عادی و منتظره است. بسیاری از شهرهای کوچک فرانسه بین ساعت ۱۲ تا ۱۴ برای ناهار مغازه‌هایشان را می‌بندند، پس قبل از رفتن ساعت کاری را چک کن!'
+    title: 'Le déjeuner du dimanche 🍽️',
+    body: 'در بسیاری از خانواده‌های فرانسوی، ناهار یکشنبه یک رسم مهم است: همه اعضای خانواده دور یک میز جمع می‌شوند. همچنین در فرانسه معمولاً پرسیدن شغل (<i>Qu\'est-ce que vous faites dans la vie ?</i>) کاملاً عادی و بخشی از آشنایی اولیه است، برخلاف پرسیدن سن یا حقوق.'
   },
   lessons: [
     {
       id: 'u2l1',
-      title: 'Les lieux de la ville',
-      fa: 'مکان‌های شهر',
+      title: 'J\'habite ici',
+      fa: 'اینجا زندگی می‌کنم — علاقه‌مندی‌ها',
       vocab: [
-        { fr: 'une ville', ipa: 'vil', fa: 'شهر', ex: 'Paris est une belle ville.', exfa: 'پاریس شهر زیبایی است.' },
-        { fr: 'une rue', ipa: 'ʁy', fa: 'خیابان', ex: 'J\'habite rue Pasteur.', exfa: 'در خیابان پاستور زندگی می‌کنم.' },
-        { fr: 'une place', ipa: 'plas', fa: 'میدان', ex: 'La place de la République', exfa: 'میدان جمهوری' },
-        { fr: 'un café', ipa: 'kafe', fa: 'کافه', ex: 'Il y a un café ici.', exfa: 'اینجا یک کافه هست.' },
-        { fr: 'un restaurant', ipa: 'ʁɛstoʁɑ̃', fa: 'رستوران', ex: 'Le restaurant est ouvert.', exfa: 'رستوران باز است.' },
-        { fr: 'un cinéma', ipa: 'sinema', fa: 'سینما', ex: 'On va au cinéma ?', exfa: 'بریم سینما؟' },
-        { fr: 'un musée', ipa: 'myze', fa: 'موزه', ex: 'Le musée du Louvre', exfa: 'موزه لوور' },
-        { fr: 'une gare', ipa: 'ɡaʁ', fa: 'ایستگاه قطار', ex: 'La gare est loin ?', exfa: 'ایستگاه دور است؟' },
-        { fr: 'un hôtel', ipa: 'otɛl', fa: 'هتل', ex: 'L\'hôtel est dans le centre.', exfa: 'هتل در مرکز شهر است.' },
-        { fr: 'une banque', ipa: 'bɑ̃k', fa: 'بانک', ex: 'La banque est fermée.', exfa: 'بانک بسته است.' },
-        { fr: 'une pharmacie', ipa: 'faʁmasi', fa: 'داروخانه', ex: 'Il y a une pharmacie près d\'ici ?', exfa: 'نزدیک اینجا داروخانه هست؟' },
-        { fr: 'une école', ipa: 'ekɔl', fa: 'مدرسه', ex: 'L\'école est petite.', exfa: 'مدرسه کوچک است.' },
-        { fr: 'un parc', ipa: 'paʁk', fa: 'پارک', ex: 'Le parc est magnifique.', exfa: 'پارک فوق‌العاده است.' },
-        { fr: 'un supermarché', ipa: 'sypɛʁmaʁʃe', fa: 'سوپرمارکت', ex: 'Je vais au supermarché.', exfa: 'به سوپرمارکت می‌روم.' }
+        { fr: 'habiter', ipa: 'abite', fa: 'زندگی کردن، ساکن بودن', ex: 'J\'habite à Téhéran.', exfa: 'در تهران زندگی می‌کنم.' },
+        { fr: 'un quartier', ipa: 'kaʁtje', fa: 'محله', ex: 'C\'est un quartier calme.', exfa: 'محله آرامی است.' },
+        { fr: 'une ville', ipa: 'vil', fa: 'شهر', ex: 'J\'habite dans une grande ville.', exfa: 'در شهر بزرگی زندگی می‌کنم.' },
+        { fr: 'la campagne', ipa: 'kɑ̃paɲ', fa: 'روستا / حومه', ex: 'Mes parents habitent à la campagne.', exfa: 'والدینم در روستا زندگی می‌کنند.' },
+        { fr: 'aimer', ipa: 'eme', fa: 'دوست داشتن', ex: 'J\'aime la musique.', exfa: 'موسیقی را دوست دارم.' },
+        { fr: 'détester', ipa: 'deteste', fa: 'متنفر بودن', ex: 'Je déteste le bruit.', exfa: 'از سروصدا متنفرم.' },
+        { fr: 'adorer', ipa: 'adɔʁe', fa: 'عاشق بودن', ex: 'J\'adore le cinéma.', exfa: 'عاشق سینمام.' },
+        { fr: 'la musique', ipa: 'myzik', fa: 'موسیقی', ex: 'J\'aime la musique classique.', exfa: 'موسیقی کلاسیک را دوست دارم.' },
+        { fr: 'le cinéma', ipa: 'sinema', fa: 'سینما', ex: 'On aime le cinéma.', exfa: 'سینما را دوست داریم.' },
+        { fr: 'le sport', ipa: 'spɔʁ', fa: 'ورزش', ex: 'Elle adore le sport.', exfa: 'او عاشق ورزش است.' },
+        { fr: 'pourquoi', ipa: 'puʁkwa', fa: 'چرا', ex: 'Pourquoi tu aimes ça ?', exfa: 'چرا این را دوست داری؟' },
+        { fr: 'parce que', ipa: 'paʁs kə', fa: 'چون / زیرا', ex: 'J\'aime ce quartier parce que c\'est calme.', exfa: 'این محله را دوست دارم چون آرام است.' }
       ],
       phrases: [
-        { fr: 'Il y a...', fa: 'وجود دارد / هست' },
-        { fr: 'Il n\'y a pas de...', fa: 'وجود ندارد / نیست' },
-        { fr: 'Qu\'est-ce qu\'il y a dans ton quartier ?', fa: 'در محله‌ات چه چیزهایی هست؟' },
-        { fr: 'C\'est ouvert / fermé.', fa: 'باز است / بسته است.' }
+        { fr: 'Tu habites où ?', fa: 'کجا زندگی می‌کنی؟' },
+        { fr: 'J\'habite dans un quartier calme.', fa: 'در یک محله آرام زندگی می‌کنم.' },
+        { fr: 'Qu\'est-ce que tu aimes ?', fa: 'چه چیزی دوست داری؟' },
+        { fr: 'J\'aime beaucoup / Je n\'aime pas du tout', fa: 'خیلی دوست دارم / اصلاً دوست ندارم' }
       ],
       grammar: {
-        title: 'Les articles définis + « il y a »',
-        body: 'دو نوع حرف تعریف تا حالا دیده‌ای:<br>' +
-          '• <b>نامعین</b> un / une / des («یک، چندتا»): چیز ناشناخته — Il y a <b>un</b> café. (یک کافه‌ای هست)<br>' +
-          '• <b>معین</b> le / la / l\' / les («آنِ مشخص»): چیز مشخص — <b>Le</b> café est ouvert. (آن کافه باز است)<br>' +
-          'عبارت <b>il y a</b> یعنی «هست / وجود دارد» و همیشه همین شکل می‌ماند. منفی آن: <b>il n\'y a pas de</b> (بدون حرف تعریف!)',
+        title: 'Les verbes en « -er » — habiter, aimer, détester',
+        body: 'اکثر فعل‌های فرانسه به <b>-er</b> ختم می‌شوند و همه یک الگو دارند. کافی است -er را حذف کنی و پسوندها را اضافه کنی:<br>' +
+          'ریشه (habit-، aim-، détest-) + <b>e / es / e / ons / ez / ent</b>',
         table: {
-          head: ['', 'مذکر', 'مؤنث', 'قبل صدادار', 'جمع'],
+          head: ['ضمیر', 'habiter', 'aimer'],
           rows: [
-            ['نامعین', 'un café', 'une rue', 'un hôtel', 'des cafés'],
-            ['معین', 'le café', 'la rue', 'l\'hôtel', 'les cafés']
+            ['je / j\'', 'habite', 'aime'],
+            ['tu', 'habites', 'aimes'],
+            ['il / elle', 'habite', 'aime'],
+            ['nous', 'habitons', 'aimons'],
+            ['vous', 'habitez', 'aimez'],
+            ['ils / elles', 'habitent', 'aiment']
           ]
         },
         examples: [
-          { fr: 'Dans ma ville, il y a un grand parc.', fa: 'در شهر من یک پارک بزرگ هست.' },
-          { fr: 'Il n\'y a pas de cinéma ici.', fa: 'اینجا سینما نیست.' },
-          { fr: 'La pharmacie est fermée.', fa: 'داروخانه بسته است.' }
+          { fr: 'J\'habite dans un petit quartier et j\'aime beaucoup ça.', fa: 'در یک محله کوچک زندگی می‌کنم و خیلی آن را دوست دارم.' },
+          { fr: 'Ils détestent le bruit de la ville.', fa: 'آنها از سروصدای شهر متنفرند.' }
         ]
       },
       phonetics: {
-        title: 'آواهای [e] و [ɛ]',
-        body: 'دو نوع «اِ» در فرانسه: <b>[e]</b> بسته (مثل é در café) و <b>[ɛ]</b> باز (مثل è یا ai). گوش کن و تفاوت را حس کن:',
+        title: 'تلفظ فعل‌های -er',
+        body: 'در چهار صرفِ je/tu/il/ils، پایانه‌های e، es، e، ent همه <b>بی‌صدا</b> هستند — یعنی این چهار صرف یک صدا دارند!',
         items: [
-          { fr: 'un café', ipa: 'kafe', fa: 'بسته [e]' },
-          { fr: 'un musée', ipa: 'myze', fa: 'بسته [e]' },
-          { fr: 'près', ipa: 'pʁɛ', fa: 'باز [ɛ]' },
-          { fr: 'français', ipa: 'fʁɑ̃sɛ', fa: 'باز [ɛ]' },
-          { fr: 'une école', ipa: 'ekɔl', fa: 'بسته [e]' }
+          { fr: 'j\'habite / il habite / ils habitent', ipa: 'abit', fa: 'هر سه: «ابیت»' },
+          { fr: 'j\'aime / il aime / ils aiment', ipa: 'ɛm', fa: 'هر سه: «اِم»' },
+          { fr: 'nous habitons', ipa: 'nuzabitɔ̃', fa: 'فقط اینجا صدا فرق می‌کند' }
         ]
       },
       dialogue: {
-        title: 'Mon quartier',
+        title: 'Tu habites où ?',
         lines: [
           { s: 'Nina', fr: 'Tu habites où, Karim ?', fa: 'کجا زندگی می‌کنی کریم؟' },
-          { s: 'Karim', fr: 'J\'habite dans le centre, rue Pasteur.', fa: 'در مرکز شهر زندگی می‌کنم، خیابان پاستور.' },
-          { s: 'Nina', fr: 'C\'est bien ? Qu\'est-ce qu\'il y a dans ton quartier ?', fa: 'خوب است؟ در محله‌ات چه چیزهایی هست؟' },
-          { s: 'Karim', fr: 'Il y a un parc, des cafés et un petit cinéma.', fa: 'یک پارک، چند کافه و یک سینمای کوچک هست.' },
-          { s: 'Nina', fr: 'Super ! Et il y a un supermarché ?', fa: 'عالی! سوپرمارکت هم هست؟' },
-          { s: 'Karim', fr: 'Non, il n\'y a pas de supermarché, mais il y a une épicerie.', fa: 'نه، سوپرمارکت نیست، ولی یک بقالی هست.' }
+          { s: 'Karim', fr: 'J\'habite dans un quartier calme, près du parc.', fa: 'در یک محله آرام زندگی می‌کنم، نزدیک پارک.' },
+          { s: 'Nina', fr: 'Tu aimes ce quartier ?', fa: 'این محله را دوست داری؟' },
+          { s: 'Karim', fr: 'Oui, j\'adore ! J\'aime la musique et il y a beaucoup de cafés.', fa: 'آره، عاشقشم! موسیقی را دوست دارم و کافه زیاد دارد.' },
+          { s: 'Nina', fr: 'Moi, je déteste le centre-ville, c\'est trop bruyant. Je préfère la campagne.', fa: 'من از مرکز شهر متنفرم، خیلی پرسروصداست. روستا را ترجیح می‌دهم.' }
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'حرف تعریف معین', level: 'easy', fa: 'حرف تعریف معین درست را بگذار:', q: '___ pharmacie est fermée.', answer: ['La', 'la'], explain: 'pharmacie مؤنث است ← la.' },
-        { type: 'fill', skill: 'GR', topic: 'حرف تعریف معین', level: 'easy', fa: 'حرف تعریف معین درست را بگذار:', q: '___ hôtel est dans le centre.', answer: ["L'", "l'", 'L', 'l'], explain: 'قبل از صدادار یا h بی‌صدا: \'l.' },
-        { type: 'mcq', skill: 'GR', topic: 'حرف تعریف نامعین', level: 'easy', q: 'کدام جمله درست است؟', options: ['Il y a une banque ici.', 'Il y a un banque ici.', 'Il y a le banque ici.', 'Il y a banque ici.'], correct: 0, explain: 'banque مؤنث است و برای چیز ناشناخته une می‌آید.' },
-        { type: 'mcq', skill: 'GR', topic: 'il y a', level: 'easy', q: 'منفیِ «Il y a un cinéma» چیست؟', options: ['Il n\'y a pas de cinéma.', 'Il n\'y a pas un cinéma.', 'Il y a ne pas cinéma.', 'Il n\'y a pas du cinéma.'], correct: 0, explain: 'در حالت منفی، un/une/des به de تبدیل می‌شود.' },
-        { type: 'match', skill: 'VO', topic: 'شهر و مکان‌ها', level: 'easy', fa: 'مکان‌ها را جور کن:', pairs: [['la gare', 'ایستگاه قطار'], ['le musée', 'موزه'], ['la pharmacie', 'داروخانه'], ['le parc', 'پارک'], ['l\'école', 'مدرسه']] },
-        { type: 'mcq', skill: 'CO', topic: 'شهر و مکان‌ها', level: 'easy', q: '🎧 گوش کن — در محله چه چیزی نیست؟', audio: 'Dans mon quartier, il y a un café et une pharmacie, mais il n\'y a pas de parc.', audioFa: 'در محله من یک کافه و یک داروخانه هست، ولی پارک نیست.', options: ['پارک', 'کافه', 'داروخانه', 'مدرسه'], correct: 0, frOptions: false },
-        { type: 'dictation', skill: 'CO', topic: 'il y a', level: 'medium', text: 'Il y a un café dans la rue.', trans: 'در خیابان یک کافه هست.' },
-        { type: 'order', skill: 'GR', topic: 'il y a', level: 'easy', answer: 'Il y a un parc dans mon quartier.', fa: 'جمله «در محله من یک پارک هست» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'شهر و مکان‌ها', level: 'easy', text: 'Dans ma ville, il y a des cafés et un grand parc.', fa: 'در شهر من چند کافه و یک پارک بزرگ هست.' },
-        { type: 'write', skill: 'PE', topic: 'شهر و مکان‌ها', level: 'medium', prompt: 'دو جمله درباره محله‌ات بنویس: چه چیزهایی هست و چه چیزی نیست؟', min: 8, sample: 'Dans mon quartier, il y a un parc et des restaurants. Il n\'y a pas de cinéma.' }
+        { type: 'fill', skill: 'GR', topic: 'فعل‌های -er', level: 'easy', fa: 'habiter را صرف کن:', q: 'Nous ___ à Paris.', answer: ['habitons'] },
+        { type: 'fill', skill: 'GR', topic: 'فعل‌های -er', level: 'easy', fa: 'aimer را صرف کن:', q: 'Elle ___ la musique.', answer: ['aime'] },
+        { type: 'mcq', skill: 'GR', topic: 'فعل‌های -er', level: 'easy', q: 'کدام درست است؟', options: ['Ils habitent à Lyon.', 'Ils habites à Lyon.', 'Ils habitons à Lyon.', 'Ils habite à Lyon.'], correct: 0 },
+        { type: 'match', skill: 'VO', topic: 'محل زندگی', level: 'easy', fa: 'جور کن:', pairs: [['un quartier', 'محله'], ['une ville', 'شهر'], ['la campagne', 'روستا'], ['le bruit', 'سروصدا']] },
+        { type: 'mcq', skill: 'CO', topic: 'علاقه‌مندی‌ها', level: 'easy', q: '🎧 گوش کن — او چه چیزی را دوست ندارد؟', audio: 'J\'aime la musique et le cinéma, mais je déteste le sport.', audioFa: 'موسیقی و سینما را دوست دارم، ولی از ورزش متنفرم.', options: ['ورزش', 'موسیقی', 'سینما', 'همه را دوست دارد'], correct: 0, frOptions: false },
+        { type: 'dictation', skill: 'CO', topic: 'فعل‌های -er', level: 'medium', text: 'J\'habite dans un quartier calme.', trans: 'در یک محله آرام زندگی می‌کنم.' },
+        { type: 'order', skill: 'GR', topic: 'علاقه‌مندی‌ها', level: 'easy', answer: 'J\'aime beaucoup la musique.', fa: 'جمله «موسیقی را خیلی دوست دارم» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'محل زندگی', level: 'easy', text: 'J\'habite dans un petit quartier. J\'aime beaucoup le cinéma.', fa: 'محل زندگی و علاقه‌مندی‌ات را بگو' },
+        { type: 'write', skill: 'PE', topic: 'محل زندگی', level: 'medium', prompt: 'کجا زندگی می‌کنی و چرا آنجا را دوست داری؟ (۳ جمله با parce que)', min: 10, sample: 'J\'habite dans un quartier calme. J\'aime ce quartier parce qu\'il y a un parc. Je déteste le centre-ville parce que c\'est bruyant.' }
       ]
     },
     {
       id: 'u2l2',
-      title: 'On y va comment ?',
-      fa: 'چطور برویم؟ — فعل aller و وسایل نقلیه',
+      title: 'Ma famille',
+      fa: 'خانواده من',
       vocab: [
-        { fr: 'aller', ipa: 'ale', fa: 'رفتن', ex: 'Je vais au cinéma.', exfa: 'به سینما می‌روم.' },
-        { fr: 'le métro', ipa: 'metʁo', fa: 'مترو', ex: 'Je prends le métro.', exfa: 'مترو سوار می‌شوم.' },
-        { fr: 'le bus', ipa: 'bys', fa: 'اتوبوس', ex: 'Le bus numéro 12', exfa: 'اتوبوس شماره ۱۲' },
-        { fr: 'un train', ipa: 'tʁɛ̃', fa: 'قطار', ex: 'Le train pour Lyon', exfa: 'قطارِ لیون' },
-        { fr: 'un vélo', ipa: 'velo', fa: 'دوچرخه', ex: 'J\'y vais à vélo.', exfa: 'با دوچرخه می‌روم.' },
-        { fr: 'une voiture', ipa: 'vwatyʁ', fa: 'ماشین', ex: 'Nous allons en voiture.', exfa: 'با ماشین می‌رویم.' },
-        { fr: 'à pied', ipa: 'a pje', fa: 'پیاده', ex: 'Je vais au travail à pied.', exfa: 'پیاده سر کار می‌روم.' },
-        { fr: 'un taxi', ipa: 'taksi', fa: 'تاکسی', ex: 'On prend un taxi ?', exfa: 'تاکسی بگیریم؟' },
-        { fr: 'le travail', ipa: 'tʁavaj', fa: 'کار، محل کار', ex: 'Je vais au travail.', exfa: 'سر کار می‌روم.' },
-        { fr: 'la maison', ipa: 'mɛzɔ̃', fa: 'خانه', ex: 'Je rentre à la maison.', exfa: 'به خانه برمی‌گردم.' },
-        { fr: 'loin (de)', ipa: 'lwɛ̃', fa: 'دور (از)', ex: 'C\'est loin d\'ici ?', exfa: 'از اینجا دور است؟' },
-        { fr: 'près (de)', ipa: 'pʁɛ', fa: 'نزدیک (به)', ex: 'C\'est près de la gare.', exfa: 'نزدیک ایستگاه است.' }
+        { fr: 'la famille', ipa: 'famij', fa: 'خانواده', ex: 'J\'ai une petite famille.', exfa: 'خانواده کوچکی دارم.' },
+        { fr: 'les parents', ipa: 'paʁɑ̃', fa: 'والدین', ex: 'Mes parents habitent à Ispahan.', exfa: 'والدینم در اصفهان زندگی می‌کنند.' },
+        { fr: 'le père / la mère', ipa: 'pɛʁ / mɛʁ', fa: 'پدر / مادر', ex: 'Mon père s\'appelle Ali.', exfa: 'اسم پدرم علی است.' },
+        { fr: 'un frère / une sœur', ipa: 'fʁɛʁ / sœʁ', fa: 'برادر / خواهر', ex: 'J\'ai un frère et une sœur.', exfa: 'یک برادر و یک خواهر دارم.' },
+        { fr: 'un fils / une fille', ipa: 'fis / fij', fa: 'پسر / دختر (فرزند)', ex: 'Ils ont deux fils.', exfa: 'دو پسر دارند.' },
+        { fr: 'le mari / la femme', ipa: 'maʁi / fam', fa: 'شوهر / همسر (زن)', ex: 'Son mari est médecin.', exfa: 'شوهرش پزشک است.' },
+        { fr: 'un enfant / des enfants', ipa: 'ɑ̃fɑ̃', fa: 'بچه / فرزند', ex: 'Ils ont trois enfants.', exfa: 'آنها سه فرزند دارند.' },
+        { fr: 'célibataire', ipa: 'selibatɛʁ', fa: 'مجرد', ex: 'Il est célibataire.', exfa: 'او مجرد است.' },
+        { fr: 'marié / mariée', ipa: 'maʁje', fa: 'متأهل', ex: 'Elle est mariée.', exfa: 'او متأهل است.' },
+        { fr: 'divorcé / divorcée', ipa: 'divɔʁse', fa: 'مطلقه', ex: 'Mes parents sont divorcés.', exfa: 'والدینم طلاق گرفته‌اند.' },
+        { fr: 'mon / ma / mes', ipa: 'mɔ̃ / ma / me', fa: 'مالِ من', ex: 'C\'est mon frère.', exfa: 'او برادرم است.' },
+        { fr: 'ton / ta / tes, son / sa / ses', ipa: '', fa: 'مالِ تو، مالِ او', ex: 'C\'est ta sœur ?', exfa: 'او خواهرت است؟' }
       ],
       phrases: [
-        { fr: 'On va où ?', fa: 'کجا برویم؟' },
-        { fr: 'On y va comment ?', fa: 'چطور برویم؟' },
-        { fr: 'On y va !', fa: 'بزن بریم!' },
-        { fr: 'Je vais au travail.', fa: 'سر کار می‌روم.' },
-        { fr: 'C\'est à dix minutes.', fa: 'ده دقیقه راه است.' }
+        { fr: 'Tu as des frères et sœurs ?', fa: 'برادر و خواهر داری؟' },
+        { fr: 'Quelle est ta situation familiale ?', fa: 'وضعیت تأهلت چیست؟' },
+        { fr: 'Je suis marié(e) / célibataire.', fa: 'متأهل / مجرد هستم.' }
       ],
       grammar: {
-        title: 'Le verbe « aller » + à la / au / aux',
-        body: 'فعل <b>aller</b> (رفتن) بی‌قاعده است و خیلی پرکاربرد.<br>' +
-          'بعد از aller برای مقصد از حرف اضافه <b>à</b> استفاده می‌کنیم، ولی à با حرف تعریف ترکیب می‌شود:<br>' +
-          '• à + le = <b>au</b> → Je vais <b>au</b> cinéma.<br>' +
-          '• à + la = <b>à la</b> → Je vais <b>à la</b> banque.<br>' +
-          '• à + l\' = <b>à l\'</b> → Je vais <b>à l\'</b>hôtel.<br>' +
-          '• à + les = <b>aux</b> → Je vais <b>aux</b> toilettes.<br>' +
-          'ضمیر <b>on</b> در گفتار یعنی «ما» و مثل il/elle صرف می‌شود: On va au parc. (می‌رویم پارک)',
+        title: 'Les adjectifs possessifs — mon / ma / mes...',
+        body: 'صفت ملکی («مالِ من، مالِ تو...») با <b>اسم بعدش</b> مطابقت می‌کند نه با مالک!<br>' +
+          '• قبل اسم مذکر: mon frère، ton père، son fils<br>' +
+          '• قبل اسم مؤنث: ma sœur، ta mère، sa femme<br>' +
+          '• قبل اسم جمع: mes parents، tes enfants، ses frères<br>' +
+          '⚠️ قبل اسم مؤنث که با صدادار شروع شود، mon/ton/son می‌آید نه ma/ta/sa: <b>mon</b> amie (نه ma amie).',
         table: {
-          head: ['ضمیر', 'aller — رفتن'],
+          head: ['', 'مذکر', 'مؤنث', 'جمع'],
           rows: [
-            ['je', 'vais'], ['tu', 'vas'], ['il / elle / on', 'va'],
-            ['nous', 'allons'], ['vous', 'allez'], ['ils / elles', 'vont']
+            ['من', 'mon', 'ma', 'mes'],
+            ['تو', 'ton', 'ta', 'tes'],
+            ['او', 'son', 'sa', 'ses']
           ]
         },
         examples: [
-          { fr: 'Je vais au supermarché à pied.', fa: 'پیاده به سوپرمارکت می‌روم.' },
-          { fr: 'On va à la gare en taxi.', fa: 'با تاکسی به ایستگاه می‌رویم.' },
-          { fr: 'Ils vont à l\'école en bus.', fa: 'آنها با اتوبوس به مدرسه می‌روند.' }
+          { fr: 'Mon père et ma mère habitent à Ispahan.', fa: 'پدر و مادرم در اصفهان زندگی می‌کنند.' },
+          { fr: 'C\'est ton amie ? — Non, c\'est sa sœur.', fa: 'او دوستِ توست؟ — نه، خواهرِ اوست.' }
         ]
       },
       phonetics: {
-        title: 'آواهای تودماغی [ɑ̃] و [ɔ̃]',
-        body: 'فرانسه چند صدای «تودماغی» دارد که در فارسی نیستند. هوا هم از دهان و هم از بینی خارج می‌شود:<br>' +
-          '<b>[ɑ̃]</b> مثل an/en و <b>[ɔ̃]</b> مثل on:',
+        title: 'آواهای [œʁ] و [ɛʁ]',
+        body: 'واژه‌های خانواده صداهای مشابهی دارند، دقت کن:',
         items: [
-          { fr: 'en voiture', ipa: 'ɑ̃ vwatyʁ', fa: '[ɑ̃]' },
-          { fr: 'le train', ipa: 'tʁɛ̃', fa: '[ɛ̃]' },
-          { fr: 'on va', ipa: 'ɔ̃ va', fa: '[ɔ̃]' },
-          { fr: 'la maison', ipa: 'mɛzɔ̃', fa: '[ɔ̃]' },
-          { fr: 'cent / son', ipa: 'sɑ̃ / sɔ̃', fa: 'مقایسه کن!' }
+          { fr: 'la sœur', ipa: 'sœʁ', fa: '[œʁ] — خواهر' },
+          { fr: 'le père', ipa: 'pɛʁ', fa: '[ɛʁ] — پدر' },
+          { fr: 'la mère', ipa: 'mɛʁ', fa: '[ɛʁ] — مادر' },
+          { fr: 'le frère', ipa: 'fʁɛʁ', fa: '[ɛʁ] — برادر' }
         ]
       },
       dialogue: {
-        title: 'On va au cinéma ?',
+        title: 'La photo de famille',
         lines: [
-          { s: 'Léa', fr: 'On va au cinéma ce soir ?', fa: 'امشب بریم سینما؟' },
-          { s: 'Karim', fr: 'Oui, super ! On y va comment ?', fa: 'آره، عالی! چطور بریم؟' },
-          { s: 'Léa', fr: 'En métro. C\'est direct.', fa: 'با مترو. مستقیم است.' },
-          { s: 'Karim', fr: 'C\'est loin de la station ?', fa: 'از ایستگاه دور است؟' },
-          { s: 'Léa', fr: 'Non, c\'est à cinq minutes à pied.', fa: 'نه، پنج دقیقه پیاده است.' },
-          { s: 'Karim', fr: 'Parfait, on y va !', fa: 'عالی، بزن بریم!' }
+          { s: 'Léa', fr: 'C\'est qui, sur la photo ?', fa: 'توی عکس کیست؟' },
+          { s: 'Karim', fr: 'C\'est ma famille ! Voilà mon père, ma mère et mon petit frère.', fa: 'خانواده منه! این پدرم، این مادرم و این برادر کوچکترم.' },
+          { s: 'Léa', fr: 'Et cette dame ?', fa: 'و این خانم؟' },
+          { s: 'Karim', fr: 'C\'est ma tante. Elle est célibataire, elle habite seule.', fa: 'عمه‌ام است. مجرد است، تنها زندگی می‌کند.' },
+          { s: 'Léa', fr: 'Et toi ? Tu es marié ?', fa: 'تو چطور؟ متأهلی؟' },
+          { s: 'Karim', fr: 'Non, pas encore ! Je suis célibataire.', fa: 'نه، هنوز نه! مجردم.' }
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'فعل aller و حرف اضافه à', level: 'easy', fa: 'aller را صرف کن:', q: 'Nous ___ à la gare.', answer: ['allons'] },
-        { type: 'fill', skill: 'GR', topic: 'فعل aller و حرف اضافه à', level: 'easy', fa: 'حرف اضافه درست (au / à la / à l\') را بگذار:', q: 'Je vais ___ cinéma.', answer: ['au'], explain: 'cinéma مذکر است: à + le = au.' },
-        { type: 'fill', skill: 'GR', topic: 'فعل aller و حرف اضافه à', level: 'easy', fa: 'حرف اضافه درست را بگذار:', q: 'Elle va ___ pharmacie.', answer: ['à la', 'a la'], explain: 'pharmacie مؤنث است: à la.' },
-        { type: 'mcq', skill: 'GR', topic: 'فعل aller و حرف اضافه à', level: 'easy', q: '«آنها به هتل می‌روند» به فرانسه:', options: ['Ils vont à l\'hôtel.', 'Ils vont au hôtel.', 'Ils allez à l\'hôtel.', 'Ils va à la hôtel.'], correct: 0 },
-        { type: 'match', skill: 'VO', topic: 'وسایل نقلیه', level: 'easy', fa: 'وسیله‌ها را جور کن:', pairs: [['le métro', 'مترو'], ['à pied', 'پیاده'], ['le vélo', 'دوچرخه'], ['la voiture', 'ماشین']] },
-        { type: 'mcq', skill: 'CO', topic: 'وسایل نقلیه', level: 'easy', q: '🎧 گوش کن — او چطور سر کار می‌رود؟', audio: 'Moi, je vais au travail à vélo. C\'est rapide !', audioFa: 'من با دوچرخه سر کار می‌روم. سریع است!', options: ['با دوچرخه', 'با مترو', 'پیاده', 'با ماشین'], correct: 0, frOptions: false },
-        { type: 'dictation', skill: 'CO', topic: 'فعل aller و حرف اضافه à', level: 'medium', text: 'On va au restaurant ce soir.', trans: 'امشب به رستوران می‌رویم.' },
-        { type: 'order', skill: 'GR', topic: 'فعل aller و حرف اضافه à', level: 'easy', answer: 'Tu vas à la banque à pied ?', fa: 'سؤال «پیاده به بانک می‌روی؟» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'وسایل نقلیه', level: 'easy', text: 'Je vais au travail en métro. C\'est à vingt minutes.', fa: 'با مترو سر کار می‌روم. بیست دقیقه راه است.' }
+        { type: 'fill', skill: 'GR', topic: 'صفت ملکی', level: 'medium', fa: 'صفت ملکی درست (mon/ma/mes):', q: 'C\'est ___ sœur. (مالِ من)', answer: ['ma'] },
+        { type: 'fill', skill: 'GR', topic: 'صفت ملکی', level: 'medium', fa: 'صفت ملکی درست (son/sa/ses):', q: 'Il aime ___ famille. (مالِ او)', answer: ['sa'] },
+        { type: 'mcq', skill: 'GR', topic: 'صفت ملکی', level: 'medium', q: '«دوستم» (زن، اسم با صدادار) به فرانسه:', options: ['mon amie', 'ma amie', 'ta amie', 'son amie'], correct: 0, explain: 'قبل اسم مؤنث با صدادار: mon.' },
+        { type: 'match', skill: 'VO', topic: 'خانواده', level: 'easy', fa: 'جور کن:', pairs: [['le père', 'پدر'], ['la mère', 'مادر'], ['un frère', 'برادر'], ['une sœur', 'خواهر'], ['les parents', 'والدین']] },
+        { type: 'mcq', skill: 'CO', topic: 'خانواده', level: 'easy', q: '🎧 گوش کن — وضعیت تأهل او چیست؟', audio: 'Ma sœur est mariée, mais moi, je suis célibataire.', audioFa: 'خواهرم متأهل است، ولی من مجردم.', options: ['او مجرد است، خواهرش متأهل', 'هردو متأهل‌اند', 'او مطلقه است', 'هردو مجردند'], correct: 0, frOptions: false },
+        { type: 'dictation', skill: 'CO', topic: 'خانواده', level: 'medium', text: 'Mon père et ma mère habitent à Lyon.', trans: 'پدر و مادرم در لیون زندگی می‌کنند.' },
+        { type: 'order', skill: 'GR', topic: 'خانواده', level: 'medium', answer: 'Tu as des frères et sœurs ?', fa: 'سؤال «برادر و خواهر داری؟» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'خانواده', level: 'medium', text: 'Voici mon père et ma mère. J\'ai un frère et une sœur.', fa: 'خانواده‌ات را معرفی کن' },
+        { type: 'write', skill: 'PE', topic: 'خانواده', level: 'medium', prompt: 'خانواده‌ات را معرفی کن: چند نفرید، اسم‌شان چیست، وضعیت تأهل تو چیست؟ (۴ جمله)', min: 12, sample: 'J\'ai une petite famille. Mon père s\'appelle Ali et ma mère s\'appelle Maryam. J\'ai une sœur. Je suis célibataire.' }
       ]
     },
     {
       id: 'u2l3',
-      title: 'L\'itinéraire',
-      fa: 'مسیر — آدرس پرسیدن و دادن',
+      title: 'Les métiers',
+      fa: 'شغل‌ها',
       vocab: [
-        { fr: 'tourner', ipa: 'tuʁne', fa: 'پیچیدن', ex: 'Tournez à droite.', exfa: 'به راست بپیچید.' },
-        { fr: 'continuer', ipa: 'kɔ̃tinɥe', fa: 'ادامه دادن', ex: 'Continuez tout droit.', exfa: 'مستقیم ادامه دهید.' },
-        { fr: 'traverser', ipa: 'tʁavɛʁse', fa: 'عبور کردن (رد شدن)', ex: 'Traversez la place.', exfa: 'از میدان رد شوید.' },
-        { fr: 'à droite', ipa: 'a dʁwat', fa: 'به راست / سمت راست', ex: 'La banque est à droite.', exfa: 'بانک سمت راست است.' },
-        { fr: 'à gauche', ipa: 'a ɡoʃ', fa: 'به چپ / سمت چپ', ex: 'Tournez à gauche.', exfa: 'به چپ بپیچید.' },
-        { fr: 'tout droit', ipa: 'tu dʁwa', fa: 'مستقیم', ex: 'Allez tout droit.', exfa: 'مستقیم بروید.' },
-        { fr: 'devant', ipa: 'dəvɑ̃', fa: 'جلوی', ex: 'Devant la gare', exfa: 'جلوی ایستگاه' },
-        { fr: 'derrière', ipa: 'dɛʁjɛʁ', fa: 'پشتِ', ex: 'Derrière l\'école', exfa: 'پشت مدرسه' },
-        { fr: 'à côté de', ipa: 'a kote də', fa: 'کنارِ', ex: 'À côté de la pharmacie', exfa: 'کنار داروخانه' },
-        { fr: 'en face de', ipa: 'ɑ̃ fas də', fa: 'روبه‌رویِ', ex: 'En face du café', exfa: 'روبه‌روی کافه' },
-        { fr: 'entre', ipa: 'ɑ̃tʁ', fa: 'بینِ', ex: 'Entre la banque et le parc', exfa: 'بین بانک و پارک' },
-        { fr: 'premier / première', ipa: 'pʁəmje / pʁəmjɛʁ', fa: 'اول / اولین', ex: 'La première rue à droite', exfa: 'اولین خیابان سمت راست' },
-        { fr: 'deuxième', ipa: 'døzjɛm', fa: 'دوم', ex: 'La deuxième rue à gauche', exfa: 'دومین خیابان سمت چپ' }
+        { fr: 'un métier / une profession', ipa: 'metje / pʁɔfesjɔ̃', fa: 'شغل / حرفه', ex: 'Quel est ton métier ?', exfa: 'شغلت چیست؟' },
+        { fr: 'un étudiant / une étudiante', ipa: 'etydjɑ̃ / etydjɑ̃t', fa: 'دانشجو', ex: 'Je suis étudiante.', exfa: 'من دانشجو هستم.' },
+        { fr: 'un professeur', ipa: 'pʁɔfesœʁ', fa: 'معلم / استاد', ex: 'Elle est professeure.', exfa: 'او معلم است.' },
+        { fr: 'un médecin', ipa: 'medsɛ̃', fa: 'پزشک', ex: 'Mon père est médecin.', exfa: 'پدرم پزشک است.' },
+        { fr: 'un ingénieur / une ingénieure', ipa: 'ɛ̃ʒenjœʁ', fa: 'مهندس', ex: 'Je suis ingénieure.', exfa: 'من مهندس هستم.' },
+        { fr: 'un journaliste / une journaliste', ipa: 'ʒuʁnalist', fa: 'خبرنگار', ex: 'Il est journaliste.', exfa: 'او خبرنگار است.' },
+        { fr: 'un acteur / une actrice', ipa: 'aktœʁ / aktʁis', fa: 'بازیگر', ex: 'C\'est une actrice célèbre.', exfa: 'او بازیگر معروفی است.' },
+        { fr: 'un employé / une employée', ipa: 'ɑ̃plwaje', fa: 'کارمند', ex: 'Il est employé de banque.', exfa: 'او کارمند بانک است.' }
       ],
       phrases: [
-        { fr: 'Excusez-moi, où est la gare ?', fa: 'ببخشید، ایستگاه کجاست؟' },
-        { fr: 'Pour aller à la gare, s\'il vous plaît ?', fa: 'برای رفتن به ایستگاه (از کدام طرف)، لطفاً؟' },
-        { fr: 'Prenez la première rue à droite.', fa: 'اولین خیابان سمت راست را بروید.' },
-        { fr: 'C\'est juste là.', fa: 'همین‌جاست.' },
-        { fr: 'Merci beaucoup ! — De rien.', fa: 'خیلی ممنون! — خواهش می‌کنم.' }
+        { fr: 'Qu\'est-ce que tu fais dans la vie ?', fa: 'شغلت چیست؟' },
+        { fr: 'Je travaille comme...', fa: 'به‌عنوان ... کار می‌کنم' },
+        { fr: 'Elle est professeure de français.', fa: 'او معلم فرانسه است.' }
       ],
       grammar: {
-        title: 'L\'impératif — فعل امری',
-        body: 'برای دادن دستور یا راهنمایی، فعل را <b>بدون ضمیر</b> می‌آوریم:<br>' +
-          '• رسمی (vous): Tournez ! Continuez ! Prenez !<br>' +
-          '• خودمانی (tu): Tourne ! Continue ! Prends !<br>' +
-          '⚠️ در حالت امریِ tu برای فعل‌های -er، حرف s حذف می‌شود: Tu tournes → Tourne !',
+        title: 'Le masculin et le féminin des professions',
+        body: 'مثل ملیت‌ها، اسم شغل‌ها هم با جنسیت شخص تغییر می‌کند:<br>' +
+          '• اکثراً +e-: étudiant → étudiant<b>e</b><br>' +
+          '• -eur → -euse یا -rice: acteur → act<b>rice</b><br>' +
+          '• واژه‌های ختم به e تغییر نمی‌کنند: journaliste (مرد و زن یکسان)<br>' +
+          '⚠️ بعد از être، حرف تعریف نمی‌آید: Elle est médecin. (نه une médecin)',
         table: {
-          head: ['فعل', 'امری با tu', 'امری با vous'],
+          head: ['مذکر', 'مؤنث', 'معنی'],
           rows: [
-            ['tourner', 'Tourne !', 'Tournez !'],
-            ['continuer', 'Continue !', 'Continuez !'],
-            ['traverser', 'Traverse !', 'Traversez !'],
-            ['aller', 'Va !', 'Allez !']
+            ['étudiant', 'étudiante', 'دانشجو'],
+            ['acteur', 'actrice', 'بازیگر'],
+            ['employé', 'employée', 'کارمند'],
+            ['journaliste', 'journaliste', 'خبرنگار (بی‌تغییر)']
           ]
         },
         examples: [
-          { fr: 'Traversez la place et tournez à gauche.', fa: 'از میدان رد شوید و به چپ بپیچید.' },
-          { fr: 'Va tout droit et prends la deuxième rue.', fa: 'مستقیم برو و خیابان دوم را بگیر.' }
+          { fr: 'Il est étudiant, elle est étudiante.', fa: 'او دانشجوست (مرد)، او دانشجوست (زن).' },
+          { fr: 'Ma sœur est ingénieure et mon frère est journaliste.', fa: 'خواهرم مهندس است و برادرم خبرنگار.' }
         ]
       },
       phonetics: {
-        title: 'آوای [ʁ] فرانسوی',
-        body: 'حرف r فرانسه از تهِ گلو تلفظ می‌شود، شبیه «غ» نرم فارسی! تمرین کن:',
+        title: 'پایانه‌های شغل',
+        body: 'گوش کن به تفاوت مذکر و مؤنث:',
         items: [
-          { fr: 'la rue', ipa: 'ʁy', fa: 'خیابان' },
-          { fr: 'à droite', ipa: 'dʁwat', fa: 'راست' },
-          { fr: 'derrière', ipa: 'dɛʁjɛʁ', fa: 'پشت' },
-          { fr: 'le restaurant', ipa: 'ʁɛstoʁɑ̃', fa: 'رستوران' },
-          { fr: 'Paris', ipa: 'paʁi', fa: 'پاریس' }
+          { fr: 'étudiant / étudiante', ipa: 'etydjɑ̃ / etydjɑ̃t', fa: 'ت آخر فقط در مؤنث' },
+          { fr: 'acteur / actrice', ipa: 'aktœʁ / aktʁis', fa: 'صدای کاملاً متفاوت' },
+          { fr: 'employé / employée', ipa: 'ɑ̃plwaje', fa: 'یکسان تلفظ می‌شود' }
         ]
       },
       dialogue: {
-        title: 'Où est le musée ?',
+        title: 'Qu\'est-ce que tu fais dans la vie ?',
         lines: [
-          { s: 'Touriste', fr: 'Excusez-moi, madame. Où est le musée, s\'il vous plaît ?', fa: 'ببخشید خانم. موزه کجاست، لطفاً؟' },
-          { s: 'Passante', fr: 'Le musée ? Continuez tout droit et prenez la première rue à gauche.', fa: 'موزه؟ مستقیم ادامه بدهید و اولین خیابان سمت چپ را بروید.' },
-          { s: 'Touriste', fr: 'La première à gauche...', fa: 'اولی سمت چپ...' },
-          { s: 'Passante', fr: 'Oui. Le musée est en face du parc, à côté de la banque.', fa: 'بله. موزه روبه‌روی پارک است، کنار بانک.' },
-          { s: 'Touriste', fr: 'C\'est loin ?', fa: 'دور است؟' },
-          { s: 'Passante', fr: 'Non, c\'est à cinq minutes à pied.', fa: 'نه، پنج دقیقه پیاده است.' },
-          { s: 'Touriste', fr: 'Merci beaucoup ! — De rien !', fa: 'خیلی ممنون! — خواهش می‌کنم!' }
+          { s: 'Julie', fr: 'Et toi, Mona, qu\'est-ce que tu fais dans la vie ?', fa: 'و تو مونا، شغلت چیست؟' },
+          { s: 'Mona', fr: 'Je suis ingénieure. Et mon mari est médecin.', fa: 'من مهندسم. و شوهرم پزشک است.' },
+          { s: 'Julie', fr: 'Et ta sœur ?', fa: 'و خواهرت؟' },
+          { s: 'Mona', fr: 'Elle est journaliste. Elle adore son métier !', fa: 'او خبرنگار است. عاشق شغلشه!' },
+          { s: 'Julie', fr: 'Moi, je suis professeure. J\'aime beaucoup mes étudiants.', fa: 'من معلمم. دانشجوهایم را خیلی دوست دارم.' }
         ]
       },
       exercises: [
-        { type: 'mcq', skill: 'CO', topic: 'مسیر و جهت', level: 'easy', q: '🎧 گوش کن — باید کدام طرف بروی؟', audio: 'Traversez la place et tournez à droite. La pharmacie est juste là.', audioFa: 'از میدان رد شوید و به راست بپیچید. داروخانه همان‌جاست.', options: ['از میدان رد شو و بپیچ راست', 'مستقیم برو', 'بپیچ چپ', 'با مترو برو'], correct: 0, frOptions: false },
-        { type: 'fill', skill: 'GR', topic: 'فعل امری', level: 'easy', fa: 'به یک غریبه (رسمی) بگو «بپیچید به چپ»:', q: '___ à gauche.', answer: ['Tournez', 'tournez'] },
-        { type: 'fill', skill: 'GR', topic: 'فعل امری', level: 'easy', fa: 'به دوستت (خودمانی) بگو «مستقیم ادامه بده»:', q: '___ tout droit.', answer: ['Continue', 'continue'], explain: 'امری با tu برای فعل -er بدون s است.' },
-        { type: 'match', skill: 'VO', topic: 'حروف اضافه مکان', level: 'easy', fa: 'جور کن:', pairs: [['en face de', 'روبه‌روی'], ['à côté de', 'کنار'], ['derrière', 'پشت'], ['entre', 'بین'], ['devant', 'جلوی']] },
-        { type: 'mcq', skill: 'CE', topic: 'مسیر و جهت', level: 'easy', q: 'پیام را بخوان — کافه کجاست؟', qfr: 'Le café « Chez Paul » est en face de la gare, entre la banque et l\'hôtel.', options: ['روبه‌روی ایستگاه، بین بانک و هتل', 'پشت ایستگاه', 'داخل هتل', 'کنار موزه'], correct: 0, frOptions: false },
-        { type: 'dictation', skill: 'CO', topic: 'مسیر و جهت', level: 'medium', text: 'Prenez la deuxième rue à droite.', trans: 'دومین خیابان سمت راست را بروید.' },
-        { type: 'order', skill: 'GR', topic: 'مسیر و جهت', level: 'easy', answer: 'Où est la gare s\'il vous plaît ?', fa: 'سؤال «ایستگاه کجاست لطفاً؟» را بساز:' },
-        { type: 'speak', skill: 'PO', topic: 'مسیر و جهت', level: 'easy', text: 'Excusez-moi, pour aller au musée, s\'il vous plaît ?', fa: 'ببخشید، برای رفتن به موزه (از کدام طرف)، لطفاً؟' },
-        { type: 'write', skill: 'PE', topic: 'مسیر و جهت', level: 'medium', prompt: 'به یک توریست آدرس بده: از اینجا تا داروخانه (۲-۳ جمله امری).', min: 8, sample: 'Continuez tout droit. Prenez la première rue à gauche. La pharmacie est à côté de la banque.' }
+        { type: 'fill', skill: 'GR', topic: 'شغل‌ها', level: 'medium', fa: 'مؤنث بساز:', q: 'Il est étudiant. → Elle est ___.', answer: ['étudiante', 'etudiante'] },
+        { type: 'fill', skill: 'GR', topic: 'شغل‌ها', level: 'medium', fa: 'مؤنث بساز:', q: 'Il est acteur. → Elle est ___.', answer: ['actrice'] },
+        { type: 'mcq', skill: 'GR', topic: 'شغل‌ها', level: 'medium', q: 'کدام درست است؟', options: ['Elle est médecin.', 'Elle est une médecin.', 'Elle est la médecin.', 'Elle médecin.'], correct: 0, explain: 'بعد از être برای شغل حرف تعریف نمی‌آید.' },
+        { type: 'match', skill: 'VO', topic: 'شغل‌ها', level: 'easy', fa: 'جور کن:', pairs: [['médecin', 'پزشک'], ['ingénieure', 'مهندس'], ['journaliste', 'خبرنگار'], ['professeur', 'معلم']] },
+        { type: 'mcq', skill: 'CO', topic: 'شغل‌ها', level: 'medium', q: '🎧 گوش کن — شغل او چیست؟', audio: 'Je suis actrice. Mon frère est journaliste.', audioFa: 'من بازیگرم. برادرم خبرنگار است.', options: ['بازیگر', 'معلم', 'پزشک', 'کارمند'], correct: 0, frOptions: false },
+        { type: 'dictation', skill: 'CO', topic: 'شغل‌ها', level: 'medium', text: 'Elle est médecin et il est ingénieur.', trans: 'او پزشک است و او مهندس.' },
+        { type: 'order', skill: 'GR', topic: 'شغل‌ها', level: 'medium', answer: 'Qu\'est-ce que tu fais dans la vie ?', fa: 'سؤال «شغلت چیست؟» را بساز:' },
+        { type: 'speak', skill: 'PO', topic: 'شغل‌ها', level: 'medium', text: 'Je suis ingénieure et mon frère est journaliste.', fa: 'شغل خودت و یکی از اعضای خانواده‌ات را بگو' },
+        { type: 'write', skill: 'PE', topic: 'شغل‌ها', level: 'medium', prompt: 'شغل خودت و دو نفر از خانواده‌ات را بنویس. (۳ جمله)', min: 10, sample: 'Je suis ingénieure. Mon père est médecin. Ma sœur est journaliste.' }
       ]
     }
   ],
   bilan: {
     exercises: [
-      { type: 'mcq', skill: 'CO', topic: 'شهر و مکان‌ها', level: 'easy', q: '🎧 گوش کن — در محله چه چیزهایی هست؟', audio: 'Dans mon quartier, il y a une école, deux cafés et un petit parc, mais il n\'y a pas de musée.', audioFa: 'در محله من یک مدرسه، دو کافه و یک پارک کوچک هست، ولی موزه نیست.', options: ['مدرسه، دو کافه و پارک', 'موزه و سینما', 'فقط یک بانک', 'ایستگاه و هتل'], correct: 0, frOptions: false },
-      { type: 'mcq', skill: 'CO', topic: 'مسیر و جهت', level: 'easy', q: '🎧 گوش کن — بانک کجاست؟', audio: 'La banque ? Tournez à gauche, c\'est en face du cinéma.', audioFa: 'بانک؟ به چپ بپیچید، روبه‌روی سینماست.', options: ['بپیچ چپ، روبه‌روی سینما', 'بپیچ راست، کنار پارک', 'مستقیم، پشت موزه', 'داخل ایستگاه'], correct: 0, frOptions: false },
-      { type: 'mcq', skill: 'CE', topic: 'شهر و مکان‌ها', level: 'easy', q: 'آگهی را بخوان — هتل کجاست؟', qfr: 'Hôtel Le Soleil ** — dans le centre-ville, à côté de la gare, à dix minutes du musée. Restaurant ouvert.', options: ['مرکز شهر، کنار ایستگاه', 'بیرون شهر', 'روبه‌روی پارک', 'ده دقیقه تا ایستگاه'], correct: 0, frOptions: false },
-      { type: 'fill', skill: 'GR', topic: 'فعل aller و حرف اضافه à', level: 'easy', fa: 'کامل کن:', q: 'Vous ___ au travail en bus ?', answer: ['allez'] },
-      { type: 'fill', skill: 'GR', topic: 'فعل aller و حرف اضافه à', level: 'easy', fa: 'au / à la / à l\' / aux :', q: 'On va ___ école à pied.', answer: ["à l'", "a l'", 'à l', 'a l'] },
-      { type: 'fill', skill: 'GR', topic: 'il y a', level: 'easy', fa: 'منفی کن:', q: 'Il y a un parc. → Il n\'y a pas ___ parc.', answer: ['de'] },
-      { type: 'match', skill: 'VO', topic: 'شهر و مکان‌ها', level: 'easy', fa: 'جور کن:', pairs: [['une gare', 'ایستگاه'], ['un supermarché', 'سوپرمارکت'], ['une banque', 'بانک'], ['un hôtel', 'هتل']] },
-      { type: 'order', skill: 'GR', topic: 'فعل امری', level: 'easy', answer: 'Prenez la première rue à gauche.', fa: 'جمله «اولین خیابان سمت چپ را بروید» را بساز:' },
-      { type: 'dictation', skill: 'CO', topic: 'فعل aller و حرف اضافه à', level: 'medium', text: 'Je vais à la gare en taxi.', trans: 'با تاکسی به ایستگاه می‌روم.' },
-      { type: 'speak', skill: 'PO', topic: 'مسیر و جهت', level: 'easy', text: 'Excusez-moi, où est la pharmacie ? C\'est loin d\'ici ?', fa: 'ببخشید، داروخانه کجاست؟ از اینجا دور است؟' },
-      { type: 'write', skill: 'PE', topic: 'شهر و مکان‌ها', level: 'medium', prompt: 'محله‌ات را توصیف کن: چه چیزهایی دارد، چه چیزی ندارد، و تو چطور سر کار/دانشگاه می‌روی؟ (۴ جمله)', min: 14, sample: 'J\'habite dans un petit quartier. Il y a un parc, une école et des cafés. Il n\'y a pas de cinéma. Je vais au travail en métro.' }
+      { type: 'mcq', skill: 'CO', topic: 'محل زندگی', level: 'easy', q: '🎧 گوش کن — کجا زندگی می‌کند و چه چیزی دوست دارد؟', audio: 'J\'habite à la campagne. J\'adore la nature, mais je déteste le bruit de la ville.', audioFa: 'در روستا زندگی می‌کنم. عاشق طبیعتم، ولی از سروصدای شهر متنفرم.', options: ['روستا، عاشق طبیعت', 'شهر، عاشق سینما', 'محله شلوغ', 'کنار دریا'], correct: 0, frOptions: false },
+      { type: 'mcq', skill: 'CO', topic: 'خانواده', level: 'medium', q: '🎧 گوش کن — چند فرزند دارند؟', audio: 'Dans ma famille, nous sommes trois enfants : deux frères et une sœur.', audioFa: 'در خانواده من سه بچه هستیم: دو برادر و یک خواهر.', options: ['سه بچه', 'دو بچه', 'یک بچه', 'چهار بچه'], correct: 0, frOptions: false },
+      { type: 'mcq', skill: 'CE', topic: 'شغل‌ها', level: 'easy', q: 'پروفایل را بخوان — امیر چه‌کاره است؟', qfr: 'Amir, 28 ans. Marié, un fils. Il est ingénieur et il adore son métier.', options: ['متأهل، مهندس', 'مجرد، دانشجو', 'مطلقه، پزشک', 'دو فرزند دارد'], correct: 0, frOptions: false },
+      { type: 'fill', skill: 'GR', topic: 'فعل‌های -er', level: 'easy', fa: 'کامل کن:', q: 'Nous ___ le sport. (aimer)', answer: ['aimons'] },
+      { type: 'fill', skill: 'GR', topic: 'صفت ملکی', level: 'medium', fa: 'صفت ملکی:', q: 'C\'est ___ frère. (مالِ تو)', answer: ['ton'] },
+      { type: 'fill', skill: 'GR', topic: 'شغل‌ها', level: 'medium', fa: 'مؤنث بساز:', q: 'Il est acteur. → Elle est ___.', answer: ['actrice'] },
+      { type: 'match', skill: 'VO', topic: 'خانواده', level: 'easy', fa: 'جور کن:', pairs: [['marié', 'متأهل'], ['célibataire', 'مجرد'], ['divorcé', 'مطلقه'], ['les parents', 'والدین']] },
+      { type: 'order', skill: 'GR', topic: 'محل زندگی', level: 'easy', answer: 'J\'habite dans un quartier calme.', fa: 'جمله «در یک محله آرام زندگی می‌کنم» را بساز:' },
+      { type: 'dictation', skill: 'CO', topic: 'شغل‌ها', level: 'medium', text: 'Mon père est médecin et ma mère est professeure.', trans: 'پدرم پزشک است و مادرم معلم.' },
+      { type: 'speak', skill: 'PO', topic: 'محل زندگی', level: 'medium', text: 'J\'habite dans un petit quartier. J\'ai une sœur et je suis ingénieure.', fa: 'خودت را کامل معرفی کن' },
+      { type: 'write', skill: 'PE', topic: 'محل زندگی', level: 'medium', prompt: 'خودت را معرفی کن: کجا زندگی می‌کنی، چرا آنجا را دوست داری، خانواده‌ات و شغلت. (۵ جمله)', min: 16, sample: 'J\'habite dans un quartier calme à Téhéran. J\'aime ce quartier parce qu\'il y a un parc. J\'ai une sœur et un frère. Je suis célibataire. Je suis ingénieure et j\'adore mon métier.' }
     ]
   }
 };

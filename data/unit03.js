@@ -110,10 +110,9 @@ EDITO.units[3] = {
         { fr: 'beaucoup de', ipa: 'boku', fa: 'مقدار زیادی', ex: 'Beaucoup de fruits', exfa: 'کلی میوه' },
         { fr: 'un peu de', ipa: 'œ̃ pø', fa: 'کمی', ex: 'Un peu de riz', exfa: 'کمی برنج' },
         { fr: 'un euro', ipa: 'øʁo', fa: 'یورو', ex: 'Ça coûte dix euros.', exfa: 'ده یورو می‌شود.' },
-        { fr: 'soixante-dix', ipa: 'swasɑ̃tdis', fa: '۷۰ هفتاد', ex: '70 = 60+10 !', exfa: '' },
-        { fr: 'quatre-vingts', ipa: 'katʁəvɛ̃', fa: '۸۰ هشتاد', ex: '80 = 4×20 !', exfa: '' },
-        { fr: 'quatre-vingt-dix', ipa: 'katʁəvɛ̃dis', fa: '۹۰ نود', ex: '90 = 4×20+10 !', exfa: '' },
-        { fr: 'cent', ipa: 'sɑ̃', fa: '۱۰۰ صد', ex: 'Cent euros', exfa: 'صد یورو' }
+        { fr: 'un boulanger / une boulangère', ipa: 'bulɑ̃ʒe', fa: 'نانوا', ex: 'Chez le boulanger', exfa: 'پیش نانوا' },
+        { fr: 'un commerçant / une commerçante', ipa: 'kɔmɛʁsɑ̃', fa: 'فروشنده / مغازه‌دار', ex: 'Le commerçant est sympa.', exfa: 'مغازه‌دار مهربان است.' },
+        { fr: 'chez', ipa: 'ʃe', fa: 'پیشِ / نزدِ (کسی)', ex: 'Je vais chez le boulanger.', exfa: 'می‌روم پیش نانوا.' }
       ],
       phrases: [
         { fr: 'Vous désirez ?', fa: 'چی می‌خواهید؟ (فروشنده)' },
@@ -123,26 +122,24 @@ EDITO.units[3] = {
         { fr: 'C\'est tout, merci.', fa: 'همین، ممنون.' }
       ],
       grammar: {
-        title: 'Les quantités + اعداد ۷۰ تا ۱۰۰',
+        title: 'Les quantités + le pluriel des noms',
         body: 'بعد از واژه‌های مقدار، همیشه <b>de</b> می‌آید (بدون حرف تعریف):<br>' +
           'un kilo <b>de</b> tomates، beaucoup <b>de</b> fruits، une bouteille <b>d\'</b>eau<br><br>' +
-          'اعداد فرانسه از ۷۰ به بعد عجیب می‌شوند! 😅<br>' +
-          '• 70 = soixante-dix (۶۰+۱۰)، 71 = soixante et onze (۶۰+۱۱)... 75 = soixante-quinze<br>' +
-          '• 80 = quatre-vingts (۴×۲۰)، 81 = quatre-vingt-un<br>' +
-          '• 90 = quatre-vingt-dix (۴×۲۰+۱۰)، 95 = quatre-vingt-quinze',
+          'جمع اسم‌ها معمولاً با افزودن <b>-s</b> ساخته می‌شود (که خوانده نمی‌شود!): une tomate → des tomate<b>s</b>.<br>' +
+          '⚠️ استثناها: واژه‌های ختم به -eau → +x: un gâteau → des gâteau<b>x</b> | واژه‌های ختم به s/x/z تغییر نمی‌کنند: un pays → des pays<br><br>' +
+          'برای رفتن به مغازه: <b>à la/au</b> + مکان (à la boulangerie) یا <b>chez</b> + شخص (chez le boulanger).',
         table: {
-          head: ['عدد', 'فرانسه', 'منطقش'],
+          head: ['مفرد', 'جمع'],
           rows: [
-            ['72', 'soixante-douze', '60+12'],
-            ['80', 'quatre-vingts', '4×20'],
-            ['85', 'quatre-vingt-cinq', '4×20+5'],
-            ['91', 'quatre-vingt-onze', '4×20+11'],
-            ['100', 'cent', '—']
+            ['une tomate', 'des tomates'],
+            ['un fruit', 'des fruits'],
+            ['un gâteau', 'des gâteaux'],
+            ['un pays', 'des pays (بی‌تغییر)']
           ]
         },
         examples: [
           { fr: 'Je voudrais un kilo de tomates et un peu de fromage.', fa: 'یک کیلو گوجه و کمی پنیر می‌خواهم.' },
-          { fr: 'Ça coûte quatre-vingt-quinze euros.', fa: 'نود و پنج یورو می‌شود.' }
+          { fr: 'Je vais à la boulangerie, chez le boulanger.', fa: 'به نانوایی می‌روم، پیش نانوا.' }
         ]
       },
       phonetics: {
@@ -169,10 +166,10 @@ EDITO.units[3] = {
         ]
       },
       exercises: [
-        { type: 'mcq', skill: 'CO', topic: 'اعداد', level: 'easy', q: '🎧 گوش کن — قیمت چند یورو است؟', audio: 'Ça coûte soixante-quinze euros.', audioFa: 'هفتادوپنج یورو می‌شود.', options: ['75', '65', '85', '95'], correct: 0 },
-        { type: 'mcq', skill: 'CO', topic: 'اعداد', level: 'easy', q: '🎧 گوش کن — قیمت چند یورو است؟', audio: 'Ça fait quatre-vingt-onze euros.', audioFa: 'نودویک یورو می‌شود.', options: ['91', '81', '80', '99'], correct: 0, explain: 'quatre-vingt-onze = ۴×۲۰+۱۱ = ۹۱' },
+        { type: 'fill', skill: 'GR', topic: 'جمع اسم‌ها', level: 'easy', fa: 'جمع بساز:', q: 'une tomate → des ___', answer: ['tomates'] },
+        { type: 'fill', skill: 'GR', topic: 'جمع اسم‌ها', level: 'medium', fa: 'جمع بساز (استثنا):', q: 'un gâteau → des ___', answer: ['gâteaux', 'gateaux'], explain: 'ختم به -eau در جمع +x می‌گیرد.' },
         { type: 'fill', skill: 'GR', topic: 'کمیت‌ها', level: 'easy', fa: 'کامل کن:', q: 'Je voudrais un kilo ___ pommes.', answer: ['de'], explain: 'بعد از واژه‌های مقدار همیشه de می‌آید.' },
-        { type: 'fill', skill: 'VO', topic: 'اعداد', level: 'easy', fa: 'عدد ۸۰ را به حروف بنویس:', q: '80 = ___', answer: ['quatre-vingts', 'quatre vingts'], explain: '80 = quatre-vingts با s. ولی 81 بدون s: quatre-vingt-un.' },
+        { type: 'mcq', skill: 'GR', topic: 'مغازه‌ها', level: 'easy', q: '«پیش نانوا می‌روم» به فرانسه:', options: ['Je vais chez le boulanger.', 'Je vais à le boulanger.', 'Je vais au boulangerie.', 'Je vais la boulanger.'], correct: 0, explain: 'برای شخص: chez.' },
         { type: 'match', skill: 'VO', topic: 'کمیت‌ها', level: 'easy', fa: 'جور کن:', pairs: [['une bouteille d\'eau', 'یک بطری آب'], ['un morceau de fromage', 'یک تکه پنیر'], ['beaucoup de fruits', 'کلی میوه'], ['un peu de riz', 'کمی برنج']] },
         { type: 'dictation', skill: 'CO', topic: 'خرید', level: 'medium', text: 'Je voudrais un litre de lait.', trans: 'یک لیتر شیر می‌خواهم.' },
         { type: 'order', skill: 'GR', topic: 'خرید', level: 'easy', answer: 'Ça coûte combien s\'il vous plaît ?', fa: 'سؤال «چقدر می‌شود لطفاً؟» را بساز:' },
@@ -193,6 +190,8 @@ EDITO.units[3] = {
         { fr: 'une soupe', ipa: 'sup', fa: 'سوپ', ex: 'Une soupe de légumes', exfa: 'سوپ سبزیجات' },
         { fr: 'une glace', ipa: 'ɡlas', fa: 'بستنی', ex: 'Une glace au chocolat', exfa: 'بستنی شکلاتی' },
         { fr: 'prendre', ipa: 'pʁɑ̃dʁ', fa: 'گرفتن / خوردن (سفارش)', ex: 'Je prends le poulet.', exfa: 'مرغ می‌گیرم.' },
+        { fr: 'choisir', ipa: 'ʃwaziʁ', fa: 'انتخاب کردن', ex: 'Je choisis le poisson.', exfa: 'ماهی را انتخاب می‌کنم.' },
+        { fr: 'finir', ipa: 'finiʁ', fa: 'تمام کردن', ex: 'Tu finis ton plat ?', exfa: 'غذایت را تمام می‌کنی؟' },
         { fr: 'commander', ipa: 'kɔmɑ̃de', fa: 'سفارش دادن', ex: 'Vous voulez commander ?', exfa: 'می‌خواهید سفارش بدهید؟' },
         { fr: 'l\'addition', ipa: 'adisjɔ̃', fa: 'صورت‌حساب', ex: 'L\'addition, s\'il vous plaît !', exfa: 'صورت‌حساب، لطفاً!' },
         { fr: 'un serveur / une serveuse', ipa: 'sɛʁvœʁ', fa: 'گارسون', ex: 'Le serveur est sympa.', exfa: 'گارسون مهربان است.' },
@@ -206,25 +205,24 @@ EDITO.units[3] = {
         { fr: 'L\'addition, s\'il vous plaît.', fa: 'صورت‌حساب، لطفاً.' }
       ],
       grammar: {
-        title: 'Le verbe « prendre » + « boire »',
-        body: 'فعل <b>prendre</b> (گرفتن) در رستوران یعنی «سفارش دادن / خوردن»: Je prends le poisson. فعل بی‌قاعده است.<br>' +
-          'فعل <b>boire</b> (نوشیدن) هم بی‌قاعده است.<br>' +
+        title: 'Les verbes en « -ir » — choisir, finir',
+        body: 'دسته دوم فعل‌های باقاعده فرانسه به <b>-ir</b> ختم می‌شوند (مثل choisir، finir). ریشه + پسوند <b>-is / -is / -it / -issons / -issez / -issent</b>:<br>' +
           '💡 «Je voudrais» (می‌خواستم/می‌خواهم) شکل مؤدبانه‌ی vouloir است — در مغازه و رستوران همیشه از این استفاده کن.',
         table: {
-          head: ['ضمیر', 'prendre', 'boire'],
+          head: ['ضمیر', 'choisir', 'finir'],
           rows: [
-            ['je', 'prends', 'bois'],
-            ['tu', 'prends', 'bois'],
-            ['il / elle / on', 'prend', 'boit'],
-            ['nous', 'prenons', 'buvons'],
-            ['vous', 'prenez', 'buvez'],
-            ['ils / elles', 'prennent', 'boivent']
+            ['je', 'choisis', 'finis'],
+            ['tu', 'choisis', 'finis'],
+            ['il / elle / on', 'choisit', 'finit'],
+            ['nous', 'choisissons', 'finissons'],
+            ['vous', 'choisissez', 'finissez'],
+            ['ils / elles', 'choisissent', 'finissent']
           ]
         },
         examples: [
-          { fr: 'Je prends le plat du jour.', fa: 'غذای روز را می‌گیرم.' },
-          { fr: 'Qu\'est-ce que vous buvez ?', fa: 'چی می‌نوشید؟' },
-          { fr: 'Nous prenons deux cafés.', fa: 'دو قهوه می‌گیریم.' }
+          { fr: 'Je choisis le plat du jour.', fa: 'غذای روز را انتخاب می‌کنم.' },
+          { fr: 'Vous finissez votre dessert ?', fa: 'دسرتان را تمام می‌کنید؟' },
+          { fr: 'Nous choisissons deux entrées.', fa: 'دو پیش‌غذا انتخاب می‌کنیم.' }
         ]
       },
       phonetics: {
@@ -252,8 +250,8 @@ EDITO.units[3] = {
         ]
       },
       exercises: [
-        { type: 'fill', skill: 'GR', topic: 'فعل prendre', level: 'easy', fa: 'prendre را صرف کن:', q: 'Je ___ le poisson.', answer: ['prends'] },
-        { type: 'fill', skill: 'GR', topic: 'فعل prendre', level: 'easy', fa: 'prendre را صرف کن:', q: 'Nous ___ deux cafés.', answer: ['prenons'] },
+        { type: 'fill', skill: 'GR', topic: 'افعال -ir', level: 'easy', fa: 'choisir را صرف کن:', q: 'Je ___ le poisson.', answer: ['choisis'] },
+        { type: 'fill', skill: 'GR', topic: 'افعال -ir', level: 'easy', fa: 'finir را صرف کن:', q: 'Vous ___ votre plat ?', answer: ['finissez'] },
         { type: 'mcq', skill: 'GR', topic: 'رستوران', level: 'easy', q: 'مؤدبانه‌ترین راه سفارش دادن:', options: ['Je voudrais le poulet, s\'il vous plaît.', 'Donne le poulet !', 'Le poulet !', 'Je veux poulet.'], correct: 0 },
         { type: 'mcq', skill: 'CO', topic: 'رستوران', level: 'easy', q: '🎧 گوش کن — او برای دسر چه می‌گیرد؟', audio: 'Comme dessert, je vais prendre une glace au chocolat.', audioFa: 'برای دسر، بستنی شکلاتی می‌گیرم.', options: ['بستنی شکلاتی', 'سالاد میوه', 'قهوه', 'سوپ'], correct: 0, frOptions: false },
         { type: 'match', skill: 'VO', topic: 'رستوران', level: 'easy', fa: 'جور کن:', pairs: [['une entrée', 'پیش‌غذا'], ['un plat', 'غذای اصلی'], ['un dessert', 'دسر'], ['l\'addition', 'صورت‌حساب']] },
