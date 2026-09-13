@@ -1,7 +1,8 @@
 /* ===== مکالمه زنده با معلم فرانسه (Claude API) =====
-   نیاز به کلید API آنتروپیک دارد که کاربر در تنظیمات وارد می‌کند و فقط در
-   localStorage همین مرورگر ذخیره می‌شود. تماس مستقیم از مرورگر با
-   هدر anthropic-dangerous-direct-browser-access انجام می‌شود. */
+   به‌طور پیش‌فرض از یک کلید مشترک روی سرور (api/anthropic.js) استفاده می‌شود — نیازی
+   به کلید شخصی نیست، فقط یک سقف رایگان روزانه دارد. اگر کاربر خودش در تنظیمات یک کلید
+   API آنتروپیک وارد کند (فقط در localStorage همین مرورگر ذخیره می‌شود)، به‌جای آن مستقیم
+   از مرورگر به Anthropic وصل می‌شود و دیگر محدودیتی ندارد. */
 var Chat = {
   MODEL: 'claude-sonnet-5',
   MAX_TOKENS: 400,
@@ -25,19 +26,24 @@ var Chat = {
       '۴) هرگز از این قالب دو خطی خارج نشو، توضیح اضافه یا مقدمه ننویس.';
   },
 
+  /* آیا کاربر کلید شخصی خودش را وارد کرده؟ (اختیاری — بدون آن هم از سهمیه مشترک استفاده می‌شود) */
   hasKey: function () { return !!(Store.state.settings.apiKey || '').trim(); },
 
-  /* فراخوانی مشترک Claude API — هم برای مکالمه زنده و هم تصحیح نوشتار استفاده می‌شود */
+  /* فراخوانی مشترک Claude API — هم برای مکالمه زنده و هم تصحیح نوشتار استفاده می‌شود.
+     اگر کلید شخصی وجود داشته باشد مستقیم از مرورگر به Anthropic وصل می‌شود، وگرنه از
+     واسط مشترک روی سرور (api/anthropic.js) که سقف رایگان روزانه دارد استفاده می‌کند. */
   _call: function (system, messages, maxTokens) {
-    var key = Store.state.settings.apiKey.trim();
-    return fetch('https://api.anthropic.com/v1/messages', {
+    var ownKey = (Store.state.settings.apiKey || '').trim();
+    var url = ownKey ? 'https://api.anthropic.com/v1/messages' : '/api/anthropic';
+    var headers = { 'content-type': 'application/json' };
+    if (ownKey) {
+      headers['x-api-key'] = ownKey;
+      headers['anthropic-version'] = '2023-06-01';
+      headers['anthropic-dangerous-direct-browser-access'] = 'true';
+    }
+    return fetch(url, {
       method: 'POST',
-      headers: {
-        'content-type': 'application/json',
-        'x-api-key': key,
-        'anthropic-version': '2023-06-01',
-        'anthropic-dangerous-direct-browser-access': 'true'
-      },
+      headers: headers,
       body: JSON.stringify({
         model: this.MODEL,
         max_tokens: maxTokens,
@@ -117,7 +123,7 @@ var Chat = {
   errorMessage: function (err) {
     if (err.status === 401) return '🔑 کلید API نامعتبر است. در تنظیمات دوباره بررسی و از نو کپی کن (بدون فاصله اضافه).';
     if (err.status === 403) return '🚫 دسترسی رد شد — کلید ممکن است غیرفعال یا محدودشده باشد.';
-    if (err.status === 429) return '⏳ محدودیت نرخ درخواست — کمی صبر کن و دوباره امتحان کن.';
+    if (err.status === 429) return this.hasKey() ? '⏳ محدودیت نرخ درخواست — کمی صبر کن و دوباره امتحان کن.' : (err.message || '⏳ سقف رایگان امروز پر شده — فردا دوباره امتحان کن.');
     if (err.status === 400 && /credit|billing/i.test(err.message || '')) return '💳 اعتبار حساب Anthropic تمام شده یا روش پرداخت ثبت نشده.';
     if (err.status) return '⚠️ خطای سرور (' + err.status + '): ' + (err.message || '');
     if (location.protocol === 'file:') {
@@ -130,14 +136,6 @@ var Chat = {
 var Views = window.Views || {};
 
 Views.chat = function (el) {
-  if (!Chat.hasKey()) {
-    el.innerHTML = '<div class="card"><h2>🗣️ مکالمه زنده با معلم</h2>' +
-      '<div class="muted">این بخش با هوش مصنوعی Claude واقعاً باهات مکالمه می‌کند: سؤال می‌پرسد، جواب می‌دهی، تصحیح و بازخورد می‌گیری — درست مثل چت‌جی‌پی‌تی، ولی برای تمرین فرانسه.</div>' +
-      '<div class="muted" style="margin-top:8px">برای استفاده، یک کلید API آنتروپیک لازم داری (هزینه‌اش برای یک جلسه ۳۰ دقیقه‌ای چند سنت است).</div>' +
-      '<div class="btnrow"><a href="#settings"><button class="btn btn-lg">رفتن به تنظیمات برای وارد کردن کلید</button></a></div></div>';
-    return;
-  }
-
   var conv = Store.state.conversation;
   var LEVELS = [
     { id: 'easy', icon: '🟢', title: 'مبتدی' },
@@ -148,8 +146,11 @@ Views.chat = function (el) {
   var fileWarning = location.protocol === 'file:'
     ? '<div class="card"><div class="feedback bad">⚠️ اپ را با دابل‌کلیک روی فایل باز کرده‌ای (آدرس با file:// شروع می‌شود). مکالمه زنده روی این حالت کار نمی‌کند چون مرورگر درخواست به سرور Anthropic را مسدود می‌کند. فایل <b>start-server.bat</b> را اجرا کن و از آدرس <b class="fr">http://localhost:5173</b> استفاده کن.</div></div>'
     : '';
+  var quotaNote = Chat.hasKey() ? '' :
+    '<div class="muted" style="margin-top:6px">💬 این بخش رایگان و بدون نیاز به کلید کار می‌کند (با یک سقف روزانه مشترک). برای استفاده نامحدود، کلید شخصی‌ات را در <a href="#settings">تنظیمات</a> وارد کن.</div>';
   el.innerHTML = fileWarning +
     '<div class="card"><h2>🗣️ مکالمه زنده با معلم</h2>' +
+    quotaNote +
     '<div class="btnrow picker level-pick"></div>' +
     '<input class="ex-input topic-input" type="text" placeholder="موضوع دلخواه (اختیاری) — مثلاً: خانواده، سفر، رستوران" style="direction:rtl;text-align:right;margin-top:8px">' +
     '<div class="btnrow"><button class="btn new-chat">🔄 مکالمه جدید</button></div></div>' +

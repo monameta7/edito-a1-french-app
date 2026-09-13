@@ -429,7 +429,7 @@ var Exercises = {
       box.dataset.done = 1;
       var fb = box.querySelector('.fb');
       var userText = ta.value;
-      if (typeof Chat !== 'undefined' && Chat.hasKey()) {
+      if (typeof Chat !== 'undefined') {
         fb.innerHTML = '<div class="feedback">⏳ در حال تصحیح آنلاین توسط معلم هوش‌مصنوعی...</div>';
         Chat.gradeWriting(ex, userText).then(function (reply) {
           if (!box.isConnected) return; /* کاربر قبل از رسیدن جواب به تمرین بعدی رفته */
@@ -442,7 +442,6 @@ var Exercises = {
       } else {
         fb.innerHTML =
           '<div class="feedback ok">ثبت شد ✅ (' + words + ' واژه)</div>' +
-          '<div class="muted" style="margin-top:6px">برای تصحیح آنلاین خودکار توسط معلم هوش‌مصنوعی، یک کلید API آنتروپیک در <a href="#settings">تنظیمات</a> وارد کن — یا «کپی برای معلم» را بزن و در جلسه Claude Code بچسبان.</div>' +
           '<div style="margin-top:6px">نمونه پاسخ: <div class="fr-block">' + self.esc(ex.sample) + '</div></div>';
       }
       finish(true);

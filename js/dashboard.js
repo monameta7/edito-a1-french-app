@@ -63,7 +63,7 @@ Views.home = function (el) {
 
   h += '<div class="card unit-card" onclick="location.hash=\'#chat\'">' +
     '<div class="unit-num" style="background:var(--ok)">🗣️</div>' +
-    '<div class="unit-info"><b>مکالمه زنده با معلم</b><div class="muted">' + (Chat.hasKey() ? 'مثل چت‌جی‌پی‌تی، به فرانسه گفت‌وگو کن و بازخورد بگیر' : 'نیاز به کلید API — از تنظیمات فعالش کن') + '</div></div>' +
+    '<div class="unit-info"><b>مکالمه زنده با معلم</b><div class="muted">مثل چت‌جی‌پی‌تی، به فرانسه گفت‌وگو کن و بازخورد بگیر — رایگان، بدون نیاز به کلید</div></div>' +
     '<div style="font-size:22px">›</div></div>';
 
   /* مهارت‌ها */
@@ -488,9 +488,10 @@ Views.settings = function (el) {
       '۳) از همان‌جا اپ را استفاده کن — همه‌چیز (پیشرفتت هم) همان است.</div></div>';
   }
 
-  h += '<div class="card"><h2>🗣️ مکالمه زنده (کلید API آنتروپیک)</h2>' +
-    '<div class="muted">برای فعال‌کردن بخش «مکالمه زنده با معلم» (که با هوش مصنوعی واقعی صحبت می‌کنی)، یک کلید API از حساب Anthropic خودت لازم داری. ' +
-    'کلید فقط در همین مرورگر (localStorage) ذخیره می‌شود و در بکاپ‌های خروجی JSON قرار نمی‌گیرد. هزینه تقریبی هر جلسه ۳۰ دقیقه‌ای چند سنت است.</div>' +
+  h += '<div class="card"><h2>🗣️ مکالمه زنده (کلید API آنتروپیک — اختیاری)</h2>' +
+    '<div class="muted">بخش «مکالمه زنده با معلم» و تصحیح آنلاین نوشتار به‌طور پیش‌فرض برای همه رایگان و بدون نیاز به کلید کار می‌کنند (با یک سقف رایگان روزانه مشترک). ' +
+    'اگر می‌خواهی محدودیتی نداشته باشی، می‌توانی کلید API شخصی خودت از حساب Anthropic را اینجا وارد کنی — از آن به بعد مستقیم از کلید خودت استفاده می‌شود. ' +
+    'کلید فقط در همین مرورگر (localStorage) ذخیره می‌شود و در بکاپ‌های خروجی JSON قرار نمی‌گیرد.</div>' +
     '<input class="ex-input api-key-input" type="password" placeholder="sk-ant-..." value="' + Exercises.esc(s.apiKey || '') + '" style="direction:ltr;text-align:left;margin-top:8px">' +
     '<div class="btnrow"><button class="btn save-key">ذخیره کلید</button>' +
     (s.apiKey ? '<button class="btn-bad clear-key">حذف کلید</button>' : '') + '</div></div>';
