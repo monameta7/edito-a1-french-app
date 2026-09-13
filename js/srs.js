@@ -77,6 +77,18 @@ var SRS = {
 
   dueCount: function () { return this.due().length; },
 
+  /* آیتم‌های سررسیدشده با محتوای کامل — برای جلسه مرور با معلم هوش‌مصنوعی */
+  dueDetailed: function (limit) {
+    return this.due(limit).map(function (id) {
+      var it = Store.state.srs[id], item = EDITO.itemIndex[id];
+      return {
+        fr: item.fr, fa: item.fa, ipa: item.ipa || '',
+        ex: item.ex || '', exfa: item.exfa || '',
+        box: it.box, wrong: it.wrong || 0
+      };
+    });
+  },
+
   /* ثبت پاسخ: درست → جعبه بعدی، غلط → جعبه ۱ */
   answer: function (id, correct) {
     var it = Store.state.srs[id];

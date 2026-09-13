@@ -349,7 +349,9 @@ Views.review = function (el) {
         return '<div class="bx"><b>' + c + '</b><small>جعبه ' + (i + 1) + '<br>' + SRS.INTERVALS[i] + ' روز</small></div>';
       }).join('') + '</div>' +
       '<div class="muted center">' + (due.length ? due.length + ' کارت سررسید شده' : 'فعلاً کارتی سررسید نشده ✅') + '</div>' +
-      (due.length ? '<div class="btnrow" style="justify-content:center"><button class="btn btn-lg start">شروع مرور</button></div>' : '') +
+      (due.length ? '<div class="btnrow" style="justify-content:center">' +
+        '<button class="btn btn-lg start">شروع مرور</button>' +
+        '<a href="#chat/srs"><button class="btn-ghost btn-lg">🧠 مرور با معلم (گفت‌وگو)</button></a></div>' : '') +
       '</div>';
     if (due.length) {
       summary.querySelector('.start').onclick = function () {

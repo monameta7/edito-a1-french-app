@@ -24,6 +24,7 @@ var Store = {
       minutes: {},                  // day -> ثانیه فعالیت واقعی (برای هدف روزانه)
       customWords: {},               // itemId -> { fr, fa, ipa, ex, exfa } ← کلمات دستی کاربر
       conversation: { level: 'easy', messages: [] }, // مکالمه زنده جاری با معلم AI
+      srsConversation: { messages: [] }, // جلسه مرور فاصله‌دار (لایتنر) با معلم AI
       conversationTurns: 0,          // مجموع نوبت‌های مکالمه (برای دستاورد)
       zpd: {}                        // skill(یا "_all") -> {level, recent:[0/1,...]} ← منطقهٔ تقریبی رشد (نظریهٔ ویگوتسکی)
     };

@@ -134,7 +134,7 @@ function route() {
     case 'badges': Views.badges(el); break;
     case 'practice': Views.practice(el); break;
     case 'dictionary': Views.dictionary(el); break;
-    case 'chat': Views.chat(el); break;
+    case 'chat': Views.chat(el, parts[1]); break;
     case 'settings': Views.settings(el); break;
     default: Views.home(el);
   }
