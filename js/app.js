@@ -47,31 +47,33 @@ var Curriculum = {
 
   /* همه تمرین‌های کل دوره در یک آرایه: درس‌ها + آزمون‌های واحد + DELF
      (سیلابس بعد از بارگذاری اولیه تغییر نمی‌کند، پس نتیجه کش می‌شود) */
+  /* هر تمرین با _unitId علامت‌گذاری می‌شود (شماره واحدی که از آن آمده) تا بشود بر اساس واحد هم فیلتر کرد؛
+     تمرین‌های DELF به هیچ واحدی تعلق ندارند، پس _unitId آنها undefined می‌ماند */
   allExercises: function () {
     if (this._allExercisesCache) return this._allExercisesCache;
     var pool = [];
-    this.allLessons().forEach(function (l) {
-      (l.exercises || []).forEach(function (ex) { pool.push(ex); });
-    });
     this.unitIds().forEach(function (uid) {
       var u = EDITO.units[uid];
-      if (u.bilan) (u.bilan.exercises || []).forEach(function (ex) { pool.push(ex); });
+      (u.lessons || []).forEach(function (l) {
+        (l.exercises || []).forEach(function (ex) { ex._unitId = uid; pool.push(ex); });
+      });
+      if (u.bilan) (u.bilan.exercises || []).forEach(function (ex) { ex._unitId = uid; pool.push(ex); });
     });
     if (EDITO.delf) (EDITO.delf.exercises || []).forEach(function (ex) { pool.push(ex); });
     this._allExercisesCache = pool;
     return pool;
   },
 
-  /* استخر تمرین‌های تصفیه‌شده بر اساس مهارت (CO/CE/PE/PO/GR/VO) و/یا سطح (easy/medium/hard) — هرکدام null یعنی «هر چی» */
-  exercisesByFilter: function (skill, level, n) {
+  /* استخر تمرین‌های تصفیه‌شده بر اساس مهارت (CO/CE/PE/PO/GR/VO)، سطح (easy/medium/hard) و/یا شماره واحد — هرکدام null یعنی «هر چی» */
+  exercisesByFilter: function (skill, level, unitId, n) {
     var pool = this.allExercises().filter(function (ex) {
-      return (!skill || ex.skill === skill) && (!level || ex.level === level);
+      return (!skill || ex.skill === skill) && (!level || ex.level === level) && (unitId == null || ex._unitId === unitId);
     });
     pool = shuffle(pool);
     return n ? pool.slice(0, n) : pool;
   },
 
-  countByFilter: function (skill, level) { return this.exercisesByFilter(skill, level).length; },
+  countByFilter: function (skill, level, unitId) { return this.exercisesByFilter(skill, level, unitId).length; },
 
   /* کلید یکتا برای هر تمرین — برای جلوگیری از تکرار در تقویت مبحث */
   exerciseKey: function (ex) {

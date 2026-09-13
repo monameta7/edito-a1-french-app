@@ -194,13 +194,20 @@ Views.practice = function (el) {
     { id: 'medium', icon: '🟡', title: 'متوسط' },
     { id: 'hard', icon: '🔴', title: 'پیشرفته' }
   ];
-  var selSkill = null, selLevel = null;
+  var UNITS = [{ id: null, icon: '🔀', title: 'همه واحدها' }].concat(
+    Curriculum.unitIds().map(function (uid) {
+      var u = EDITO.units[uid];
+      return { id: uid, icon: '📘', title: 'واحد ' + uid + ' — ' + u.title };
+    })
+  );
+  var selSkill = null, selLevel = null, selUnit = null;
 
   el.innerHTML = '<h2 style="margin:10px 4px">🎯 تمرین هدفمند</h2>' +
-    '<div class="muted" style="margin:0 4px 10px">مهارت و سطحی که می‌خواهی امروز روش تمرکز کنی را انتخاب کن — فقط همان می‌آید، نه همه قاطی.</div>' +
+    '<div class="muted" style="margin:0 4px 10px">مهارت، سطح و واحدی که می‌خواهی امروز روش تمرکز کنی را انتخاب کن — فقط همان می‌آید، نه همه قاطی.</div>' +
     '<div class="card">' +
     '<h3>۱) مهارت</h3><div class="btnrow picker skill-picker"></div>' +
     '<h3>۲) سطح</h3><div class="btnrow picker level-picker"></div>' +
+    '<h3>۳) واحد</h3><div class="btnrow picker unit-picker" style="flex-wrap:wrap"></div>' +
     '<div class="muted zpd-hint" style="margin-top:6px"></div>' +
     '<div class="muted count-info" style="margin-top:10px"></div>' +
     '<div class="btnrow"><button class="btn btn-lg go-practice">شروع تمرین ▶️</button></div>' +
@@ -208,6 +215,7 @@ Views.practice = function (el) {
 
   var skillBox = el.querySelector('.skill-picker');
   var levelBox = el.querySelector('.level-picker');
+  var unitBox = el.querySelector('.unit-picker');
   var countInfo = el.querySelector('.count-info');
   var zpdHint = el.querySelector('.zpd-hint');
   var goBtn = el.querySelector('.go-practice');
@@ -233,7 +241,7 @@ Views.practice = function (el) {
   }
 
   function refresh() {
-    var count = Curriculum.countByFilter(selSkill, selLevel);
+    var count = Curriculum.countByFilter(selSkill, selLevel, selUnit);
     var stat = pctText(selSkill, selLevel);
     countInfo.innerHTML = count + ' تمرین با این انتخاب موجود است' + (stat ? '<br>' + stat : '');
     goBtn.disabled = count === 0;
@@ -272,25 +280,40 @@ Views.practice = function (el) {
     };
     levelBox.appendChild(b);
   });
+  UNITS.forEach(function (un) {
+    var b = document.createElement('button');
+    b.className = 'btn-ghost picker-btn' + (un.id === selUnit ? ' sel' : '');
+    b.textContent = un.icon + ' ' + un.title;
+    b.onclick = function () {
+      selUnit = un.id;
+      unitBox.querySelectorAll('.picker-btn').forEach(function (x) { x.classList.remove('sel'); });
+      b.classList.add('sel');
+      refresh();
+    };
+    unitBox.appendChild(b);
+  });
   skillBox.querySelector('.picker-btn').classList.add('sel');
   levelBox.querySelector('.picker-btn').classList.add('sel');
+  unitBox.querySelector('.picker-btn').classList.add('sel');
   refresh();
 
   goBtn.onclick = function () {
-    var pool = Curriculum.exercisesByFilter(selSkill, selLevel, 12);
+    var pool = Curriculum.exercisesByFilter(selSkill, selLevel, selUnit, 12);
     if (!pool.length) { toast('فعلاً تمرینی با این انتخاب نیست.'); return; }
     el.querySelector('.card').style.display = 'none';
     var skillTitle = SKILLS.filter(function (x) { return x.id === selSkill; })[0].title;
     var levelTitle = LEVELS.filter(function (x) { return x.id === selLevel; })[0].title;
+    var unitTitle = UNITS.filter(function (x) { return x.id === selUnit; })[0].title;
+    var resultTitle = skillTitle + ' / ' + levelTitle + (selUnit != null ? ' / ' + unitTitle : '');
     Exercises.resetClock();
     ExerciseRunner.run(el.querySelector('.dq'), pool, function (r) {
-      el.querySelector('.dq').innerHTML = '<div class="card center"><h2>نتیجه — ' + skillTitle + ' / ' + levelTitle + '</h2>' +
+      el.querySelector('.dq').innerHTML = '<div class="card center"><h2>نتیجه — ' + resultTitle + '</h2>' +
         '<div style="font-size:40px;margin:8px">' + r.right + '/' + r.total + '</div>' +
         '<div class="btnrow" style="justify-content:center"><a href="#practice"><button class="btn-ghost">تمرین دیگر</button></a>' +
         '<a href="#home"><button class="btn">خانه</button></a></div></div>';
       window.scrollTo(0, 0);
       Gamification.toastNew();
-    }, skillTitle + ' / ' + levelTitle);
+    }, resultTitle);
   };
 };
 
