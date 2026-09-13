@@ -136,16 +136,20 @@ var Exercises = {
     if (ex.audio) this.wireTranscript(box, ex.audio, ex.audioFa);
     var opts = box.querySelector('.ex-opts');
     var isFr = ex.frOptions !== false;
-    ex.options.forEach(function (o, i) {
+    /* ترتیب گزینه‌ها هر بار قاطی می‌شود تا جواب درست همیشه گزینه اول نباشد —
+       خودِ ex.options/ex.correct دست‌نخورده می‌ماند، فقط ترتیب نمایش عوض می‌شود */
+    var order = shuffle(ex.options.map(function (_, i) { return i; }));
+    var correctPos = order.indexOf(ex.correct);
+    order.forEach(function (origIdx, pos) {
       var d = document.createElement('div');
       d.className = 'ex-opt' + (isFr ? ' fr' : '');
-      d.textContent = o;
+      d.textContent = ex.options[origIdx];
       d.onclick = function () {
         if (box.dataset.done) return;
         box.dataset.done = 1;
-        var ok = i === ex.correct;
+        var ok = pos === correctPos;
         d.classList.add(ok ? 'right' : 'wrong');
-        opts.children[ex.correct].classList.add('right');
+        opts.children[correctPos].classList.add('right');
         box.querySelector('.fb').innerHTML = self.feedbackHTML(ok, ex,
           ok ? '' : 'پاسخ درست: <span class="fr">' + self.esc(ex.options[ex.correct]) + '</span>');
         finish(ok);
